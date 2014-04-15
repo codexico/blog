@@ -9,7 +9,7 @@ Promise, Deferreds, when, then, done, async, etc?
 
 *90% das vezes é isso que a gente precisa.*
 
-**Dois ajax ao mesmo tempo:**
+**Ex-1) Dois ajax ao mesmo tempo:**
 
 ```javascript
 $.when($.ajax('/value1'), $.ajax('/value2')).done(function (data1, data2) {
@@ -25,7 +25,7 @@ os dados necessários para preenchê-lo e depois inserir na página.
 
 ## Ainda Simples
 
-**Dois ajax e uma função que usa os resultados:**
+**Ex-2) Dois ajax e uma função que usa os resultados:**
 
 ```javascript
 function soma(a, b) {
@@ -49,12 +49,16 @@ Ajax um depois do outro até acabarem todos.
 Quando um termina chama o outro e assim por diante...
 
 O segundo ajax executa somente após o fim do primeiro,
-e só quando o segundo termina a função é chamada,
-algo assim:
+e só quando o segundo termina a função é chamada.
+
+O maior problema é que a performance fica prejudicada, o
+tempo de execução fica a soma dos tempos de cada ajax, se
+algum demorar trava todos os outros.
 
 
 *old school beginner*
-**Dois ajax e uma função que usa os resultados:**
+
+**Ex-3) Dois ajax e uma função que usa os resultados:**
 
 ```javascript
 var value1, value2;
@@ -88,7 +92,8 @@ uma função de timeout ficava rodando até que os ajax
 fossem concluídos:
 
 *old school expert*
-**Dois ajax e uma função que usa os resultados:**
+
+**Ex-4) Dois ajax e uma função que usa os resultados:**
 
 ```javascript
 var value1, value2,
@@ -137,7 +142,7 @@ waitForValues();
 O primeiro exemplo ficou bacana porque os ajax eram simples,
 quando ficam mais complexos a coisa fica bagunçada:
 
-**Dois ajax com opções:**
+**Ex-5) Dois ajax com opções:**
 
 ```javascript
 $.when(
@@ -176,8 +181,9 @@ concatenação nas urls e dados e por aí vai.
 A primeira coisa é separar os ajax em funções certo?
 
 
-*Errado*
-**Dois ajax com opções e separados em funções:**
+*Errado!!!*
+
+**Ex-6) Dois ajax com opções e separados em funções:**
 
 ```javascript
 function ajax1() {
@@ -209,7 +215,7 @@ function ajax2() {
     type: 'POST'
   });
 }
-Assim o when fica mais simples
+//Assim o when fica mais simples
 $.when(
   ajax1(),
   ajax2()
@@ -231,24 +237,34 @@ e então o 'done' disparou antes dos ajax que estavam executando em paralelo.
 É a mesma coisa que passar strings ou funções vazias para o 'when',
 alguns testes:
 
-**Exemplos de funções que não retornam promises:**
+**Ex-7) Exemplos de funções que não retornam promises:**
 
 ```javascript
 console.time('testes');
 console.time('teste timeout');
+function ajax1() {
+  // sabemos pelo Ex-1 que funciona no $.when
+  $.ajax('/value1');
+  // mas não se a função ajax1() não avisar ao $.when
+}
+
 function homeopatia() {
   // essa função não faz nada
 }
+
 function acupuntura() {
   // essa função também não faz nada, só uma picadinha
   return 'ai';
+  // mesmo retornando algo, ainda não é o que o $.when espera
 }
+
 function esperaUmPouco() {
   setTimeout(function() {
     console.log('terminou o timeout');
     console.timeEnd('teste timeout');
   }, 1000);
 }
+
 $.when(
   ajax1(),
   {},
@@ -262,11 +278,14 @@ $.when(
 .done(function () {
   console.log('done');
 
+  // log dos argumentos, em uma linha para não poluir o código
   $.each(arguments, function(i, value) {console.log(value)});
 
   console.timeEnd('testes');
 });
 ```
+
+E esta é a saída no console:
 
 ```javascript
 done
@@ -285,7 +304,8 @@ terminou o timeout
 teste timeout: 1003.675ms
 ```
 
-
+O primeiro log já é o -done-, que gostaríamos que fosse executado
+somente após os testes.
 
 
 
