@@ -1,0 +1,84 @@
+<h1>Exemplos de $.when()</h1>
+
+
+<h2>Caso Simples: dois ajax ao mesmo tempo</h2>
+
+<p>90% das vezes é isso que a gente precisa.</p>
+
+
+<code lang="javascript" nowrap="false">
+$.when(
+  $.ajax('/value1'),
+  $.ajax('/value2'))
+.done(function (data1, data2) {
+  console.log('os dois ajax terminaram');
+  console.log('agora dá para chamar alguma função que usa as duas respostas dos ajax');
+});
+</code>
+
+<p>Muito prático, por exemplo para carregar um html, os dados necessários para preenchê-lo e depois inserir na página.</p>
+
+
+<h2>Outros Exemplos</h2>
+
+<p>Grande parte dos erros que acontecem ao usar $.when() são por usar alguma função que não retorna uma promise.</p>
+
+<code lang="javascript" nowrap="false">
+function getFacebookData() {
+  // criamos uma deferred para resolver somente quando termina o FB
+  var dfd = new $.Deferred();
+
+  // o FB acontece async e não retorna uma promise
+  FB.api('/me', {fields: 'last_name'}, function(response) {
+    console.log(response);
+
+    // aqui avisamos ao $.when que  o FB terminou
+    dfd.resolve(response);
+  });
+
+  // retorna ao $.when uma promessa de que em algum momento a função vai terminar
+  return dfd.promise();
+}
+
+function getTimeout() {
+  // criamos uma deferred para resolver somente quando terminar o timeout
+  var dfd = new $.Deferred();
+
+  setTimeout(function() {
+    // alguma coisa complexa acontecendo aqui
+
+    // avisa ao $.when que terminou o getTimeout()
+    dfd.resolve("fim");
+  }, 1000);
+
+  // retorna ao $.when uma promessa de que em algum momento a função vai terminar
+  return dfd.promise();
+}
+
+// $.ajax retorna uma promise, mas não uma função com $.ajax dentro
+function complexAjax(x) {
+  var options = {
+    url: '/url1',
+    data: { param1: x }
+  }
+
+  // não é necessário criar a dfd aqui,
+  // podemos retornar a própria promise do ajax
+  return $.ajax(options);
+}
+
+$.when(
+  getFacebookData(),
+  getTimeout(),
+  complexAjax('teste')
+.done(function (fbResponse, dataFromTimeout, ajaxData) {
+  // as funções terminaram
+});
+</code>
+
+<p>Muitas funções do jQuery retornam uma promise, $.ajax() e $.animate() por exemplo.<br>
+Quando uma função não retorna a promessa, como o FB, podemos simplesmente criar uma e retornar quando quisermos.</p>
+
+<p>&nbsp;</p>
+
+<p>Esse foi um resumão do funcionamento das deferreds, eu estava escrevendo um tutorial mas estava ficando muito grande, acho que os exemplos acima já resolvem muitos problemas, depois eu posto o completão com detalhes de Promise, Deferreds, when, then, done, async, etc.</p>
