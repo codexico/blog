@@ -1,8 +1,16 @@
 # Como usar $.when()
 
+Se quiser somente alguns exemplos rápidos veja o
+[resumão](http://codexico.com.br/blog/jquery/exemplos-de-jquery-when/).
 
-Ou em outras palavras, que porcaria é essa de
-Promise, Deferreds, when, then, done, async, etc?
+
+**Ou em outras palavras, que porcaria é essa de
+Promise, Deferreds, when, then, done, async, etc?**
+
+
+
+[*Deferreds*](http://api.jquery.com/jQuery.Deferred/), uma tradução seria "adiados", são objetos que não retornam imediatamente, são adiados, retornam uma *Promise*, "promessa", de que em algum momento irão terminar.
+
 
 
 ## Caso Simples
