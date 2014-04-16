@@ -9,7 +9,7 @@ Promise, Deferreds, when, then, done, async, etc?**
 
 
 
-[*Deferreds*](http://api.jquery.com/jQuery.Deferred/), uma tradução seria "adiados", são objetos que não retornam imediatamente, são adiados, retornam uma *Promise*, "promessa", de que em algum momento irão terminar.
+> [*Deferreds*](http://api.jquery.com/jQuery.Deferred/), uma tradução seria "adiados", são objetos que não retornam imediatamente, são adiados, retornam uma *Promise*, "promessa", de que em algum momento irão terminar.
 
 
 
@@ -20,9 +20,13 @@ Promise, Deferreds, when, then, done, async, etc?**
 **Ex-1) Dois ajax ao mesmo tempo:**
 
 ```javascript
-$.when($.ajax('/value1'), $.ajax('/value2')).done(function (data1, data2) {
-  console.log('os dois ajax terminaram');
-  console.log('agora dá para chamar alguma função que usa as duas respostas dos ajax');
+$.when(
+  $.ajax('/value1'),
+  $.ajax('/value2'))
+.done(function (data1, data2) {
+  // os dois ajax terminaram
+  // agora dá para chamar alguma função que usa as duas respostas dos ajax
+  console.log(data1, data2);
 });
 ```
 
@@ -48,7 +52,8 @@ $.when($.ajax('/value1'), $.ajax('/value2')).done(function (data1, data2) {
 ## Antigamente era assim
 
 Lembra como era pra fazer uma coisa dessas?
-Normalmente tinha 2 maneiras, callbak hell ou timeouts.
+
+2 maneiras eram comuns, callbak hell ou timeouts.
 
 
 ### Callback Hell
@@ -64,9 +69,8 @@ tempo de execução fica a soma dos tempos de cada ajax, se
 algum demorar trava todos os outros.
 
 
-*old school beginner*
 
-**Ex-3) Dois ajax e uma função que usa os resultados:**
+**Ex-3) Dois ajax e uma função que usa os resultados:** (*old school beginner*)
 
 ```javascript
 var value1, value2;
@@ -99,9 +103,9 @@ No método dos timeouts os ajax eram disparados e
 uma função de timeout ficava rodando até que os ajax
 fossem concluídos:
 
-*old school expert*
 
-**Ex-4) Dois ajax e uma função que usa os resultados:**
+
+**Ex-4) Dois ajax e uma função que usa os resultados:** (*old school expert*)
 
 ```javascript
 var value1, value2,
@@ -229,7 +233,7 @@ $.when(
   ajax2()
 )
 .done(function (data1, data2) {
-  console.log('os dois ajax só começaram');
+  // os dois ajax só começaram
   console.log(data1); // undefined
   console.log(data2); // undefined
 });
@@ -238,8 +242,8 @@ $.when(
 Os logs retornam undefined.
 
 O que acontece é que o 'when' dispara o 'done' quando suas funções terminam.
-Como os ajax são async as funções retornaram undefined imediatamente
-e então o 'done' disparou antes dos ajax que estavam executando em paralelo.
+Como os ajax são async, as funções retornaram undefined imediatamente,
+então o 'done' disparou antes dos ajax, enquanto ainda estavam executando em paralelo.
 
 
 É a mesma coisa que passar strings ou funções vazias para o 'when',
@@ -314,6 +318,9 @@ teste timeout: 1003.675ms
 
 O primeiro log já é o -done-, que gostaríamos que fosse executado
 somente após os testes.
+
+
+> Os parâmetros passados ao when precisam retornar a promessa de que vão terminar, senão o when não encontra a promise e considera que já terminou.
 
 
 
