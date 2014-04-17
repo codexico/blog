@@ -322,30 +322,157 @@ somente após os testes.
 
 > Os parâmetros passados ao when precisam retornar a promessa de que vão terminar, senão o when não encontra a promise e considera que já terminou.
 
+> Muitas funções do jQuery retornam uma promise, $.ajax() e $.animate() por exemplo.
+
+
+A solução é criar a própria deferred e retornar a promise.
+
+
+*Certo!!!*
+
+**Ex-8) Dois ajax com opções e separados em funções:**
+
+```javascript
+function ajax1() {
+  // criamos uma deferred para resolver somente quando
+  // terminar o código que quisermos executar
+  var dfd = new $.Deferred();
+
+  $.ajax('/value1').done(function () {
+    // aqui avisamos ao $.when que o código terminou
+    dfd.resolve(response);
+  });
+
+  // retorna ao $.when uma promessa de que em algum momento a função vai terminar
+  return dfd.promise();
+}
+function ajax2() {
+  // o $.ajax() já retorna uma promise, não é necessário
+  // criar uma deferred nesse caso
+  return $.ajax('/value1');
+}
+function esperaUmPouco() {
+  // criamos uma deferred para resolver somente quando
+  // terminar o código que quisermos executar
+  var dfd = new $.Deferred();
+
+  setTimeout(function() {
+    console.log('terminou o timeout');
+    // aqui avisamos ao $.when que o timeout terminou
+    // e também podemos passar conteúdo
+    dfd.resolve('fim do timeout');
+  }, 1000);
+
+  // retorna ao $.when uma promessa de que em
+  // algum momento a função vai terminar
+  return dfd.promise();
+}
+
+$.when(
+  ajax1(),
+  ajax2(),
+  esperaUmPouco()
+)
+.done(function (a, b, c) {
+  // os dois ajax terminaram corretamente
+  console.log(a); // response
+  console.log(b); // - o que quer que o ajax tenha trazido
+  console.log(c); // fim do timeout
+});
+```
+
+
+Acho que foi tudo.
+
+Um último exemplo, uma vez tive que fazer uma chamada à uma api e pegar os dados (posts do user no facebook no último mês) e depois fazer outras chamadas com esses dados (shares e likes desses posts), processar as respostas (pegar somente amigos no último mês), enviá-las para o back (que fazia algum cálculo doidão) e finalmente com a resposta mostrar algo para o usuário. Isso é só uma parte, ainda tinha muito mais regras e tipos de dados para buscar.
+
+Imagina fazer isso sem deferreds?
+
+
+*Ficou +- assim:*
+
+**Ex-9) when dentro de when:**
+
+```javascript
+function getPosts() {
+  var dfd = new $.Deferred();
+  // é só um exemplo, ahhh como seria legal se a api
+  // do facebook fosse consistente...
+  FB.api('getPosts', function(response) {
+    dfd.resolve(response);
+  });
+  return dfd.promise();
+}
+function getFriends() {
+  var dfd = new $.Deferred();
+  FB.api('getFriends', function(response) {
+    dfd.resolve(response);
+  });
+  return dfd.promise();
+}
+function getLikes(posts, friends) {
+  var dfd = new $.Deferred();
+  FB.api('batchGetLikesFromPosts', function(response) {
+    dfd.resolve(response);
+  });
+  return dfd.promise();
+}
+function getLikesPostsAndFriends() {
+  var dfd = new $.Deferred();
+
+  $.when(
+    getPosts,
+    getFriends()
+  )
+  .done(function (posts, friends) {
+    // when dentro de when pode?
+    // pode, com atenção, dava até pra ter
+    // criado uma outra função aqui para ficar mais legível
+    $.when(
+      getLikes(posts, friends);
+    )
+    .done(function (likes) {
+      // repare que é o único resolve da função inteira
+      dfd.resolve(posts, friends, likes);
+    });
+  });
+
+  return dfd.promise();
+}
+
+
+// e esse na verdade é o código, o resto conseguimos
+// separar em funções, poderiam até estar em outro arquivo
+$.when(
+  getLikesPostsAndFriends(),
+  getEvents(),
+  getVideos()
+)
+.done(function (posts, friends, ...) {
+
+  $.ajax({
+    url: '/analyzeData',
+    data: {posts, friends, ...}
+  }).done(function (reponse) {
+    $('#resposta').html(response);
+  });
+});
+```
+
+
+
+Últimos detalhes, não fiz nenhum tratamento de erro no tutorial, mas é fácil, quando acontece algum erro, ao invés de executar o done, é chamado o [fail](http://api.jquery.com/deferred.fail/).
 
 
 
 
+### Referências
+
+
+[Deferreds](http://api.jquery.com/jQuery.Deferred/) - http://api.jquery.com/jQuery.Deferred/
+
+[$.when](http://api.jquery.com/jquery.when/) - http://api.jquery.com/jquery.when/
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Agora a teoria:
