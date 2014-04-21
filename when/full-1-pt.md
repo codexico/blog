@@ -291,7 +291,7 @@ $.when(
   console.log('done');
 
   // log dos argumentos, em uma linha para não poluir o código
-  $.each(arguments, function(i, value) {console.log(value)});
+  console.log([].slice.call(arguments));
 
   console.timeEnd('testes');
 });
