@@ -1,0 +1,1242 @@
+{
+  "apt-get-install-todos-os-compactadores-e-descompactadores-no-linux": {
+    "title": "apt-get install todos os compactadores e descompactadores no linux",
+    "name": "apt-get-install-todos-os-compactadores-e-descompactadores-no-linux",
+    "link": "https://codexico.com.br/blog/2010/02/07/apt-get-install-todos-os-compactadores-e-descompactadores-no-linux/",
+    "comments": [
+      {
+        "id": "4",
+        "author": "Marcelo",
+        "email": "marcelo.hqlinuxmaya@gmail.com",
+        "date": "2010-08-14 06:40:18",
+        "content": "Bom Dia.\nMuito bom o seu tutorial sobre os descompactadores, muito obrigado.\nMarcelo",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "5",
+        "author": "JULIO",
+        "email": "julio.limareis@hotmail.com",
+        "date": "2015-04-08 04:20:00",
+        "content": "VLW!!!!!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "6",
+        "author": "Luiz Machado",
+        "email": "lcmach@gmail.com",
+        "date": "2016-04-13 09:21:00",
+        "content": "Não sou um especialista em linux e estou tentando instalar o descompactador, só que não está instalando e dando o seguinte erro:Impossível encontrar o pacote ncompr",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "7",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2016-04-15 15:32:00",
+        "content": "Oi, o nome correto é \"ncompress\", parece que cortou na tela, mas se selecionar tudo e colar vai corretamente.\nVou tentar ver pq o apareceu cortado no post, valeu!",
+        "approved": "1",
+        "parent": "6"
+      }
+    ]
+  },
+  "tutorial-simples-como-usar-o-git-e-o-github": {
+    "title": "Tutorial simples: Como usar o git e o github",
+    "name": "tutorial-simples-como-usar-o-git-e-o-github",
+    "link": "https://codexico.com.br/blog/2010/03/11/tutorial-simples-como-usar-o-git-e-o-github/",
+    "comments": [
+      {
+        "id": "8",
+        "author": "Kleber Shimabuku",
+        "email": "klebershimabuku@gmail.com",
+        "date": "2010-04-13 04:23:51",
+        "content": "Muito bacana o tutorial! valeu! :-)",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "9",
+        "author": "Kleber Correia",
+        "email": "klebervirgilio@gmail.com",
+        "date": "2010-05-18 16:23:40",
+        "content": "Parabéns pela iniciativa! Mto bom tuto!!!\n\nVale lembrar: é necessário criar a chave rsa... id_rsa e id_rsa.pub....\nhttp://help.github.com/msysgit-key-setup/\n\nAbraços!!!\n\n;)",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "10",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2010-05-18 18:21:56",
+        "content": "Hehehe, 2 comentários de 2 Kleber.\n\n@Kleber1 - estamos aí pra isso, qq coisa é só chamar!\n\n@Kleber2 - valeu, eu fiz o tutorial só para o linux né, vários já me pediram para colocar as instruções para windows também, estou pensando se atualizo este ou faço um outro post, o lance é que raramente uso windows, então vou ter q aprender e testar as ferramentas antes para poder escrever, me ajuda?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "11",
+        "author": "Kleber Correia",
+        "email": "klebervirgilio@gmail.com",
+        "date": "2010-05-18 22:28:03",
+        "content": "Então cara e só uso linux tb! Ubuntu 10.04... não meu caso foi necessário gerar a chave.... \nDa uma olhada:\n\nhttp://help.github.com/linux-git-installation/\n\nhttp://help.github.com/linux-key-setup/",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "12",
+        "author": "marco antonio",
+        "email": "marcofognog@gmail.com",
+        "date": "2010-09-26 03:45:00",
+        "content": "Ol&aacute;, parab&eacute;ns pelo tutorial.\nUma sugest&atilde;o: faltou dizer como se faz para recuperar um commit.\nAbra&ccedil;o!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "13",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2010-11-15 21:32:00",
+        "content": "Para recuperar modificações há algumas possibilidades:1) O arquivo foi modificado mas ainda não foi dado commit:<code>git checkout -- arquivomodificado</code>2) O arquivo foi modificado e foi dado commit:<code>git log --pretty=oneline</code>Identifique o SHA do commit que deseja que seja o atual e substitua no comando:<code>git reset --hard b8551c9354ee071349f104e3867e57ea7b220c69</code>O problema é que pode ser que vc queira de novo as modificações e é difícil recuperar (git reflog, git log -g ), a melhor maneira é criar um branch para o código com as modificações e só depois excluir os commits no branch priincipal.Vou mostrar como funcionam branchs e merges na parte 2 do tutorial.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "14",
+        "author": "Andressa Agnhesi",
+        "email": "aramosagnhesi@gmail.com",
+        "date": "2011-02-08 02:40:00",
+        "content": "Muito bom o post!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "15",
+        "author": "Nataliel Vasconcelos",
+        "email": "nataliel.vasconcelos@gmail.com",
+        "date": "2011-02-26 01:33:00",
+        "content": "Otimo post! parabens",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "16",
+        "author": "Filipe Acácio",
+        "email": "contato@filipeacacio.com.br",
+        "date": "2011-05-25 20:18:00",
+        "content": "Ótimo post! Parabéns!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "17",
+        "author": "Régis",
+        "email": "rg3915@yahoo.com.br",
+        "date": "2011-07-07 23:49:00",
+        "content": "Codexico, como você configura esses códigos pra ficar numerado com fundo preto no blog? Eu li o código fonte da página mas não consegui.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "18",
+        "author": "Thiago Marques",
+        "email": null,
+        "date": "2011-08-01 17:56:00",
+        "content": "Muito simples e útil seu tutorial. valeo!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "19",
+        "author": "Thiago Marques",
+        "email": null,
+        "date": "2011-08-01 17:56:00",
+        "content": "Muito simples e útil seu tutorial. valeo!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "20",
+        "author": "Thiago Marques",
+        "email": null,
+        "date": "2011-08-01 17:56:00",
+        "content": "Muito simples e útil seu tutorial. valeo!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "21",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2011-08-07 18:32:00",
+        "content": "Eu uso o plugin CodeColorer: http://kpumuk.info/projects/wordpress-plugins/codecolorer/",
+        "approved": "1",
+        "parent": "17"
+      },
+      {
+        "id": "22",
+        "author": "Cássio Nandi Citadin",
+        "email": "cassionandi@gmail.com",
+        "date": "2011-09-16 12:23:00",
+        "content": "Curti o tutorial codexico. Nas várias leituras que fiz essa semana sobre o assunto, foi esse post que abriu minha mente. Esse conceito de gerenciamento local eu nunca tinha me tocado.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "23",
+        "author": "Guilherme Souza",
+        "email": "guilherme@gmrio.com",
+        "date": "2011-10-05 10:28:00",
+        "content": "Aprendi com este tutorial e já estou fazendo uso do conhecimento adquirido. Muito bacana a iniciativa. Foi muito bem detalhado e de fácil aprendizado. Parabéns!!!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "24",
+        "author": "Quelzita2008",
+        "email": "quelzita2008@gmail.com",
+        "date": "2012-01-19 00:24:00",
+        "content": "muito bom o post!! gostei e ja divulguei para alguns amigos!! ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "25",
+        "author": "Leandro Gomes da Silva",
+        "email": null,
+        "date": "2012-02-13 22:45:00",
+        "content": "Olá,, já possuía um projeto no Git mas tive que formatar  meu pc... Estou tentando continuar o projeto mas não está dando... quando dou o comando git push origin master ele retorna \"Permission denied (publickey).\nfatal: The remote end hung up unexpectedly\"",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "26",
+        "author": "Siya",
+        "email": "siya87@yahoo.com",
+        "date": "2012-02-14 07:35:00",
+        "content": "Eu não tenho palavras para apreciar este post ..... estou realmente impressionado.... a pessoa que criou este post certamente sabia bem o assunto .. obrigado por compartilhar isso conosco. \n<a href=\"http://www.mp3fundoo.in/gali-gali-mein-chor-hai-songs-mp3-download.html\" rel=\"nofollow ugc\">Gali Gali Chor Hai Songs</a>\n",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "27",
+        "author": "Simar",
+        "email": "simar98@yahoo.com",
+        "date": "2012-02-14 07:36:00",
+        "content": "Eu estava na necessidade real de tal site.I um estou muito ajudado por este sitecomo eu sempre recebo here.Thanks post de inspiração e de instrução para tomar o tempo para conversar tudo de tal maneira ao longo this.Go.\n<a href=\"http://www.mp3fundoo.in/jodi-breakers-songs-free-mp3-download.html\" rel=\"nofollow ugc\">Jodi Breakers Songs</a>",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "28",
+        "author": "Criando e usando um repositório Git &laquo; Compiladão de dicas",
+        "email": null,
+        "date": "2012-02-26 12:14:32",
+        "content": "[...] e mais opções:codexico parte 1codexico parte 2 The Git Community Book Share this:TwitterFacebookEmailPrintGostar disso:GostoSeja o [...]",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "29",
+        "author": "Diego Souza",
+        "email": "diegosouzapb@gmail.com",
+        "date": "2012-05-31 14:12:00",
+        "content": "Obrigado! me ajudou a descomplicar o Git/Github",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "30",
+        "author": "Felipe Duarte",
+        "email": "felipe.duarte55@gmail.com",
+        "date": "2012-07-06 18:26:00",
+        "content": "Prezado(a),\n\n    Muito bom este artigo meu ajudou bastante.. ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "31",
+        "author": "Ronaldo Richieri",
+        "email": null,
+        "date": "2012-07-18 23:08:00",
+        "content": "Olá! Muito fera teu tutorial! Grato! e Parabéns! ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "32",
+        "author": "Hélio Barbosa",
+        "email": null,
+        "date": "2012-08-20 20:37:00",
+        "content": "pra cada projeto (php, java, whatever) que eu crio eu tenho que criar um repositório? \nCom subversion eu tenho um repositório só e quando preciso mexer em um projeto só baixo o diretório daquele projeto, há algo parecido no git ou tenho que clonar o repositório inteiro?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "33",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2012-08-26 17:43:00",
+        "content": "Hélio, para trabalhar dessa maneira teria que clonar o repositório todo mesmo. Mas é fácil criar novos repositórios e tem a vantagem de que se der algum problema, algo que ocorre menos no git do que no svn, o problema ocorre em um só.\nCom  um repositório para cada projeto  pode-se por exemplo usar um gitignore diferente para os projetos em php e java, também o repositório não fica tão grande se for separado e se você estiver em um computador diferente é só clonar o projeto que quiser.\nO processo de deploy fica facilitado se  usar um repositório para cada projeto, você pode configurar por exemplo para enviar os arquivos ao servidor de testes ou ao de produção automaticamente dependendo de qual branch estiver usando.\nSó vejo vantagens em usar um repositório para cada projeto.",
+        "approved": "1",
+        "parent": "32"
+      },
+      {
+        "id": "34",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2012-08-26 17:49:00",
+        "content": " Hélio, para trabalhar dessa maneira teria que clonar o repositório todo mesmo. Mas é fácil criar novos repositórios e tem a vantagem de que se der algum problema, algo que ocorre menos no git do que no svn, o problema ocorre em um só.\nCom  um repositório para cada projeto  pode-se por exemplo usar um gitignore diferente para os projetos em php e java, também o repositório não fica tão grande se for separado e se você estiver em um computador diferente é só clonar o projeto que quiser.\nO processo de deploy fica facilitado se  usar um repositório para cada projeto, você pode configurar por exemplo para enviar os arquivos ao servidor de testes ou ao de produção automaticamente dependendo de qual branch estiver usando.\nSó vejo vantagens em usar um repositório para cada projeto.",
+        "approved": "1",
+        "parent": "32"
+      },
+      {
+        "id": "35",
+        "author": "robmachado",
+        "email": "linux.rlm@gmail.com",
+        "date": "2012-10-03 10:39:00",
+        "content": "Muito, mas muito útil mesmo !!! me ajudou bastante ... um excelente mini tutorial.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "36",
+        "author": "Vanderson",
+        "email": "emusic.911@gmail.com",
+        "date": "2012-10-23 17:33:00",
+        "content": "Cara muito bom o tuto aqui em, me ensinou bastante. Vaelu!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "37",
+        "author": "Renato Tavares",
+        "email": null,
+        "date": "2013-01-28 14:52:00",
+        "content": "Minha dúvida pode ser boba porém acho válida, quando estou construindo um sistema sozinho e do zero, usar GIT é uma boa pedida? estou testando aqui porém acho que ele ta me deixando pouco produtivo pois sempre tenho que alterar arquivos e corrigir bugs e construir coisas. gosto do git porém ele não seria melhor para controlar um sistema depois que ele sai do desenvolvimento? ja ganha sua primeira TAG e por ai adiante?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "38",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2013-02-16 20:15:00",
+        "content": "É Renato, muitas vezes a gente vai desenvolvendo sozinho e do zero, fazendo partes meio aleatórias do projeto, naquela fase em que na verdade a gente tá criando mesmo algo, tem muita coisa que a gente vai colocando e tirando no código muito rápido, a gente tá fazendo uma parte e descobre que precisava fazer outra antes e por aí vai, pode ser um pouco mais ágil fazer commits mais esparsos.\n\nComo vc disse, depois que o projeto estiver mais consistente aí dá pra controlar melhor.\nNesse caso acho que a melhor regra seria \"fiz algo importante que vale a pena perder algum tempinho para commitar e explicar?\".\n\nO git vai melhor quando a gente usa alguma metodologia tipo scrum ou algo assim onde a gente divide as tarefas.\nEu gosto das metodologias ágeis, mesmo quando estou fazendo algo sozinho e do zero. Na verdade eu uso pra mim mesmo GTD + pomodoro, o GTD para dividir as tarefas e o pomodoro para controlar a execução, assim eu paro de tempos em tempos para rever e que fiz e aproveito e dou um git.",
+        "approved": "1",
+        "parent": "37"
+      },
+      {
+        "id": "39",
+        "author": "Renato Tavares",
+        "email": null,
+        "date": "2013-03-19 08:49:00",
+        "content": "Obrigado pela resposta. Outra vez parabéns",
+        "approved": "1",
+        "parent": "38"
+      },
+      {
+        "id": "40",
+        "author": "Lorena Adrian",
+        "email": "lorenaadrian@gmail.com",
+        "date": "2013-03-23 18:36:00",
+        "content": "Dúvida: como faço para dar \"check out\" quando estou trabalhando com 1 solução - ou seja, tenho 1 projeto de software, vários usuários acessando esse repositório e preciso dar checkout para que outro não consiga alterar enquanto estou mexendo???",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "41",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2013-04-11 16:48:00",
+        "content": "O git não tem um needs-lock como no svn, a ideia é essa mesma, ser um sistema distribuído em que todos podem trabalhar offline e os conflitos sejam resolvidos no merge.\n\nUma opção é ter um repositório central onde você pode controlar os merges, então cada desenvolvedor manda para um branch e você decide se aquela alteração entra no repositório central, como um pull-request.\n\nQuem sabe algo como a opção core.sharedRepository pode ajudar também.",
+        "approved": "1",
+        "parent": "40"
+      },
+      {
+        "id": "42",
+        "author": "Daniel Albino",
+        "email": "daniel.albino@gmail.com",
+        "date": "2013-07-02 13:23:00",
+        "content": "Vlw bróder!!!\nEstava patinando pra configurar essa parada, mas com seu tutorial eu consegui.\n[]'s",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "43",
+        "author": "Marcelo",
+        "email": "marcelogiesel@gmail.com",
+        "date": "2013-08-19 16:17:00",
+        "content": "Valeu! Ajudou bastante,",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "44",
+        "author": "Rafael Freitas",
+        "email": "rfl.freitasm@gmail.com",
+        "date": "2013-09-28 23:38:00",
+        "content": "Seu tutorial foi de grande utilidade para mim, muito obrigado!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "45",
+        "author": "Fabiano Maximiano",
+        "email": "fabianomaximiano@hotmail.com",
+        "date": "2013-10-10 12:25:00",
+        "content": "Parabens pelo tutorial, estava levando um coro e nao sabia nem por onde começar a utilizar o GIT.\nAgora vou deixar de ser junior!!!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "46",
+        "author": "Henrique Souza",
+        "email": "8ohenrique.oliveira@gmail.com",
+        "date": "2013-10-17 16:09:00",
+        "content": "Muito bom artigo! Agora.. fiquei com uma dúvida: como faço para apagar os arquivos e diretórios do GitHub via Git?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "47",
+        "author": "Gabriel Darezzo",
+        "email": "gabrieldarezzo@hotmail.com",
+        "date": "2013-11-28 00:14:00",
+        "content": "Legal segui seu tutu e foi certinho\n\nTive problemas só pra gerar ssh\nPeguei mais info no oficial:\nhttps://help.github.com/articles/generating-ssh-keys",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "48",
+        "author": "Cléber Otaviano",
+        "email": "cleberotaviano.core@gmail.com",
+        "date": "2014-04-13 21:22:00",
+        "content": "Sensacional!!!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "49",
+        "author": "Danilo Agostinho",
+        "email": "professordanilo8@gmail.com",
+        "date": "2014-04-24 01:11:00",
+        "content": "Boas dica, apenas precisam serem atualizadas. O post foi publicado em 2010, mais ainda dá pra seguir direitinho.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "50",
+        "author": "Cerebro Vasconcelos",
+        "email": "cerebro.vasconcelos@zipmail.com.br",
+        "date": "2014-05-03 21:16:00",
+        "content": "o meu ta dando erro, não consigo commitar, num tem uma parte de uma parte de configuração de token\n\ngit config --global github.token your_token",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "51",
+        "author": "Caio Cutrim",
+        "email": "kaiocoutrim@gmail.com",
+        "date": "2014-05-16 13:18:00",
+        "content": "valeu brother :)",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "52",
+        "author": "Cornélio José Wiedemann",
+        "email": "cornelio@yopmail.com",
+        "date": "2014-06-27 16:21:00",
+        "content": "amazing brow\nvaleu ai negrao\ncurti pacas\n:D",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "53",
+        "author": "Jones",
+        "email": "jbilles@textworld.com",
+        "date": "2014-09-23 21:41:00",
+        "content": "rapaz nem sei por onde começar, não entendi nada! =/",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "54",
+        "author": "Jonatan Alves",
+        "email": "johnatansfc@gmail.com",
+        "date": "2014-10-01 09:57:00",
+        "content": "Pessoal ,  vocês conhecem uma forma de pesquisar projetos do github e retornar  com download todos os projetos de uma vez ?  Por  exemplo  na api do git (https://api.github.com/search/repositories?q=forks:20+language:java&amp;sort=stars&amp;order=desc) consigo retornar todos os projetos em java , com maiores estrelas e  com 20 forks . mas não consigo fazer download desses projetos encontrados . Não é trivial  fazer o download de um por um , seria necessário download em lote , sei ainda que o git  bloqueia  20 downloads de projetos por minuto , mas não sei como fazer estes download em lote . Alguém conhece um script que faça isso ou tem alguma ideia  ? Obrigado !",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "55",
+        "author": "kndrio",
+        "email": "knd.rio@gmail.com",
+        "date": "2014-11-19 17:28:00",
+        "content": "Faz um script dando git clone dos projetos que você encontrou.",
+        "approved": "1",
+        "parent": "54"
+      },
+      {
+        "id": "56",
+        "author": "husmeck",
+        "email": "hus-dev@outlook.com",
+        "date": "2015-06-01 13:24:00",
+        "content": "$ git remote add origin git@github.com:codexico/tutorial-github.git\n\neu tentei usando esses passos mas n vejo nada no meu github",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "57",
+        "author": "Renoir Faria",
+        "email": "renofaria@gmail.com",
+        "date": "2015-11-04 16:35:00",
+        "content": "Olá, excelente tutorial!!\n\nbtw, qual é o plugin que você usa para mostrar códigos?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "58",
+        "author": "CRISLANIO",
+        "email": "crislanio.ufc@gmail.com",
+        "date": "2016-04-01 13:17:00",
+        "content": "Muito Bom !",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "59",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2016-04-15 15:41:00",
+        "content": "O plugin é esse: https://wordpress.org/plugins/codecolorer/\nAinda bem que perguntou, fui olhar e está sem atualizações faz 2 anos, talvez seja hora de mudar, apareceram alguns problemas já, em outro post cortou um pouquinho do código.\nValeu!",
+        "approved": "1",
+        "parent": "57"
+      }
+    ]
+  },
+  "como-instalar-varios-programas-de-uma-so-vez-no-windows": {
+    "title": "Como instalar vários programas de uma só vez no Windows",
+    "name": "como-instalar-varios-programas-de-uma-so-vez-no-windows",
+    "link": "https://codexico.com.br/blog/2010/05/30/como-instalar-varios-programas-de-uma-so-vez-no-windows/",
+    "comments": [
+      {
+        "id": "60",
+        "author": "W311in",
+        "email": "w311in@gmail.com",
+        "date": "2011-01-04 23:40:00",
+        "content": "Muito bom post cara estava atras de uns programas desses, justamente por fazer manutenção em computadores.\n\nVlw pelas dicas.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "61",
+        "author": "W311in",
+        "email": "w311in@gmail.com",
+        "date": "2011-01-04 23:40:00",
+        "content": "Muito bom post cara estava atras de uns programas desses, justamente por fazer manutenção em computadores.\n\nVlw pelas dicas.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "62",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2011-01-05 13:01:00",
+        "content": "Bacana, qual vc usou?",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "como-instalar-rails-3-no-kubuntu-10-04": {
+    "title": "Como instalar Rails 3 no (k) ubuntu",
+    "name": "como-instalar-rails-3-no-kubuntu-10-04",
+    "link": "https://codexico.com.br/blog/2010/06/08/como-instalar-rails-3-no-kubuntu-10-04/",
+    "comments": [
+      {
+        "id": "63",
+        "author": "Norberto",
+        "email": "norbejunior@gmail.com",
+        "date": "2010-06-18 20:52:30",
+        "content": "&nbsp;\nOl&aacute;, mto bom o post.\n&nbsp;\nSer&aacute; que poderia me ajudar, fui criar um projeto pra testar usando o ruby 1.9.1 &quot;rails new teste&quot; e me voltou este erro\n&nbsp;\n/usr/local/lib/site_ruby/1.8/rubygems.rb:779:in `report_activate_error&#39;: Could not find RubyGem rails (&gt;= 0) (Gem::LoadError)\nfrom /usr/local/lib/site_ruby/1.8/rubygems.rb:214:in `activate&#39;\nfrom /usr/local/lib/site_ruby/1.8/rubygems.rb:1082:in `gem&#39;\nfrom /usr/bin/rails:18\n&nbsp;\neu n&atilde;o sei o que pode ser.\n&nbsp;",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "64",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2010-06-19 12:43:09",
+        "content": "<p>Norberto, &eacute; um erro meio estranho mesmo.</p>\n<p>Para conferir se as coisas est&atilde;o instaladas corretamente pode usar os comandos &quot;ruby -v&quot;, &quot;rails -v&quot;. Se n&atilde;o aparecer a vers&atilde;o q vc instalou a&iacute; pode estar faltando o passo de deixar como default:</p>\n<p>rvm --default 1.9.1</p>\n<p>Para ver se o rvm instalou tudo direitinho s&atilde;o &uacute;teis os comandos &quot;rvm list&quot; e &quot;rvm notes&quot;.</p>\n<p>O que pode estar acontecendo &eacute; algum problema no bashrc, &eacute; a parte mais chata da instala&ccedil;&atilde;o do rvm, tente refazer os passos. Qual o linux q vc est&aacute; usando?</p>\n<p>&nbsp;</p>\n<p>Aproveitando para atualizar o post, testei com o ruby 1.9.2 e funcionou tudo normalmente, vou arrumar as instru&ccedil;&otilde;es.</p>\n<p>Pode ser uma outra tentativa pra vc, instalar a vers&atilde;o 1.9.2 pode ser que resolva este problema. Depois diga como resolveu para que eu possa corrigir alguma coisa nas instru&ccedil;&otilde;es e obrigado pelo feedback.</p>",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "65",
+        "author": "Gabriel F. Vilar ( CoGUMm )",
+        "email": "cogumm@gmail.com",
+        "date": "2010-08-24 10:33:46",
+        "content": "Codexico, eu utilizava o Rails 2.3.8 e depois que atualizei para o Rails 3.0.0.rc2 seguindo o seu tutorial, fiquei com o mesmo problema do Noberto, j&aacute; tentei v&aacute;rias coisa e n&atilde;o conseguir. Ser&aacute; que voc&ecirc; poderia nos ajudar?\nAbra&ccedil;os e parab&eacute;ns pelo blog!!\n<blockquote>\n\t&nbsp;\n\t/usr/local/lib/site_ruby/1.8/rubygems.rb:779:in `report_activate_error&#039;: Could not find RubyGem rails (&gt;= 0) (Gem::LoadError)\n\tfrom /usr/local/lib/site_ruby/1.8/rubygems.rb:214:in `activate&#039;\n\tfrom /usr/local/lib/site_ruby/1.8/rubygems.rb:1082:in `gem&#039;\n\tfrom /usr/bin/rails:18\n\t&nbsp;\n</blockquote>\n",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "66",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2010-08-27 20:24:59",
+        "content": "<p>Gabriel e Norberto, testei novamente e a instala&ccedil;&atilde;o continua funcionando. Mas tenho algumas suspeitas:</p>\n<p>&nbsp;</p>\n<p>1) Como vc j&aacute; usava o rails antes (o tutorial &eacute; para sistemas novos) talvez tenha que desinstalar o rails antigo, mas acho essa a causa menos prov&aacute;vel do problema. Instalei o rails antigo e n&atilde;o deu conflito nenhum aqui.</p>\n<p>2) &quot;sudo&quot; &eacute; s&oacute; no primeiro comando, os outros s&atilde;o como usu&aacute;rio comum. Confira se vc n&atilde;o fez por exemplo &quot;sudo gem install rails --pre&quot;.</p>\n<p>3) Como ficou seu .bashrc? O rvm deve ser a &uacute;ltima coisa.</p>\n<p>4) Tem mais algumas dicas no site do rvm: http://rvm.beginrescueend.com/rvm/install/</p>\n<p>&nbsp;</p>\n<p>Se o problema persistir verifique a sa&iacute;da dos comandos rvm -v, ruby -v, rails -v, rvm notes, rvm info, type rvm | head -n1, qualquer problema envie o resultado.</p>\n<p>Se mesmo assim n&atilde;o funcionar eu fa&ccedil;o outros testes instalando primeiro o rails 2.3.8 e depois o rvm para ver se consigo reproduzir o erro.</p>\n<p>E se der certo n&atilde;o esque&ccedil;a de voltar e dizer como foi para que outros possam aproveitar tamb&eacute;m !!</p>",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "67",
+        "author": "Gabriel F. Vilar ( CoGUMm )",
+        "email": "cogumm@gmail.com",
+        "date": "2010-08-28 11:36:02",
+        "content": "Ol&aacute;, eu conseguir depois que dei um gem update --system e um gem install rails --pre que ele instalou o Rails rc2.\nFora isso tudo rodando bem!!\n&nbsp;\nParab&eacute;ns!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "68",
+        "author": "Ruan",
+        "email": "ruanmer@gmail.com",
+        "date": "2010-09-20 01:47:10",
+        "content": "muito bom o tuto!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "69",
+        "author": "Felypeguimaraes",
+        "email": "felypeguimaraes@hotmail.com",
+        "date": "2011-03-14 16:06:00",
+        "content": "bom cara vlw pelo post mas lembra a galera de colocar sudo so no primeiro comando se colocar sudo no rvm nao funciona blza",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "70",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2011-03-18 11:53:00",
+        "content": "Bem lembrado Felype, usar sudo nos outros comandos não vai funcionar. Já coloquei um alerta no início do post. \nValeu!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "71",
+        "author": "Anderson Felix",
+        "email": null,
+        "date": "2011-05-14 15:05:00",
+        "content": " Problema com Item 2:\n\nEntrei no link de referência: https://rvm.beginrescueend.com/\nE usei esse comando:\n $ bash &lt; &lt;(curl -s https://rvm.beginrescueend.com/install/rvm)\n",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "72",
+        "author": "Anderson Felix",
+        "email": null,
+        "date": "2011-05-14 15:07:00",
+        "content": " Outra coisa, para rodar a aplicação ao invés de: rails -s \nQue gerou um erro de comando.\n\nUltilizei: rails server",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "73",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2011-05-15 00:12:00",
+        "content": "Valeu Anderson, já atualizei o comando de instalação do rvm.\nO comando para ligar o servidor é \"rails s\", sem hífen. É só uma abreviação do \"rails server\".\n\nOutros comandos têm abreviações, \"rails console\" pode ser somente \"rails c\".\n",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "74",
+        "author": "Pedro Araujo de Andrade",
+        "email": "peuweb@gmail.com",
+        "date": "2011-10-22 13:12:00",
+        "content": "Cara, muito obrigado. Eu tive sérios problemas tentando instalar no ubuntu em uma máquina virtual. Com esse tutorial consegui fazer tudo funcionar.  Quando digitei rvm --default 1.9.2 ele nao trocou a versão. digitei ruby -v e ainda estava a 1.8.6. \n\nDai digitei rvm --default 1.8.6\no rvm deu o erro que ja esperava, disse que não tinah essa versao do ruby para o RVM. então digitei rvm --defaul 1.9.2 novamente\n\ndai rolou. Não sei o que aconteceu, mas tá rolando agora.",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "porque-fiz-o-ttlocal": {
+    "title": "Por que fiz o http://ttlocal.info",
+    "name": "porque-fiz-o-ttlocal",
+    "link": "https://codexico.com.br/blog/2010/07/26/porque-fiz-o-ttlocal/",
+    "comments": [
+      {
+        "id": "75",
+        "author": "Luiza",
+        "email": "luizamcf@gmail.com",
+        "date": "2010-07-26 22:30:03",
+        "content": "Achei muito interessante. Acho que vale colocar um link para um google search em cada topic, assim a gente j&aacute; fica sabendo qual &eacute; a fofoca da vez. :D\nBeijos e parab&eacute;ns!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "76",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2010-08-05 01:54:58",
+        "content": "Valeu Luiza, já coloquei o link lá. \n\nAproveitei e fiz um plugin pra jQuery que aciona o link automaticamente, não precisa nem clicar, basta deixar o mouse em cima por 2 segundos. Será o próximo post : )",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "77",
+        "author": "teste",
+        "email": "teste@yahoo.com.br",
+        "date": "2010-09-10 15:00:32",
+        "content": " alert('teste'); ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "78",
+        "author": "admin",
+        "email": "francisco.kahil@gmail.com",
+        "date": "2010-09-10 17:39:28",
+        "content": "<p>Engra&ccedil;adinho o figura a&iacute; acima hein?</p>\n<p>alert('teste');</p>",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "79",
+        "author": "ferrugis",
+        "email": "eduardo.hillebrand@gmail.com",
+        "date": "2011-05-11 17:27:00",
+        "content": "tinha que pensar melhor .. ele teria que no minimo digitar \nalert('teste :D')",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "80",
+        "author": "ferrugis",
+        "email": "eduardo.hillebrand@gmail.com",
+        "date": "2011-05-11 17:27:00",
+        "content": "tinha que pensar melhor .. ele teria que no minimo digitar \nalert('teste :D')",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "81",
+        "author": "ferrugis",
+        "email": "eduardo.hillebrand@gmail.com",
+        "date": "2011-05-11 17:27:00",
+        "content": "tinha que pensar melhor .. ele teria que no minimo digitar \nalert('teste :D')",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "82",
+        "author": "Deusa Luh",
+        "email": "deusados7mares@hotmail.com",
+        "date": "2013-07-30 15:16:00",
+        "content": "Gostaria muito de usá-lo no meu blog. Onde coloco-os no meu HTML?",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "copiar-ou-clonar-uma-vm-no-virtualbox-e-facil": {
+    "title": "Copiar ou clonar uma VM no VirtualBox é fácil",
+    "name": "copiar-ou-clonar-uma-vm-no-virtualbox-e-facil",
+    "link": "https://codexico.com.br/blog/2010/08/31/copiar-ou-clonar-uma-vm-no-virtualbox-e-facil/",
+    "comments": [
+      {
+        "id": "83",
+        "author": "David",
+        "email": "asd@asd.net",
+        "date": "2011-09-30 23:29:00",
+        "content": "nao funcionou na versão 4.0.6\n",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "84",
+        "author": "Jao",
+        "email": "sahdkahdf@hotmail.com",
+        "date": "2012-03-15 16:21:00",
+        "content": "Deu Certo Parabéns!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "85",
+        "author": "Juliano Costa",
+        "email": "julianogpc@gmail.com",
+        "date": "2013-01-17 20:27:00",
+        "content": "Parabéns, ajudou bastante.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "86",
+        "author": "Yago Ernandes",
+        "email": "yago_ernandes@hotmail.com",
+        "date": "2013-03-08 16:55:00",
+        "content": "Mas tem um botão de clonar, não sei se na sua versão não tinha, é só ir na janela de \"Gerenciador de Mídias Virtuais\" no menu Arquivo e selecionar o vdi que vc quer clonar e clicar em Copiar...",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "87",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2013-03-19 00:43:00",
+        "content": "É, agora tá bem mais fácil. Como eu disse no post \" mais fácil que isso só se tivesse um botão “Clonar”!\".",
+        "approved": "1",
+        "parent": "86"
+      },
+      {
+        "id": "88",
+        "author": "ArmxVogel",
+        "email": "armstrong_v23@live.com",
+        "date": "2013-09-04 01:19:00",
+        "content": "E agora existe o botão \"Clonar\".. kkkkk",
+        "approved": "1",
+        "parent": "87"
+      },
+      {
+        "id": "89",
+        "author": "Natan Felles",
+        "email": "contato@natanfelles.com",
+        "date": "2014-02-21 12:10:00",
+        "content": "Parabéns!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "112",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2010-10-31 02:09:00",
+        "content": "comentário de teste do disqus",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "2",
+        "author": "Alfredo Cuaresma",
+        "email": "alfredocuaresma@yahoo.es",
+        "date": "2010-02-28 12:04:35",
+        "content": "Hello,\ni have read your issue with cakephp:\nhttp://cakephp.lighthouseapp.com/projects/42648/tickets/317\n\ni have the same problem. Have you solved yours one with the advice they have given? Any feedback would be welcome.\n\nO brigado!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "3",
+        "author": "pritt",
+        "email": "melo.priscilla@gmail.com",
+        "date": "2011-02-01 18:37:00",
+        "content": "Que legal que está isso aqui franshine!!! adorei :)\nbjs\npritt",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "simbolos-para-usar-no-twitter": {
+    "title": "Símbolos para usar no twitter",
+    "name": "simbolos-para-usar-no-twitter",
+    "link": "https://codexico.com.br/blog/2010/10/07/simbolos-para-usar-no-twitter/",
+    "comments": [
+      {
+        "id": "90",
+        "author": "Thaís",
+        "email": null,
+        "date": "2011-07-06 22:14:00",
+        "content": "uhuuuuuuuuuuuuuuuu",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "91",
+        "author": "nanim~",
+        "email": "nanim@hotmail.com",
+        "date": "2011-08-05 20:02:00",
+        "content": "poderia haver uma opção pra acrescentar mais símbolos, sério, tem pouquinho D':",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "92",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2011-08-07 18:22:00",
+        "content": "Boa ideia nanim, na última atualização do plugin para o Chrome já coloquei mais abas para novos símbolos, mas dá um certo trabalho pegar todos, tenho atualizado quando dá tempo.\nPensei em criar uma aba extra para o usuário colocar seus preferidos, acho que seria a solução para vc né?\nO código é aberto, se quiser colaborar pode editar no link https://github.com/codexico/UTF-8-Chrome-Extension/blob/master/popup.html\nValeu!\n\n",
+        "approved": "1",
+        "parent": "91"
+      },
+      {
+        "id": "93",
+        "author": "Anna Carolina ✓",
+        "email": null,
+        "date": "2011-09-30 12:32:00",
+        "content": "Ameii ! ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "94",
+        "author": "Maria do carmo",
+        "email": "mariuka@twitter.com",
+        "date": "2011-12-26 17:06:00",
+        "content": "ñ expllica muito bem!☹i love lua blanco☠",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "95",
+        "author": "Mariana",
+        "email": "mariana@bol.com.br",
+        "date": "2012-02-01 23:28:00",
+        "content": "aqui não abre todos os coisinhas D:",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "96",
+        "author": "caroline silveira",
+        "email": "caroline-machado66@hotmail.com",
+        "date": "2012-02-29 20:14:00",
+        "content": " tem muito pouca frase☹",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "97",
+        "author": "Laurasherllen",
+        "email": "laurasherllen@hotmail.com",
+        "date": "2012-04-08 18:21:00",
+        "content": "Ameiii oos simbulooos ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "98",
+        "author": "débora",
+        "email": "deu.08gata@hotmail.com",
+        "date": "2012-04-09 14:13:00",
+        "content": "oche tem muita pouca coisa eu a posto que tem VARIAS coisas ne outro SITE",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "99",
+        "author": "❤☾♬ℓµเžล ♫ ♪ ♩",
+        "email": null,
+        "date": "2012-07-22 17:35:00",
+        "content": "Hey..Me segue eu sigo de volta...@LuluRPS",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "100",
+        "author": "❤☾♬ℓµเžล ♫ ♪ ♩",
+        "email": null,
+        "date": "2012-07-22 17:35:00",
+        "content": "Hey..Me segue eu sigo de volta...@LuluRPS",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "101",
+        "author": "The Vampire Diaries™",
+        "email": null,
+        "date": "2012-08-14 20:37:00",
+        "content": "Sigam no twitter @TaisinhaGuedes:twitter Eu sigo t-o-d-o-s de volta! ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "102",
+        "author": "The Vampire Diaries™",
+        "email": null,
+        "date": "2012-08-14 20:37:00",
+        "content": "Sigam no twitter @TaisinhaGuedes:twitter Eu sigo t-o-d-o-s de volta! ",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "103",
+        "author": "dani",
+        "email": "dani_zinhas2@hotmail.com",
+        "date": "2012-10-14 00:26:00",
+        "content": "Me sigam no  twitter \n@_4iis20",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "104",
+        "author": "lara",
+        "email": "lara_015@live.com",
+        "date": "2012-11-12 21:15:00",
+        "content": "segue ? https://twitter.com/KissMeBabyhaha_",
+        "approved": "1",
+        "parent": "90"
+      },
+      {
+        "id": "105",
+        "author": "Ela é do Rap☞",
+        "email": null,
+        "date": "2012-11-20 13:56:00",
+        "content": "mina segui aki q eu suigoo de voolta só avisar rs https://twitter.com/viibittencourth",
+        "approved": "1",
+        "parent": "100"
+      },
+      {
+        "id": "106",
+        "author": "Marida da Emma ✍",
+        "email": null,
+        "date": "2013-02-24 20:45:00",
+        "content": "adorei site mt bom",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "107",
+        "author": "Karolina Oliveira",
+        "email": "karol00@hotmail.com",
+        "date": "2013-09-27 12:53:00",
+        "content": "https://twitter.com/AKAROL92 ' sigam-me os bons *-*",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "108",
+        "author": "André",
+        "email": "andre_gostoso_lindo_100@hotmail.com",
+        "date": "2014-07-08 11:19:00",
+        "content": "Segue https://twitter.com/878793218581599",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "109",
+        "author": "issabella",
+        "email": "isabella.aparecida22@gmail.com",
+        "date": "2014-10-27 22:45:00",
+        "content": "concoordo!!!",
+        "approved": "1",
+        "parent": "91"
+      },
+      {
+        "id": "110",
+        "author": "issabella",
+        "email": "isabella.aparecida22@gmail.com",
+        "date": "2014-10-27 22:47:00",
+        "content": "Lgll mais acho que poderia ter mais simbolos sla ficaria mais legal mais adoreii '-'",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "111",
+        "author": "Sky",
+        "email": "sofiarf27@gmail.com",
+        "date": "2015-03-07 14:50:00",
+        "content": "Símbolo de âncora?",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "tutorial-simples-formas-basicas-do-canvas-no-html5": {
+    "title": "Tutorial simples: Formas básicas do canvas no html5",
+    "name": "tutorial-simples-formas-basicas-do-canvas-no-html5",
+    "link": "https://codexico.com.br/blog/2010/10/17/tutorial-simples-formas-basicas-do-canvas-no-html5/",
+    "comments": [
+      {
+        "id": "113",
+        "author": "Conectt | HTML5: TOP 10 – impactos do modelo - Conectt",
+        "email": null,
+        "date": "2015-01-28 10:29:48",
+        "content": "[&#8230;] feito com o Canvas 2D Context pode ser feito com outros métodos (SVG, WebGL, CSS3). Exemplo em: http://codexico.com.br/blog/html5/tutorial-simples-formas-basicas-do-canvas-no-html5/  5. Tipos de Dados Binários Javascript nasceu para fazer validação textual em formulários. No [&#8230;]",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "tutorial-simples-parte-2-git-branch-e-merge": {
+    "title": "Tutorial simples parte 2: git branch e merge",
+    "name": "tutorial-simples-parte-2-git-branch-e-merge",
+    "link": "https://codexico.com.br/blog/2010/11/16/tutorial-simples-parte-2-git-branch-e-merge/",
+    "comments": [
+      {
+        "id": "114",
+        "author": "Pedro",
+        "email": "pedroj120@gmail.com",
+        "date": "2010-12-14 13:02:00",
+        "content": "Muito bacana o tutorial... Me ajudou bastante ! Valeu!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "115",
+        "author": "Lau",
+        "email": "laucode@gmail.com",
+        "date": "2010-12-23 03:35:00",
+        "content": "Muito bom, tirou muitas dúvidas. Parabéns!",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "116",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2010-12-28 14:54:00",
+        "content": "@Pedro, @Lau, muito obrigado! Assim me motiva a continuar.\n\nSugestões para a parte 3?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "117",
+        "author": "svgit",
+        "email": "daveps@gmail.com",
+        "date": "2011-02-07 18:44:00",
+        "content": "Poderia falar sobre o dia-a-dia, por exemplo, reverter um arquivo para revisão X. Até o momento, o tutorial cobre as possibilidades de um programador infalível! ;)",
+        "approved": "1",
+        "parent": "116"
+      },
+      {
+        "id": "118",
+        "author": null,
+        "email": "codexico@gmail.com",
+        "date": "2011-02-07 23:42:00",
+        "content": "svgit, verdade!\nMas programadores são falíveis? Controle de versão é frescura de quem se diz 'agile'! Hehehe, brincadeira ;)\n\nAté escrevi rapidamente como recuperar commits em um comentário na parte 1 do tutorial, como vc é a segunda pessoa a solicitar esse tipo de informação acho que focarei neste assunto o próximo post.\n\nObrigado pelo feedback.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "119",
+        "author": "Julio Bitencourt",
+        "email": "jc_bitencourt@hotmail.com",
+        "date": "2011-03-23 17:35:00",
+        "content": "Não entendi bem o que fazer no momento que aparece o bug. Em qual branch eu executo o comando git checkout -b bug42 ?\n\nVolto para o master ou mantem no funcionalidadeX?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "120",
+        "author": "Cássio Nandi Citadin",
+        "email": "cassionandi@gmail.com",
+        "date": "2011-10-05 19:44:00",
+        "content": "codexico, tb fiquei com uma dúvida sobre o momento em que aparece o bug.\nQuando vc execuou o checkout -b bug42, foi criado um novo branch que era cópia do branch onde vc estava trabalhando, no caso o funcionalidadex. Mas o bug42 apareceu (ou deu a entender) na versão estável (master), então deveria primeiro ter mudado pro master. É isso ou eu to viajando?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "121",
+        "author": "Jonhnny Werlley",
+        "email": "jonhnny.werlley.s.s@gmail.com",
+        "date": "2012-01-14 14:35:00",
+        "content": "Muito bom mesmo! Parabens",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "122",
+        "author": "justme",
+        "email": "felipesouza@gmail.com",
+        "date": "2012-02-09 05:38:00",
+        "content": "Excelente turorial. Era o que eu buscava. Algo rápido, simples mas ao mesmo tempo abrangendo coisas típicas do dia a dia. Muito bom .Ve se nao demoa fazer a parte 3 em ..rs... brincadeirinha ;)",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "123",
+        "author": "Criando e usando um repositório Git &laquo; Compiladão de Dicas",
+        "email": null,
+        "date": "2012-02-26 16:37:43",
+        "content": "[...] e mais opções:codexico parte 1codexico parte 2 The Git Community Book Share this:TwitterFacebookEmailPrintGostar disso:GostoSeja o primeiro a [...]",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "124",
+        "author": "blueskypoa",
+        "email": "bluesky.poa@gmail.com",
+        "date": "2013-03-07 13:08:00",
+        "content": "Excelente. Muito bom e pratico. Obrigado por compartilhar.",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "125",
+        "author": "Henrique Santana",
+        "email": "henricke.ss@gmail.com",
+        "date": "2014-06-08 21:03:00",
+        "content": "Melhor explicação , estava perdido nesse merge ai. Valeu memso",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "126",
+        "author": "Mikael Lemos",
+        "email": "kalel157@live.com",
+        "date": "2015-01-01 11:55:00",
+        "content": "Cara valeu, esse tutorial me ajudou muito !!!!",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  },
+  "diy-slideshow-em-jquery": {
+    "title": "DIY - slideshow em jQuery",
+    "name": "diy-slideshow-em-jquery",
+    "link": "https://codexico.com.br/blog/2010/12/15/diy-slideshow-em-jquery/",
+    "comments": [
+      {
+        "id": "127",
+        "author": "Aviso",
+        "email": "aviso@gmail.com",
+        "date": "2013-04-01 18:08:00",
+        "content": "As demos não estão funcionando...",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "128",
+        "author": "codexico",
+        "email": "codexico@gmail.com",
+        "date": "2013-04-11 17:08:00",
+        "content": "Puxa, obrigado pelo aviso, os links estavam relativos, aí apareciam na home do blog mas não na interna, já arrumei, valeu!",
+        "approved": "1",
+        "parent": "127"
+      },
+      {
+        "id": "129",
+        "author": "Wilson",
+        "email": "wm.lavrador@uol.com.br",
+        "date": "2013-04-17 16:42:00",
+        "content": "Como faz um auto play e com stop simples ?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "130",
+        "author": "E. NETO",
+        "email": "elmoneto99@gmail.com",
+        "date": "2014-07-30 00:41:00",
+        "content": "Pessoal, peço desculpas caso esteja sendo ignorante, mas onde fica o '\"else\" dessa parte:\n    if(!$slideativo.size()) $slideativo = $('#slides').find(\"li\").first();\n\nou melhor, porque não é necessário o \"else\" nesse caso?",
+        "approved": "1",
+        "parent": "0"
+      },
+      {
+        "id": "131",
+        "author": "Emerson Thompson",
+        "email": "thompson.emerson@gmail.com",
+        "date": "2015-01-22 12:50:00",
+        "content": "E para ele ficar mudando sozinho, como faço? Já tentei adicionar um setimeout mas não rolou :(",
+        "approved": "1",
+        "parent": "0"
+      }
+    ]
+  }
+}

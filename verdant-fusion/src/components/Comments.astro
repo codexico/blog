@@ -1,0 +1,17 @@
+---
+const { comentariosDoPost } = Astro.props;
+---
+
+{
+  comentariosDoPost.length > 0 && (
+    <section class="comments-section">
+      <h3>Comentários</h3>
+      {comentariosDoPost.map((c) => (
+        <div class="comment">
+          <strong>{c.author}</strong>&nbsp;<small>{c.date}</small>
+          <p>{c.content}</p>
+        </div>
+      ))}
+    </section>
+  )
+}

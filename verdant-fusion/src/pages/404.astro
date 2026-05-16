@@ -1,0 +1,45 @@
+---
+// src/pages/404.astro
+
+export const prerender = false; // Força esta rota a rodar sob demanda na Cloudflare Edge
+
+import { getCollection } from "astro:content";
+
+const url = new URL(Astro.request.url);
+const pathSegments = url.pathname.split("/").filter(Boolean);
+
+// Proteção contra loops infinitos caso a rota falhe
+if (pathSegments.length === 0) {
+  return Astro.redirect("/");
+}
+
+// Extrai o slug final da requisição (ex: de /2026/05/16/meu-post, captura "meu-post")
+const lastSegment = pathSegments[pathSegments.length - 1];
+
+// Busca o arquivo Markdown local correspondente
+const allPosts = await getCollection("blog");
+const matchingPost = allPosts.find((post) => {
+  return post.id === lastSegment;
+});
+
+if (matchingPost) {
+  // Constrói o novo destino canônico simplificado: /blog/id/
+  const correctUrl = `/blog/${matchingPost.id}/`;
+
+  // Executa o redirecionamento 301 de servidor seguro para o Google
+  return Astro.redirect(correctUrl, 301);
+}
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Página não encontrada</title>
+  </head>
+  <body>
+    <h1>Erro 404</h1>
+    <p>O conteúdo que você procura foi movido ou não existe.</p>
+    <a href="/">Voltar para a Home</a>
+  </body>
+</html>
