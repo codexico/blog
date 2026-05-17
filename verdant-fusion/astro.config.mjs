@@ -7,9 +7,8 @@ import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  //   output: "hybrid",
   adapter: cloudflare(),
-  site: "https://example.com",
+  site: "https://codexico.com.br",
   integrations: [mdx(), sitemap()],
   redirects: {
     "/": "/blog",

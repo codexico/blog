@@ -18,7 +18,6 @@ const post = Astro.props;
 const { Content } = await render(post);
 
 const comentariosDoPost = (commentList as CommentList)[post.id]?.comments || [];
-console.log({ comentariosDoPost });
 ---
 
 <BlogPost {...post.data}>
