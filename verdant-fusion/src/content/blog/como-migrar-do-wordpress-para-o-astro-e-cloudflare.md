@@ -2,6 +2,7 @@
 title: "Como migrar do WordPress para o Astro e Cloudflare"
 pubDate: 2026-05-16
 description: "Um manual prático de como migrar seu blog para o Astro, mudar a estrutura de links para /blog/slug e replicar o redirecionamento canônico do WordPress de graça na Cloudflare."
+heroImage: ../../assets/wp_to_astro.png
 draft: true
 ---
 

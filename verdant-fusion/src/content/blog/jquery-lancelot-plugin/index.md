@@ -10,7 +10,7 @@ tags:
   - "jquery"
   - "plugin"
 
-// heroImage: "../../assets/blog-placeholder-3.jpg"
+# heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
 Este plugin serve para substituir o click do mouse por um hover.

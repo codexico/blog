@@ -9,19 +9,36 @@ import type { CommentList } from "../../types/comments";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  return posts.map((post) => ({
-    params: { slug: post.id },
-    props: post,
-  }));
+  return posts
+    .filter((post) => {
+      if (import.meta.env.MODE !== "development" && post.data.draft) {
+        return false;
+      }
+      return true;
+    })
+    .map((post) => ({
+      params: { slug: post.id },
+      props: post,
+    }));
 }
 
 const post = Astro.props;
+const draft = Astro.props.data.draft || false;
 const { Content } = await render(post);
 
 const comentariosDoPost = (commentList as CommentList)[post.id]?.comments || [];
 ---
 
 <BlogPost {...post.data}>
+  {
+    draft && (
+      <div style="background-color: #b75050; padding: 1em; border-radius: 8px; margin-bottom: 1em; text-align: center;">
+        <strong>
+          Este post está em rascunho e não é visível para o público.
+        </strong>
+      </div>
+    )
+  }
   <Content />
   <Comments comentariosDoPost={comentariosDoPost} />
 </BlogPost>
