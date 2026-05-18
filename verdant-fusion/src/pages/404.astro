@@ -1,45 +1,24 @@
 ---
 // src/pages/404.astro
-
+// Primeiro tenta encontrar um post correspondente ao slug da URL,
+// se encontrar, redireciona para a URL canônica do post.
+// Se não encontrar, exibe a página 404 personalizada.
 export const prerender = false; // Força esta rota a rodar sob demanda na Cloudflare Edge
 
-import { getCollection } from "astro:content";
+import { postRedirectHandler } from "../utils/posts";
 
-const url = new URL(Astro.request.url);
-const pathSegments = url.pathname.split("/").filter(Boolean);
+const redirectResult = await postRedirectHandler(Astro.request.url);
 
-// Proteção contra loops infinitos caso a rota falhe
-if (pathSegments.length === 0) {
-  return Astro.redirect("/");
+if (redirectResult) {
+  return Astro.redirect(redirectResult.url, redirectResult.status);
 }
 
-// Extrai o slug final da requisição (ex: de /2026/05/16/meu-post, captura "meu-post")
-const lastSegment = pathSegments[pathSegments.length - 1];
-
-// Busca o arquivo Markdown local correspondente
-const allPosts = await getCollection("blog");
-const matchingPost = allPosts.find((post) => {
-  return post.id === lastSegment;
-});
-
-if (matchingPost) {
-  // Constrói o novo destino canônico simplificado: /blog/id/
-  const correctUrl = `/blog/${matchingPost.id}/`;
-
-  // Executa o redirecionamento 301 de servidor seguro para o Google
-  return Astro.redirect(correctUrl, 301);
-}
+// Se não encontrar nenhum post correspondente, renderiza a página 404 personalizada
+import Layout from "../layouts/Page.astro";
 ---
 
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Página não encontrada</title>
-  </head>
-  <body>
-    <h1>Erro 404</h1>
-    <p>O conteúdo que você procura foi movido ou não existe.</p>
-    <a href="/">Voltar para a Home</a>
-  </body>
-</html>
+<Layout title="Página não encontrada" description="Sobre mim e sobre o blog">
+  <h1>Erro 404</h1>
+  <p>O conteúdo que você procura foi movido ou não existe.</p>
+  <a href="/">Voltar para a Home</a>
+</Layout>
