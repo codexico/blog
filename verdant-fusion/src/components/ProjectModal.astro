@@ -27,6 +27,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
           class="modal-main-img"
           width={project.image.width}
           height={project.image.height}
+          widths={[240, 540, 720, project.image.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${project.image.width}px`}
         />
       ) : (
         project.image && (
@@ -50,6 +52,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
               class="gallery-thumb"
               width={project.image.width}
               height={project.image.height}
+              widths={[240, 540, 720, project.image.width]}
+              sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${project.image.width}px`}
               onmouseover="this.style.transform='scale(1.05)'"
               onmouseout="this.style.transform='scale(1)'"
             />
@@ -76,6 +80,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                   class="gallery-thumb"
                   width={g.width}
                   height={g.height}
+                  widths={[240, 540, 720, g.width]}
+                  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${g.width}px`}
                   onmouseover="this.style.transform='scale(1.05)'"
                   onmouseout="this.style.transform='scale(1)'"
                 />
@@ -254,6 +260,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     mainImg.style.opacity = "0.7";
     setTimeout(() => {
       mainImg.src = target.src;
+      if (target.srcset) mainImg.srcset = target.srcset;
+      if (target.sizes) mainImg.sizes = target.sizes;
       mainImg.style.opacity = "1";
     }, 50);
   };

@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 
 interface Props {
     imagesAndTitles: {
@@ -58,11 +58,15 @@ function spread(index: number, total: number) {
                     style={`left: ${left}; top: ${top}; transform: rotate(${rotate}deg); z-index: ${zIndex};`}
                 >
                     {images[img.src] ? (
-                        <Image
+                        <Picture
                             src={images[img.src]()}
                             alt={title}
                             width={img.width}
                             height={img.height}
+                            widths={[140, 190, 380]}
+                            sizes="(max-width: 768px) 140px, 190px"
+                            formats={['avif', 'webp']}
+                            fallbackFormat="jpg"
                             loading="lazy"
                         />
                     ) : (
