@@ -8,7 +8,9 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
+);
 ---
 
 <dialog id={`modal-${project.id}`} class="project-modal">
@@ -26,18 +28,44 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{j
           width={project.image.width}
           height={project.image.height}
         />
-      ) : project.image && (
-        <img
-          src={project.image.src}
-          alt={project.title}
-          class="modal-main-img"
-        />
+      ) : (
+        project.image && (
+          <img
+            src={project.image.src}
+            alt={project.title}
+            class="modal-main-img"
+          />
+        )
       )
     }
 
     {
       project.gallery && project.gallery.length > 0 && (
         <div class="modal-gallery-container">
+          {project.image && images[project.image.src] ? (
+            <Image
+              src={images[project.image.src]()}
+              alt={`${project.title} screenshot`}
+              loading="lazy"
+              class="gallery-thumb"
+              width={project.image.width}
+              height={project.image.height}
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+            />
+          ) : (
+            project.image && (
+              <img
+                src={project.image.src}
+                alt={`${project.title} screenshot`}
+                loading="lazy"
+                class="gallery-thumb"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+              />
+            )
+          )}
+
           {project.gallery.map((g) => {
             if (images[g.src]) {
               return (
@@ -70,7 +98,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{j
 
     <h2>{project.title}</h2>
     <span class="year">
-      {project.category.join(", ")} &bull; {project.year || ""}
+      {project.category.map((c) => c.title).join(", ")} &bull; {
+        project.year || ""
+      }
     </span>
 
     {
@@ -104,18 +134,21 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{j
   dialog {
     border: 1px solid var(--line-shadow-color);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.5rem;
+    box-sizing: border-box; /* Isso garante que o modal tenha exatamente 90% de largura, sem o padding somar a mais */
     max-width: 700px;
     width: 90%;
     background: var(--background);
     color: var(--text-color);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-height: 90vh;
+    margin: auto;
+    max-height: calc(100vh - 4rem);
     overflow-y: auto;
+  }
+  @media (min-width: 768px) {
+    dialog {
+      padding: 2rem;
+    }
   }
   dialog::backdrop {
     background: rgba(0, 0, 0, 0.7);
@@ -124,16 +157,26 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{j
   .dialog-close {
     position: absolute;
     top: 1rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    font-size: 2rem;
+    right: 1rem;
+    background: var(--background);
+    border: 1px solid var(--line-shadow-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    line-height: 1;
     cursor: pointer;
     color: var(--text-color);
-    transition: color 0.2s;
+    transition: all 0.2s;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   .dialog-close:hover {
     color: var(--title-hover);
+    transform: scale(1.1);
   }
 
   .modal-main-img {
