@@ -9,11 +9,11 @@ export const projectCategories: Record<ProjectCategoryKey, ProjectCategory> = {
   featured: { title: "Projetos em Destaque", description: "Projetos onde mais trabalhei ou tem algo interessante" },
   websites: { title: "Websites", description: "Diversos tipos de sites com diferentes tecnologias" },
   extensions: { title: "Extensões para Navegadores", description: "Extensões para navegadores" },
+  freelancer: { title: "Freelancer", description: "Trabalhos freelance" },
   mobile: { title: "Aplicativos para celulares", description: "Aplicativos para celulares" },
   ia: { title: "IA", description: "Projetos de Inteligência Artificial" },
-  plugins: { title: "Plugins", description: "Plugins jQuery" },
   personal: { title: "Projetos Pessoais", description: "Projetos Pessoais" },
-  freelancer: { title: "Freelancer", description: "Trabalhos freelance" },
+  plugins: { title: "Plugins", description: "Plugins jQuery" },
   openSource: { title: "Open Source", description: "Projetos e contribuições de código aberto" },
   others: { title: "Outros", description: "Outros" }
 } as const;
@@ -39,10 +39,11 @@ export const projects: Project[] = [
     title: "App EITA Pegadas",
     category: [projectCategories.featured, projectCategories.mobile, projectCategories.openSource,],
     shortDescription: "Aplicativo React Native com geolocalização e NoSQL offline-first.",
-    description: "Desenvolvimento de uma aplicação React Native com geolocalização, bancos de dados NoSQL offline assíncronos, sincronização entre celulares sem internet, Material UI e animações. https://gitlab.com/eita/pegadas/pegadas-app",
+    description: "Desenvolvimento de uma aplicação React Native para a Cooperativa EITA, com geolocalização, bancos de dados NoSQL offline assíncronos, sincronização entre celulares sem internet, Material UI e animações. https://gitlab.com/eita/pegadas/pegadas-app",
     image: { src: "/src/assets/projetos/eita/play_store.webp", width: 983, height: 908 },
     link: "https://eita.coop.br/",
     gallery: [
+      { src: "/src/assets/projetos/eita/pegadas.webp", width: 522, height: 1028 },
       { src: "/src/assets/projetos/eita/perfil.webp", width: 296, height: 592 },
       { src: "/src/assets/projetos/eita/pesca.webp", width: 296, height: 592 },
       { src: "/src/assets/projetos/eita/especies.webp", width: 305, height: 895 },
@@ -50,10 +51,9 @@ export const projects: Project[] = [
       { src: "/src/assets/projetos/eita/beliscou.webp", width: 296, height: 592 },
       { src: "/src/assets/projetos/eita/conexões.webp", width: 296, height: 592 },
       { src: "/src/assets/projetos/eita/diversidade.webp", width: 296, height: 592 },
-      { src: "/src/assets/projetos/eita/logo.webp", width: 480, height: 480 },
       { src: "/src/assets/projetos/eita/minha_pescaria.webp", width: 296, height: 592 },
-      { src: "/src/assets/projetos/eita/pegadas.webp", width: 522, height: 1028 },
-      { src: "/src/assets/projetos/eita/dados.webp", width: 296, height: 592 }
+      { src: "/src/assets/projetos/eita/dados.webp", width: 296, height: 592 },
+      { src: "/src/assets/projetos/eita/logo.webp", width: 480, height: 480 },
     ],
     tags: ["React Native", "Android", "Material UI", "NoSQL", "Animações", "Geolocalização", "Sincronização offline", "Offline-first"],
     year: "2023"
@@ -64,12 +64,12 @@ export const projects: Project[] = [
     category: [projectCategories.featured, projectCategories.websites],
     shortDescription: "Desenvolvimento Full Stack, interface de e-mail, design system e integrações.",
     description: "Colaboração em equipes multifuncionais para entrega de projetos críticos, incluindo integração com backend, novo layout, design system e otimização. Implementação de interface de e-mail semelhante a webmail.",
-    image: { src: "/src/assets/projetos/Pipefy/Pipefy_project.webp", width: 1291, height: 911 },
+    image: { src: "/src/assets/projetos/Pipefy/Pipefy_mail_card.webp", width: 706, height: 810 },
     gallery: [
       { src: "/src/assets/projetos/Pipefy/Pipefy_Card.webp", width: 1280, height: 960 },
       { src: "/src/assets/projetos/Pipefy/Pipes_list_emails.webp", width: 1622, height: 1165 },
       { src: "/src/assets/projetos/Pipefy/Pipefy_assignees.webp", width: 1676, height: 1438 },
-      { src: "/src/assets/projetos/Pipefy/Pipefy_mail_card.webp", width: 706, height: 810 }
+      { src: "/src/assets/projetos/Pipefy/Pipefy_project.webp", width: 1291, height: 911 },
     ],
     tags: ["Full Stack", "React", "Ruby on Rails", "Design System", "GraphQL", "NoSQL", "Email UI", "Webmail", "Backend APIs", "Team Collaboration", "Performance", "Bug Fixes", "UX Improvements", "Testing"],
     year: "2020 - 2022"
@@ -80,15 +80,24 @@ export const projects: Project[] = [
     category: [projectCategories.featured, projectCategories.websites],
     shortDescription: "Plataforma de Checkout, aplicativo responsivo, métodos de pagamento, segurança e unificação de sistemas.",
     description: "Atuação na equipe de checkout do e-commerce. Implementação de métodos de pagamento, CI/CD e analytics. Unificação dos aplicativos mobile e desktop em um único app responsivo. Também unifiquei os checkouts de diversas plataformas e sistemas da empresa, liberei outras equipes da responsabilidade de manter seus checkouts e fui nomeado Funcionário do Mês.",
-    image: { src: "/src/assets/projetos/magalu/desk/desk.webp", width: 2000, height: 1789 },
+    image: { src: "/src/assets/projetos/magalu/desk/frete.webp", width: 1920, height: 1250 },
     link: "https://www.magazineluiza.com.br",
     gallery: [
-      { src: "/src/assets/projetos/magalu/mobile/mobile.webp", width: 345, height: 2000 },
-      { src: "/src/assets/projetos/magalu/desk/pedido.webp", width: 1347, height: 850 },
-      { src: "/src/assets/projetos/magalu/desk/entrega2.webp", width: 1011, height: 671 },
+      { src: "/src/assets/projetos/magalu/desk/geolocation.webp", width: 1920, height: 1698 },
+      { src: "/src/assets/projetos/magalu/desk/lojas.webp", width: 1920, height: 1830 },
       { src: "/src/assets/projetos/magalu/desk/order_review_sameday.webp", width: 2000, height: 1537 },
+      { src: "/src/assets/projetos/magalu/desk/pedido.webp", width: 1347, height: 850 },
       { src: "/src/assets/projetos/magalu/desk/pedido2.webp", width: 1024, height: 953 },
-      { src: "/src/assets/projetos/magalu/mobile/endereco-alterado.webp", width: 360, height: 1001 }
+      { src: "/src/assets/projetos/magalu/desk/recomendacoes.webp", width: 1920, height: 1430 },
+
+      { src: "/src/assets/projetos/magalu/mobile/endereco-alterado.webp", width: 360, height: 1001 },
+      { src: "/src/assets/projetos/magalu/mobile/mobile.webp", width: 345, height: 2000 },
+      { src: "/src/assets/projetos/magalu/mobile/order_senha.webp", width: 360, height: 640 },
+      { src: "/src/assets/projetos/magalu/mobile/frete.webp", width: 360, height: 1598 },
+      { src: "/src/assets/projetos/magalu/mobile/geolocation.webp", width: 360, height: 1316 },
+      { src: "/src/assets/projetos/magalu/mobile/pedido.webp", width: 960, height: 1704 },
+      { src: "/src/assets/projetos/magalu/mobile/revisao.webp", width: 924, height: 2000 },
+      { src: "/src/assets/projetos/magalu/mobile/sacola.webp", width: 360, height: 617 },
     ],
     tags: ["E-commerce", "Checkout", "React", "CI/CD", "Analytics", "Security", "Responsivo", "Unificação de sistemas", "Mobile", "Web", "Testing"],
     year: "2016 - 2020"
@@ -102,10 +111,10 @@ export const projects: Project[] = [
     image: { src: "/src/assets/projetos/chillibeans/chillibeans1.webp", width: 1257, height: 978 },
     link: "https://www.chillibeans.com.br",
     gallery: [
-      { src: "/src/assets/projetos/chillibeans/chillibeans.webp", width: 1162, height: 974 },
+      { src: "/src/assets/projetos/chillibeans/chillibeans1.webp", width: 1162, height: 974 },
       { src: "/src/assets/projetos/chillibeans/chillibeans2.webp", width: 1232, height: 964 },
     ],
-    tags: ["JavaScript", "CSS", "CakePHP", "jQuery", "Publicidade", "PHP", "MySQL", "HTML", "JSON", "SEO"],
+    tags: ["JavaScript", "CSS", "CakePHP", "jQuery", "Publicidade", "PHP", "MySQL", "HTML", "JSON", "SEO", "Maps"],
     year: "2012 - 2014"
   },
   {
@@ -212,6 +221,31 @@ export const projects: Project[] = [
     tags: ["Campanha", "Mobile", "Desktop", "JavaScript", "CSS", "HTML", "Publicidade", "Landing Page"],
     year: "2013"
   },
+  {
+    id: "duster",
+    title: "Renault Duster",
+    category: [projectCategories.websites],
+    shortDescription: "Campanha promocional Renault Duster.",
+    description: "Ação de marketing com layouts nível pixel perfect para Desktop e Mobile com formulários customizados.",
+    image: { src: "/src/assets/projetos/RenaultDuster/DesafioDuster_Bonus.webp", width: 1500, height: 1800 },
+    gallery: [
+      { src: "/src/assets/projetos/RenaultDuster/DesafioDuster_Cadastro.webp", width: 1500, height: 1800 },
+      { src: "/src/assets/projetos/RenaultDuster/DesafioDuster_Regras.webp", width: 1500, height: 1800 },
+      { src: "/src/assets/projetos/RenaultDuster/Renault_Duster_Facebook.webp", width: 981, height: 1764 },
+    ],
+    tags: ["Campanha", "JavaScript", "CSS", "HTML", "Publicidade", "Landing Page", "Facebook"],
+    year: "2013"
+  },
+  {
+    id: "moneytimes",
+    title: "Moneytimes",
+    category: [projectCategories.websites, projectCategories.personal, projectCategories.freelancer],
+    shortDescription: "Portal de notícias sobre investimentos.",
+    description: "Elaboração e desenvolvimento de Portal de notícias sobre investimentos feito em Drupal. ",
+    image: { src: "/src/assets/projetos/Moneytimes.webp", width: 1620, height: 1620 },
+    tags: ["Drupal", "PHP", "JavaScript", "SEO", "HTML", "CSS", "Freelancer"],
+    year: "2013"
+  },
 
   // Outros
   {
@@ -248,5 +282,46 @@ export const projects: Project[] = [
     link: "https://github.com/codexico/ttlocal",
     tags: ["API", "PHP", "jQuery", "Twitter", "Youtube"],
     year: "2012"
-  }
+  },
+  {
+    id: "dilma_2014",
+    title: "Dilma 2014 - Campanha para Presidente",
+    category: [projectCategories.websites],
+    shortDescription: "Website da campanha para Presidente da República.",
+    description: "Website da campanha para Presidente da República.",
+    image:
+      { src: "/src/assets/projetos/dilma/DILMA_noticias_mobile.webp", width: 640, height: 960 },
+    gallery: [
+      { src: "/src/assets/projetos/dilma/Dilma_2014.webp", width: 637, height: 957 },
+      { src: "/src/assets/projetos/dilma/Dilma_Agenda.webp", width: 1188, height: 2000 },
+    ],
+    tags: ["Javascript", "jQuery", "CSS", "HTML", "Publicidade"],
+    year: "2014"
+  },
+  {
+    id: "diversos",
+    title: "Diversos",
+    category: [projectCategories.websites],
+    shortDescription: "Diversos websites e campanhas para grandes marcas.",
+    description: "Desenvolvimento de diversos websites e campanhas para grandes marcas.",
+    image:
+      { src: "/src/assets/projetos/Havaianas_Vestuário_Categoria.webp", width: 950, height: 2000 },
+    gallery: [
+      { src: "/src/assets/projetos/Colgate_maxfresh.webp", width: 1022, height: 967 },
+      { src: "/src/assets/projetos/pernambucanas-mulheres.webp", width: 1202, height: 831 },
+      { src: "/src/assets/projetos/Samsumg_Galaxy_S4_Mobile.webp", width: 640, height: 420 },
+      { src: "/src/assets/projetos/Craque_Renault_Kangoo.webp", width: 1280, height: 1664 },
+      { src: "/src/assets/projetos/Havaianas_Vestuário_Home.webp", width: 1280, height: 1601 },
+      { src: "/src/assets/projetos/Pernambucanas_faces.webp", width: 1920, height: 1080 },
+      { src: "/src/assets/projetos/Natura_Sou_facebook_produtos.webp", width: 1027, height: 2000 },
+      { src: "/src/assets/projetos/Perdigao.webp", width: 1024, height: 1989 },
+      { src: "/src/assets/projetos/NaturaSou_site_home.webp", width: 564, height: 2000 },
+      { src: "/src/assets/projetos/oi.webp", width: 318, height: 562 },
+      { src: "/src/assets/projetos/Perdigao_novidades.webp", width: 1543, height: 1930 },
+      { src: "/src/assets/projetos/AquaSaver.webp", width: 1000, height: 449 },
+      { src: "/src/assets/projetos/sandero-design-20140904.webp", width: 965, height: 1705 },
+    ],
+    tags: ["Javascript", "jQuery", "CSS", "HTML", "Publicidade", "Facebook", "Mobile", "Animações"],
+    year: "2014"
+  },
 ];
