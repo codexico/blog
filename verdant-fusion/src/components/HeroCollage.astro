@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    imagesAndTitles: {
+        title: string;
+        img: { src: string; width: number; height: number };
+    }[];
+}
+
+const { imagesAndTitles } = Astro.props;
+
+function spread(index: number, total: number) {
+    // Configurando colunas e linhas baseadas no número de imagens (ex: 35 img)
+    const cols = Math.ceil(Math.sqrt(total * 2.0));
+    const rows = Math.ceil(total / cols);
+
+    const col = index % cols;
+    const row = Math.floor(index / cols);
+
+    // Posicionamento base (espalhado de 0 a 90% horizontalmente e -10% a 60% verticalmente)
+    const baseLeft = (col / Math.max(1, cols - 1)) * 90;
+    const baseTop = (row / Math.max(1, rows - 1)) * 65 - 10;
+
+    // Jitter para dar aspecto bagunçado mas predeterminado
+    const jitterX = Math.sin(index * 12.3) * 8;
+    const jitterY = Math.cos(index * 8.7) * 15;
+
+    // Garantir limites
+    const left = Math.max(-5, Math.min(85, baseLeft + jitterX));
+    const top = Math.max(-20, Math.min(70, baseTop + jitterY));
+
+    const rotate = (Math.sin(index * 7.5) * 30).toFixed(1);
+    const zIndex = Math.abs(Math.floor(Math.sin(index) * 10)) + 1;
+
+    return {
+        rotate,
+        left: `${left.toFixed(1)}%`,
+        top: `${top.toFixed(1)}%`,
+        zIndex,
+    };
+}
+---
+
+<div class="hero-scatter-collage">
+    {
+        imagesAndTitles.map(({ title, img }, index: number) => {
+            const { rotate, left, top, zIndex } = spread(
+                index,
+                imagesAndTitles.length
+            );
+
+            return (
+                <div
+                    class="scatter-img-wrapper"
+                    style={`left: ${left}; top: ${top}; transform: rotate(${rotate}deg); z-index: ${zIndex};`}
+                >
+                    <Image
+                        src={img.src}
+                        alt={title}
+                        width={img.width}
+                        height={img.height}
+                        loading="lazy"
+                    />
+                </div>
+            );
+        })
+    }
+</div>
+
+<style>
+    .hero-scatter-collage {
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        height: 380px;
+        width: 90%;
+        overflow: hidden;
+        background: linear-gradient(
+            135deg,
+            rgba(var(--accent-rgb), 0.05) 0%,
+            transparent 100%
+        );
+        border-radius: 12px;
+    }
+    .scatter-img-wrapper {
+        position: absolute;
+        max-width: 190px;
+        border-radius: 8px;
+        /* border: 1px solid rgba(var(--box-shadow-color), 0.6); */
+        transition: transform 0.3s ease, z-index 0s, box-shadow 0.3s ease;
+        background: rgba(var(--box-shadow-color), 1);
+        box-shadow: 2px 2px 4px rgba(var(--box-shadow-color), 0.4);
+    }
+    .scatter-img-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        transition: filter 0.3s;
+    }
+    .scatter-img-wrapper:hover {
+        transform: scale(1.15) rotate(0deg) !important;
+        z-index: 100 !important;
+        box-shadow: 0 15px 35px rgba(var(--box-shadow-color), 0.8);
+        border-width: 4px;
+        border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+        .hero-scatter-collage {
+            padding: 2rem 0;
+        }
+        .scatter-img-wrapper {
+            width: 140px;
+            height: 100px;
+            margin: -15px -10px;
+        }
+    }
+</style>

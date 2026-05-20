@@ -1,0 +1,129 @@
+---
+import type { Project } from "../data/projects";
+import { Image } from "astro:assets";
+
+const { project } = Astro.props;
+---
+
+<div
+    class="project-card"
+    onclick={`document.getElementById('modal-${project.id}').showModal()`}
+>
+    {
+        project.image && (
+            <Image
+                src={project.image.src}
+                alt={project.title}
+                width={project.image.width}
+                height={project.image.height}
+                loading="lazy"
+            />
+        )
+    }
+
+    <div class="project-card-content">
+        <h3 class="project-card-title">{project.title}</h3>
+        <p class="project-card-description">{project.shortDescription}</p>
+        <div class="project-tags">
+            {
+                project.tags
+                    .slice(0, 4)
+                    .map((tag: string) => <span class="tag">{tag}</span>)
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .project-card {
+        /* O truque do padding-box e border-box permite usar gradientes como borda de forma impecável! */
+        background: linear-gradient(
+                    var(--background-alt),
+                    var(--background-alt)
+                )
+                padding-box,
+            linear-gradient(
+                    135deg,
+                    rgba(var(--orange), 0.3) 0%,
+                    transparent 100%
+                )
+                border-box;
+        border: 12px solid transparent;
+        border-radius: 22px;
+        padding-bottom: 0.5rem;
+        break-inside: avoid;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease,
+            box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-card img {
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 140px;
+        object-position: top;
+    }
+    .project-card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .project-card-title {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.25rem;
+        color: var(--title-color);
+        transition: color 0.3s ease;
+    }
+    .project-card-description {
+        font-size: 1rem;
+        color: var(--title-color);
+        line-height: 1.2;
+        flex-grow: 1;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        /* Acende a borda com as cores do seu tema quando o mouse passa */
+        background: linear-gradient(
+                    var(--background-alt),
+                    var(--background-alt)
+                )
+                padding-box,
+            linear-gradient(
+                    135deg,
+                    rgba(var(--orange), 0.9) 0%,
+                    rgba(var(--orange), 0.3) 100%
+                )
+                border-box;
+        box-shadow: 0 10px 30px rgba(var(--orange), 0.15);
+    }
+    .project-card:hover .project-card-title {
+        color: var(--title-hover);
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        justify-self: end;
+        justify-items: end;
+        align-items: flex-end;
+    }
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.1rem 0.6rem 0;
+        background: var(--accent);
+        color: var(--background);
+        border-radius: 12px;
+        font-weight: bold;
+    }
+</style>

@@ -1,0 +1,221 @@
+---
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<dialog id={`modal-${project.id}`} class="project-modal">
+  <form method="dialog">
+    <button class="dialog-close" aria-label="Fechar">&times;</button>
+  </form>
+
+  <div class="dialog-content">
+    {
+      project.image && (
+        <img
+          src={project.image.src}
+          alt={project.title}
+          class="modal-main-img"
+        />
+      )
+    }
+
+    {
+      project.gallery && project.gallery.length > 0 && (
+        <div class="modal-gallery-container">
+          {project.gallery.map((g) => (
+            <img
+              src={g.src}
+              alt={`${project.title} screenshot`}
+              loading="lazy"
+              class="gallery-thumb"
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+            />
+          ))}
+        </div>
+      )
+    }
+
+    <h2>{project.title}</h2>
+    <span class="year">
+      {project.category.join(", ")} &bull; {project.year || ""}
+    </span>
+
+    {
+      project.tags && project.tags.length > 0 && (
+        <div class="project-tags">
+          {project.tags.map((t) => (
+            <span class="tag">{t}</span>
+          ))}
+        </div>
+      )
+    }
+
+    <p>{project.description}</p>
+
+    {
+      project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="modal-link"
+        >
+          Acessar Projeto &rarr;
+        </a>
+      )
+    }
+  </div>
+</dialog>
+
+<style>
+  dialog {
+    border: 1px solid var(--line-shadow-color);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 700px;
+    width: 90%;
+    background: var(--background);
+    color: var(--text-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+  }
+  .dialog-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.2s;
+  }
+  .dialog-close:hover {
+    color: var(--title-hover);
+  }
+
+  .modal-main-img {
+    max-height: 350px;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background: var(--background-alt);
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .modal-gallery-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .modal-gallery-container img {
+    height: 120px;
+    width: auto;
+    flex-shrink: 0;
+    border: 1px solid var(--line-shadow-color);
+    border-radius: 8px;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  h2 {
+    margin-top: 0;
+    color: var(--title-color);
+  }
+  .year {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .project-tags {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--accent);
+    color: var(--background);
+    border-radius: 12px;
+    font-weight: bold;
+  }
+  .modal-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--background);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  // Lógica do carrossel no Modal isolada para cada componente instanciado
+  const modals = document.querySelectorAll(".project-modal");
+  const eventHandler = (
+    event: TouchEvent | MouseEvent,
+    mainImg: HTMLImageElement
+  ) => {
+    const target = event.target as HTMLImageElement;
+    mainImg.style.opacity = "0.7";
+    setTimeout(() => {
+      mainImg.src = target.src;
+      mainImg.style.opacity = "1";
+    }, 50);
+  };
+  modals.forEach((modal) => {
+    const mainImg = modal.querySelector(".modal-main-img") as HTMLImageElement;
+    const thumbs = modal.querySelectorAll(".gallery-thumb");
+
+    if (mainImg && thumbs.length > 0) {
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("mouseenter", (event) =>
+          eventHandler(event as MouseEvent, mainImg)
+        );
+        thumb.addEventListener("touchstart", (event) =>
+          eventHandler(event as TouchEvent, mainImg)
+        );
+      });
+    }
+
+    // Fecha o modal ao clicar fora dele (no ::backdrop)
+    modal.addEventListener("click", (e) => {
+      const dialog = e.currentTarget as HTMLDialogElement;
+      const rect = dialog.getBoundingClientRect();
+      const ev = e as MouseEvent;
+      // Se clicou fora dos limites da caixa do dialog
+      if (
+        ev.clientY < rect.top ||
+        ev.clientY > rect.bottom ||
+        ev.clientX < rect.left ||
+        ev.clientX > rect.right
+      ) {
+        dialog.close();
+      }
+    });
+  });
+</script>

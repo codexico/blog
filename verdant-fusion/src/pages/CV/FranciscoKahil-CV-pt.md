@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/CV.astro
+layout: ../../layouts/CVLayout.astro
 title: Francisco Kahil CV
 author: Francisco Kahil
 description: Francisco Kahil CV
@@ -52,15 +52,16 @@ dezembro de 2016 - dezembro de 2020 (4 anos e 1 mês)
 - Na equipe de checkout do e-commerce, implementei novos métodos de pagamento, login, segurança, CI/CD e analytics.
 - Responsável por separar do back e front, aumentando a estabilidade, o desempenho e a testabilidade.
 - Unifiquei os aplicativos móveis e desktop em um único aplicativo responsivo, criando uma melhor integração visual e velocidade para implementar novos recursos.
+- Ao unificar os checkouts de diversas plataformas e sistemas da empresa, liberei outras equipes da responsabilidade de manter seus checkouts e fui nomeado Funcionário do Mês.
 
 ### - Titans Group - Desenvolvedor Web Full Stack
 
 novembro de 2014 - maio de 2016 (1 ano e 7 meses)
 
-- Refatoração de plataforma white label com milhões de usuários na América Latina, com diversas marcas e temas, web e mobile, reduzindo em 80% a base de código.
+- Refatoração de plataforma white label com milhões de usuários na América Latina, com diversos idiomas marcas e temas, web e mobile, reduzindo em 80% a base de código.
 - Desenvolvimento do sistema em JavaScript puro para celulares de baixa performance.
 - Responsável por otimização e implementação de ferramentas de automatização, ci/cd, testes e boas práticas.
-- Como resultado a introdução de novos clientes passou de semanas para dias.
+- Como resultado a introdução de novas empresas clientes passou de semanas para dias.
 
 ### - Pivot Produtora Interativa - Desenvolvedor Web Full Stack
 
@@ -88,37 +89,47 @@ julho de 2008 - novembro de 2009 (1 ano 5 meses)
 
 ### - Freelancer e projetos pessoais - Desenvolvedor Web Full Stack
 
-2009 - 2026
+**2009 - 2026**
 
-- [Local AI for Kids](https://github.com/codexico/ai-kids) - IA pronta para crianças no Steam Deck usando Ollama e Open WebUI.
-- [Barking Gecko](<(http://www.barkinggecko.com.au)>) - Website australiano em Drupal (2009).
+- [No Posts No Shorts For YouTube](https://github.com/codexico/no_posts_no_shorts) - Extensão para navegadores para ocultar Shorts e Posts do YouTube, versões para Chrome, Firefox, Opera e Firefox para Android (2026).
+
+- [Local AI for Kids](https://github.com/codexico/ai-kids) - Projeto pessoal de IA no Steam Deck usando Ollama e Open WebUI, totalmente offline, segura, focada em crianças e desenvolvimento de jogos para Roblox (2026).
+
+- [Barking Gecko](http://www.barkinggecko.com.au) - Website australiano em Drupal (2009).
+
 - [GEIO](https://github.com/codexico/geio) - Sistema de controle de campanhas promocionais para Shopping
   Centers em CakePHP (2010).
+
 - [jquery-plugin-lancelot-autolink](https://github.com/codexico/jquery-plugin-lancelot-autolink) - navegação de links por hover (2010).
+
 - [Vogon](https://github.com/codexico/vogon) - Sistema de acompanhamento de variação de preços em diversas lojas. Ruby on Rails, JavaScript (2011).
+
 - [ttlocal](https://github.com/codexico/ttlocal) - Todos os Trending Topics do Twitter, Youtube e outras fontes em uma só página. Uso de Twitter API, Youtube API, PHP, jQuery, CSS (2012).
-- [jquery-validation](https://github.com/codexico/jquery-validation) - correção de bug na validação de horário de verão (2013).
-- [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 30k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2025).
+
+- [jquery-validation](https://github.com/codexico/jquery-validation) - Contribuição Open Source. Correção de bug na validação de horário de verão da biblioteca global jQuery Validation. (2013).
+
+- [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 30k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2026).
+
 - [Ligeirinho](https://github.com/codexico/ligeirinho) - Extensão para Google Chrome, sistema de procura de produtos e comparação de preços baseado em API do Buscapé (2014).
+
 - [Rspec::Visual](https://github.com/codexico/rspec-visual) - Ruby Gem para testes através de comparação de screenshots (2015).
+
 - [changelogkeeper](https://github.com/codexico/changelogkeeper) - NPM package para escrever changelogs automaticamente (2019).
 
 ## Formação acadêmica
 
-### - [MBA em Desenvolvimento de Aplicações e Games para Dispositivos Móveis e Internet das Coisas](https://web.archive.org/web/20150423035507/http://www.fiap.com.br/mba/mba-em-desenvolvimento-de-aplicacoes-e-games-para-dispositivos-moveis-internet-das-coisas/)
 
+### - [MBA em Desenvolvimento de Aplicações e Games para Dispositivos Móveis e Internet das Coisas](https://web.archive.org/web/20150423035507/http://www.fiap.com.br/mba/mba-em-desenvolvimento-de-aplicacoes-e-games-para-dispositivos-moveis-internet-das-coisas/)
 outubro de 2015 - outubro de 2016 (12 meses - 360h)
 
 Faculdade de Informática e Administração Paulista - [FIAP](https://www.fiap.com.br/)
 
 ### - [Tecnologia em Análise e Desenvolvimento de Sistemas](https://www.fiap.com.br/graduacao/tecnologo/analise-e-desenvolvimento-de-sistemas/)
-
 outubro de 2008 - outubro de 2009 (24 meses - 2000h)
 
 Faculdade de Informática e Administração Paulista - [FIAP](https://www.fiap.com.br/)
 
 ### - Física
-
 1996 - 1999 (90% concluído)
 
 Universidade Estadual de Campinas - [UNICAMP](https://unicamp.br/)
@@ -171,9 +182,7 @@ Universidade Estadual de Campinas - [UNICAMP](https://unicamp.br/)
 ## Idiomas
 
 ### - Português
-
 Nativo
 
 ### - Inglês
-
 Avançado (B2) - 1 ano e meio trabalhando em inglês na Pipefy

@@ -5,6 +5,7 @@
   --gray-dark: 34, 41, 57;
   --orange: 242, 120, 54;
   --black: hsl(40, 5%, 6%);
+  --black-shadow: hsla(60, 3%, 6%, 0.2);
   --off-black: hsl(40, 5%, 12%);
   --white: hsl(240, 5%, 96%);
   --off-white: hsl(42, 25%, 90%);
@@ -21,6 +22,7 @@
   --background: var(--white);
   --background-alt: rgba(var(--gray-light), 85%);
   --bg-gradient: rgba(var(--gray-light), 50%), var(--white);
+  --shadow-color: var(--background);
 
   background-color: var(--background);
 
@@ -50,6 +52,7 @@
     --background: var(--black);
     --background-alt: var(--black);
     --bg-gradient: var(--background), var(--off-black);
+    --shadow-color: var(--background);
 
     --box-shadow-color: var(--orange);
     --box-shadow: inset 0px -2px 0px 0px var(--box-shadow-color);
@@ -86,6 +89,7 @@ body {
   line-height: 1.7;
   background: linear-gradient(var(--bg-gradient)) no-repeat;
 }
+
 main {
   width: 720px;
   max-width: calc(100% - 2em);
@@ -103,52 +107,85 @@ h6 {
   color: var(--title-color);
   line-height: 1.2;
 }
+
 h1 {
-  font-size: 3.052em;
+  font-size: 2.5em;
 }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.052em;
+  }
+}
+
 h2 {
-  font-size: 2.441em;
+  font-size: 2.2em;
 }
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2.441em;
+  }
+}
+
 h3 {
-  font-size: 1.953em;
+  font-size: 1.7em;
 }
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.953em;
+  }
+}
+
 h4 {
   font-size: 1.563em;
 }
+
 h5 {
   font-size: 1.25em;
 }
+
 strong,
 b {
   font-weight: 700;
 }
+
 a {
   color: var(--accent);
 }
+
 a:hover {
   color: var(--accent);
 }
+
 p {
   margin-bottom: 1em;
 }
+
 .prose p {
   margin-bottom: 2em;
 }
+
 textarea {
   width: 100%;
   font-size: 16px;
 }
+
 input {
   font-size: 16px;
 }
+
 table {
   width: 100%;
 }
+
 img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
+
 code {
   padding: 2px 6px 4px;
   background-color: var(--code-bg);
@@ -156,27 +193,33 @@ code {
   border-radius: 8px;
   font-style: italic;
 }
+
 pre {
   padding: 1.5em;
   border-radius: 8px;
 }
-pre > code {
+
+pre>code {
   all: unset;
 }
+
 blockquote {
   border-left: 4px solid var(--accent);
   padding: 0 0 0 20px;
   margin: 0;
   font-size: 1.333em;
 }
+
 hr {
   border: none;
   border-top: 1px solid var(--line-shadow-color);
 }
+
 @media (max-width: 720px) {
   body {
     font-size: 18px;
   }
+
   main {
     padding: 1em;
   }

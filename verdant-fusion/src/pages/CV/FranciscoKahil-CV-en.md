@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/CV.astro
+layout: ../../layouts/CVLayout.astro
 title: Francisco Kahil CV
 author: Francisco Kahil
 description: Francisco Kahil CV
@@ -18,8 +18,6 @@ São Paulo, Brasil
 [francisco.kahil@gmail.com](mailto:francisco.kahil@gmail.com)
 
 [LinkedIn](https://www.linkedin.com/in/franciscokahil/?locale=en-US), [github](https://github.com/codexico/), [codexico.com.br](https://codexico.com.br/blog/)
-
-## About
 
 Fullstack developer with 15 years of experience building scalable and accessible web applications. Specialized in frontend development with a strong focus on JavaScript, TypeScript e React.
 
@@ -101,9 +99,11 @@ July 2008 - November 2009 (1 year 5 months)
 
 ### - Freelance and personal projects - Full Stack Web Developer
 
-2009 - 2026
+**2009 - 2026**
 
-- [Local AI for Kids](https://github.com/codexico/ai-kids) - AI ready for kids on Steam Deck using Ollama and Open WebUI.
+- [No Posts No Shorts For YouTube](https://github.com/codexico/no_posts_no_shorts) - Extensão de navegador para remover Shorts e Posts da Comunidade no YouTube, versões para Chrome, Firefox, Opera e Firefox for Android (2026).
+
+- [Local AI for Kids](https://github.com/codexico/ai-kids) - AI ready for kids on Steam Deck using Ollama and Open WebUI (2026).
 
 - [Barking Gecko](<(http://www.barkinggecko.com.au)>) - Australian website in Drupal (2009).
 
@@ -199,3 +199,4 @@ Native
 ### - English
 
 Advanced (B2) - 1.5 years working in English at Pipefy
+

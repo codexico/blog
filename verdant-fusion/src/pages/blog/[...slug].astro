@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 
-import BlogPost from "../../layouts/BlogPost.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Comments from "../../components/Comments.astro";
 
 import commentList from "../../data/comments_extracted.json";
@@ -29,7 +29,7 @@ const { Content } = await render(post);
 const comentariosDoPost = (commentList as CommentList)[post.id]?.comments || [];
 ---
 
-<BlogPost {...post.data}>
+<BlogPostLayout {...post.data}>
   {
     draft && (
       <div style="background-color: #b75050; padding: 1em; border-radius: 8px; margin-bottom: 1em; text-align: center;">
@@ -41,4 +41,4 @@ const comentariosDoPost = (commentList as CommentList)[post.id]?.comments || [];
   }
   <Content />
   <Comments comentariosDoPost={comentariosDoPost} />
-</BlogPost>
+</BlogPostLayout>
