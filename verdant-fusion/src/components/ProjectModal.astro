@@ -9,7 +9,7 @@ interface Props {
 
 const { project } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif}"
 );
 ---
 

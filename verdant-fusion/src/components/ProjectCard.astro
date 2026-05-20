@@ -9,7 +9,7 @@ interface Props {
 
 const { project } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/**/*.{jpeg,jpg,png,gif,webp}"
+    "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif}"
 );
 ---
 
@@ -26,7 +26,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 height={project.image.height}
                 widths={[240, 540, 720, project.image.width]}
                 sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${project.image.width}px`}
-                formats={['avif', 'webp']}
+                formats={["avif", "webp"]}
                 fallbackFormat="jpg"
                 loading="lazy"
             />

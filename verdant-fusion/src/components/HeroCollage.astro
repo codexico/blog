@@ -10,7 +10,9 @@ interface Props {
 }
 
 const { imagesAndTitles } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/**/*.{jpeg,jpg,png,gif,webp,avif}"
+);
 
 function spread(index: number, total: number) {
     // Configurando colunas e linhas baseadas no número de imagens (ex: 35 img)
@@ -65,7 +67,7 @@ function spread(index: number, total: number) {
                             height={img.height}
                             widths={[140, 190, 380]}
                             sizes="(max-width: 768px) 140px, 190px"
-                            formats={['avif', 'webp']}
+                            formats={["avif", "webp"]}
                             fallbackFormat="jpg"
                             loading="lazy"
                         />
