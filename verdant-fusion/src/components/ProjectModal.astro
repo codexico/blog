@@ -1,11 +1,14 @@
 ---
 import type { Project } from "../data/projects";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 interface Props {
   project: Project;
 }
 
 const { project } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/**/*.{jpeg,jpg,png,gif,webp}');
 ---
 
 <dialog id={`modal-${project.id}`} class="project-modal">
@@ -15,7 +18,15 @@ const { project } = Astro.props;
 
   <div class="dialog-content">
     {
-      project.image && (
+      project.image && images[project.image.src] ? (
+        <Image
+          src={images[project.image.src]()}
+          alt={project.title}
+          class="modal-main-img"
+          width={project.image.width}
+          height={project.image.height}
+        />
+      ) : project.image && (
         <img
           src={project.image.src}
           alt={project.title}
@@ -27,16 +38,32 @@ const { project } = Astro.props;
     {
       project.gallery && project.gallery.length > 0 && (
         <div class="modal-gallery-container">
-          {project.gallery.map((g) => (
-            <img
-              src={g.src}
-              alt={`${project.title} screenshot`}
-              loading="lazy"
-              class="gallery-thumb"
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
-            />
-          ))}
+          {project.gallery.map((g) => {
+            if (images[g.src]) {
+              return (
+                <Image
+                  src={images[g.src]()}
+                  alt={`${project.title} screenshot`}
+                  loading="lazy"
+                  class="gallery-thumb"
+                  width={g.width}
+                  height={g.height}
+                  onmouseover="this.style.transform='scale(1.05)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                />
+              );
+            }
+            return (
+              <img
+                src={g.src}
+                alt={`${project.title} screenshot`}
+                loading="lazy"
+                class="gallery-thumb"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+              />
+            );
+          })}
         </div>
       )
     }
