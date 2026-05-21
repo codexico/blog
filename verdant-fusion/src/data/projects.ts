@@ -138,6 +138,16 @@ export const projects: Project[] = [
     tags: ["Open Source", "jQuery", "JavaScript", "Regex", "Testing"],
     year: "2013"
   },
+  {
+    id: "gnucash",
+    title: "GnuCash",
+    category: [projectCategories.personal, projectCategories.openSource],
+    shortDescription: "Melhorias na Home Page do projeto GnuCash.",
+    description: "Contribuição Open Source. Melhorias na interface e usabilidade para a Home Page do projeto GnuCash.",
+    link: "https://github.com/codexico/gnucash-htdocs",
+    tags: ["Open Source", "GnuCash", "CI/CD", "HTML", "CSS"],
+    year: "2021"
+  },
 
   // Extensões
   {
@@ -146,6 +156,13 @@ export const projects: Project[] = [
     category: [projectCategories.extensions, projectCategories.personal, projectCategories.openSource],
     shortDescription: "Extensão de navegadores para ocultar Shorts e Posts.",
     description: "Extensão para navegadores para ocultar Shorts e Posts do YouTube, versões para Chrome, Firefox, Opera e Firefox para Android.",
+    image: { src: "/src/assets/projetos/no_posts_no_shorts/opera_promo_image.avif", width: 1209, height: 862 },
+    gallery: [
+      { src: "/src/assets/projetos/no_posts_no_shorts/antes_depois-1280x800.avif", width: 1280, height: 800 },
+      { src: "/src/assets/projetos/no_posts_no_shorts/icon_square.avif", width: 1229, height: 1229 },
+      { src: "/src/assets/projetos/no_posts_no_shorts/icon_square_transparent.avif", width: 1229, height: 1229 }
+
+    ],
     link: "https://github.com/codexico/no_posts_no_shorts",
     tags: ["Chrome", "Firefox", "Opera", "Android", "Browser Extension"],
     year: "2026"
@@ -269,6 +286,35 @@ export const projects: Project[] = [
     year: "2015"
   },
   {
+    id: "geio",
+    title: "GEIO",
+    category: [projectCategories.freelancer, projectCategories.openSource],
+    shortDescription: "Sistema de controle de promoções em Shopping Centers.",
+    description: "Sistema de controle de campanhas promocionais para Shopping Centers em CakePHP. Troca de notas fiscais por cupons de sorteio.",
+    link: "https://github.com/codexico/geio",
+    tags: ["CakePHP", "Backend", "Freelancer", "PDF", "PHP", "Impressão"],
+    year: "2010"
+  },
+  {
+    id: "calendar-report",
+    title: "Calendar Report",
+    category: [projectCategories.personal, projectCategories.openSource],
+    shortDescription: "Geração de relatório de atividades com Google Calendar e Google Apps Script.",
+    description: "Ferramenta que sua Google Scripts para revisar tarefas realizadas usando o Google Calendar, gera e envia relatório diário, semanal e mensal de horas trabalhadas e quantas horas por projeto (2013)",
+    link: "https://github.com/codexico/calendar-report",
+    tags: ["Google Apps Script", "Google Calendar", "Javascript", "Email"],
+    year: "2013"
+  },
+  {
+    id: "brasileirao",
+    title: "Tabela do Brasileirão para iPhone",
+    category: [projectCategories.personal, projectCategories.openSource, projectCategories.mobile],
+    shortDescription: "Primeiro aplicativo de tabela do brasileirão para iPhone.",
+    description: "Primeiro aplicativo desenvolvido para iPhone, que mostrava a tabela do campeonato brasileiro. Infelizmente não existem mais imagens, desculpa mas na época nem o github existia direito.",
+    tags: ["iPhone", "Objective-C", "Web Scrapping"],
+    year: "2009"
+  },
+  {
     id: "ttlocal",
     title: "ttlocal",
     category: [projectCategories.personal, projectCategories.openSource],
@@ -301,7 +347,7 @@ export const projects: Project[] = [
   {
     id: "diversos",
     title: "Diversos",
-    category: [projectCategories.websites],
+    category: [projectCategories.websites, projectCategories.others],
     shortDescription: "Diversos websites e campanhas para grandes marcas.",
     description: "Desenvolvimento de diversos websites e campanhas para grandes marcas.",
     image:

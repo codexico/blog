@@ -108,13 +108,19 @@ julho de 2008 - novembro de 2009 (1 ano 5 meses)
 
 - [jquery-validation](https://github.com/codexico/jquery-validation) - Contribuição Open Source. Correção de bug na validação de horário de verão da biblioteca global jQuery Validation. (2013).
 
+- [gnucash-htdocs](https://github.com/codexico/gnucash-htdocs) - Contribuição Open Source. Melhorias na interface e usabilidade para a Home Page do projeto GnuCash (2021).
+
 - [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 30k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2026).
 
 - [Ligeirinho](https://github.com/codexico/ligeirinho) - Extensão para Google Chrome, sistema de procura de produtos e comparação de preços baseado em API do Buscapé (2014).
 
 - [Rspec::Visual](https://github.com/codexico/rspec-visual) - Ruby Gem para testes através de comparação de screenshots (2015).
 
+- [calendar-report](https://github.com/codexico/calendar-report) - Ferramenta que sua Google Apps Script para revisar tarefas realizadas usando o Google Calendar, gera e envia relatório diário, semanal e mensal de horas trabalhadas e quantas horas por projeto (2013).
+
 - [changelogkeeper](https://github.com/codexico/changelogkeeper) - NPM package para escrever changelogs automaticamente (2019).
+
+- [Tabela do Brasileirão para iPhone]() - Primeiro aplicativo para iPhone que mostrava a tabela do campeonato brasileiro (2009).
 
 ## Formação acadêmica
 
