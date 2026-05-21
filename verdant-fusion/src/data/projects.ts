@@ -142,8 +142,8 @@ export const projects: Project[] = [
     id: "gnucash",
     title: "GnuCash",
     category: [projectCategories.personal, projectCategories.openSource],
-    shortDescription: "Melhorias na Home Page do projeto GnuCash.",
-    description: "Contribuição Open Source. Melhorias na interface e usabilidade para a Home Page do projeto GnuCash.",
+    shortDescription: "Responsividade na Home Page do projeto GnuCash.",
+    description: "Contribuição Open Source. Responsividade na interface e usabilidade para a Home Page do projeto GnuCash.",
     link: "https://github.com/codexico/gnucash-htdocs",
     tags: ["Open Source", "GnuCash", "CI/CD", "HTML", "CSS"],
     year: "2021"

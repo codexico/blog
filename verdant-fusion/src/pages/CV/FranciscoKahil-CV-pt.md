@@ -108,7 +108,7 @@ julho de 2008 - novembro de 2009 (1 ano 5 meses)
 
 - [jquery-validation](https://github.com/codexico/jquery-validation) - Contribuição Open Source. Correção de bug na validação de horário de verão da biblioteca global jQuery Validation. (2013).
 
-- [gnucash-htdocs](https://github.com/codexico/gnucash-htdocs) - Contribuição Open Source. Melhorias na interface e usabilidade para a Home Page do projeto GnuCash (2021).
+- [gnucash-htdocs](https://github.com/codexico/gnucash-htdocs) - Contribuição Open Source. Responsividade na interface e usabilidade para a Home Page do projeto GnuCash (2021).
 
 - [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 30k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2026).
 
