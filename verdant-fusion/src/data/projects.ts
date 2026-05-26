@@ -8,6 +8,7 @@ export type ProjectCategory = {
 export const projectCategories: Record<ProjectCategoryKey, ProjectCategory> = {
   featured: { title: "Projetos em Destaque", description: "Projetos onde mais trabalhei ou tem algo interessante" },
   websites: { title: "Websites", description: "Diversos tipos de sites com diferentes tecnologias" },
+  others: { title: "Outros", description: "Diversos websites" },
   extensions: { title: "Extensões para Navegadores", description: "Extensões para navegadores" },
   freelancer: { title: "Freelancer", description: "Trabalhos freelance" },
   mobile: { title: "Aplicativos para celulares", description: "Aplicativos para celulares" },
@@ -15,7 +16,6 @@ export const projectCategories: Record<ProjectCategoryKey, ProjectCategory> = {
   personal: { title: "Projetos Pessoais", description: "Projetos Pessoais" },
   plugins: { title: "Plugins", description: "Plugins jQuery" },
   openSource: { title: "Open Source", description: "Projetos e contribuições de código aberto" },
-  others: { title: "Outros", description: "Outros" }
 } as const;
 
 export type Category = typeof projectCategories[keyof typeof projectCategories];
@@ -118,6 +118,34 @@ export const projects: Project[] = [
     year: "2012 - 2014"
   },
   {
+    id: "no-posts",
+    title: "No Posts No Shorts For YouTube",
+    category: [projectCategories.extensions, projectCategories.personal, projectCategories.openSource],
+    shortDescription: "Extensão de navegadores para ocultar Shorts e Posts.",
+    description: "Extensão para navegadores para ocultar Shorts e Posts do YouTube, versões para Chrome, Firefox, Opera e Firefox para Android.",
+    image: { src: "/src/assets/projetos/no_posts_no_shorts/opera_promo_image.avif", width: 1209, height: 862 },
+    gallery: [
+      { src: "/src/assets/projetos/no_posts_no_shorts/antes_depois-1280x800.avif", width: 1280, height: 800 },
+      { src: "/src/assets/projetos/no_posts_no_shorts/icon_square.avif", width: 1229, height: 1229 },
+      { src: "/src/assets/projetos/no_posts_no_shorts/icon_square_transparent.avif", width: 1229, height: 1229 }
+
+    ],
+    link: "https://github.com/codexico/no_posts_no_shorts",
+    tags: ["Chrome", "Firefox", "Opera", "Android", "Browser Extension"],
+    year: "2026"
+  },
+  {
+    id: "utf8-chars",
+    title: "UTF-8 Characters",
+    category: [projectCategories.extensions, projectCategories.personal, projectCategories.openSource],
+    shortDescription: "Extensão de navegadores com mais de 30k usuários ativos.",
+    description: "Extensões para listar e usar caracteres e emojis. Versões para Chrome e Firefox com mais de 30k usuários ativos.",
+    image: { src: "/src/assets/projetos/extensions/UTF-8.avif", width: 1280, height: 800 },
+    link: "https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia",
+    tags: ["Popular", "Browser Extension", "Unicode", "HTML", "JavaScript", "CSS"],
+    year: "2013 - 2026"
+  },
+  {
     id: "ai-for-kids",
     title: "Local AI for Kids",
     category: [projectCategories.featured, projectCategories.ia, projectCategories.personal, projectCategories.openSource],
@@ -147,36 +175,6 @@ export const projects: Project[] = [
     link: "https://github.com/codexico/gnucash-htdocs",
     tags: ["Open Source", "GnuCash", "CI/CD", "HTML", "CSS"],
     year: "2021"
-  },
-
-  // Extensões
-  {
-    id: "no-posts",
-    title: "No Posts No Shorts For YouTube",
-    category: [projectCategories.extensions, projectCategories.personal, projectCategories.openSource],
-    shortDescription: "Extensão de navegadores para ocultar Shorts e Posts.",
-    description: "Extensão para navegadores para ocultar Shorts e Posts do YouTube, versões para Chrome, Firefox, Opera e Firefox para Android.",
-    image: { src: "/src/assets/projetos/no_posts_no_shorts/opera_promo_image.avif", width: 1209, height: 862 },
-    gallery: [
-      { src: "/src/assets/projetos/no_posts_no_shorts/antes_depois-1280x800.avif", width: 1280, height: 800 },
-      { src: "/src/assets/projetos/no_posts_no_shorts/icon_square.avif", width: 1229, height: 1229 },
-      { src: "/src/assets/projetos/no_posts_no_shorts/icon_square_transparent.avif", width: 1229, height: 1229 }
-
-    ],
-    link: "https://github.com/codexico/no_posts_no_shorts",
-    tags: ["Chrome", "Firefox", "Opera", "Android", "Browser Extension"],
-    year: "2026"
-  },
-  {
-    id: "utf8-chars",
-    title: "UTF-8 Characters",
-    category: [projectCategories.extensions, projectCategories.personal, projectCategories.openSource],
-    shortDescription: "Extensão de navegadores com mais de 30k usuários ativos.",
-    description: "Extensões para listar e usar caracteres e emojis. Versões para Chrome e Firefox com mais de 30k usuários ativos.",
-    image: { src: "/src/assets/projetos/extensions/UTF-8.avif", width: 1280, height: 800 },
-    link: "https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia",
-    tags: ["Popular", "Browser Extension", "Unicode", "HTML", "JavaScript", "CSS"],
-    year: "2013 - 2026"
   },
   {
     id: "ligeirinho",
@@ -253,16 +251,6 @@ export const projects: Project[] = [
     tags: ["Campanha", "JavaScript", "CSS", "HTML", "Publicidade", "Landing Page", "Facebook"],
     year: "2013"
   },
-  {
-    id: "moneytimes",
-    title: "Moneytimes",
-    category: [projectCategories.websites, projectCategories.personal, projectCategories.freelancer],
-    shortDescription: "Portal de notícias sobre investimentos.",
-    description: "Elaboração e desenvolvimento de Portal de notícias sobre investimentos feito em Drupal. ",
-    image: { src: "/src/assets/projetos/Moneytimes.avif", width: 1620, height: 1620 },
-    tags: ["Drupal", "PHP", "JavaScript", "SEO", "HTML", "CSS", "Freelancer"],
-    year: "2013"
-  },
 
   // Outros
   {
@@ -274,6 +262,16 @@ export const projects: Project[] = [
     image: { src: "/src/assets/projetos/Titans_showcase_cursos.avif", width: 1024, height: 1582 },
     tags: ["JavaScript", "Mobile", "i18n", "Multiplataforma", "White Label", "Cursos online", "SMS", "Plataforma"],
     year: "2014 - 2016"
+  },
+  {
+    id: "moneytimes",
+    title: "Moneytimes",
+    category: [projectCategories.websites, projectCategories.personal, projectCategories.freelancer],
+    shortDescription: "Portal de notícias sobre investimentos.",
+    description: "Elaboração e desenvolvimento de Portal de notícias sobre investimentos feito em Drupal. ",
+    image: { src: "/src/assets/projetos/Moneytimes.avif", width: 1620, height: 1620 },
+    tags: ["Drupal", "PHP", "JavaScript", "SEO", "HTML", "CSS", "Freelancer"],
+    year: "2013"
   },
   {
     id: "rspec-visual",

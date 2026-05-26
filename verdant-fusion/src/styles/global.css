@@ -3,17 +3,19 @@
   --gray: rgb(96, 115, 159);
   --gray-light: rgb(229, 233, 240);
   --gray-dark: rgb(34, 41, 57);
-  --orange-rgb: 242, 120, 54;
-  --orange: rgb(242, 120, 54);
+  --NaturalGray: #958f83;
+
   --black: hsl(40, 5%, 6%);
-  --black-shadow: hsla(60, 3%, 6%, 0.2);
   --off-black: hsl(40, 5%, 12%);
+  --black-shadow: hsla(60, 3%, 6%, 0.2);
+  --github: rgb(36, 41, 46);
+  --Dune: #363430;
+
   --white: hsl(240, 5%, 96%);
   --off-white: hsl(42, 25%, 90%);
-  --github: rgb(36, 41, 46);
 
-  --NaturalGray: #958f83;
-  --Dune: #363430;
+  --orange: rgb(242, 120, 54);
+
   --blue: hsl(224.3, 76.3%, 48%);
   --blue: hsl(224.3, 76.3%, 48%);
   --blue-light: hsl(217.2, 91.2%, 59.8%);
@@ -46,9 +48,10 @@
   --foreground: var(--gray);
   --muted-foreground: var(--gray-dark);
   --border: var(--Dune);
-  --date: rgb(var(--gray));
+  --date: var(--gray);
 
   --card-background: var(--blue);
+  --card-title: var(--blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,6 +78,7 @@
     --date: var(--NaturalGray);
 
     --card-background: var(--orange);
+    --card-title: var(--orange);
   }
 }
 
