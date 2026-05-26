@@ -96,7 +96,7 @@ function spread(index: number, total: number) {
         overflow: hidden;
         background: linear-gradient(
             135deg,
-            rgba(var(--accent-rgb), 0.05) 0%,
+            rgb(from var(--accent) r g b / 0.05) 0%,
             transparent 100%
         );
         border-radius: 12px;
@@ -105,10 +105,10 @@ function spread(index: number, total: number) {
         position: absolute;
         max-width: 190px;
         border-radius: 8px;
-        /* border: 1px solid rgba(var(--box-shadow-color), 0.6); */
+        /* border: 1px solid rgb(from var(--box-shadow-color) r g b / 0.6); */
         transition: transform 0.3s ease, z-index 0s, box-shadow 0.3s ease;
-        background: rgba(var(--box-shadow-color), 1);
-        box-shadow: 2px 2px 4px rgba(var(--box-shadow-color), 0.4);
+        background: rgb(from var(--box-shadow-color) r g b / 1);
+        box-shadow: 2px 2px 4px rgb(from var(--box-shadow-color) r g b / 0.4);
     }
     .scatter-img-wrapper img {
         width: 100%;
@@ -120,7 +120,7 @@ function spread(index: number, total: number) {
     .scatter-img-wrapper:hover {
         transform: scale(1.15) rotate(0deg) !important;
         z-index: 100 !important;
-        box-shadow: 0 15px 35px rgba(var(--box-shadow-color), 0.8);
+        box-shadow: 0 15px 35px rgb(from var(--box-shadow-color) r g b / 0.8);
         border-width: 4px;
         border-radius: 10px;
     }

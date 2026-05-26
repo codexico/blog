@@ -1,9 +1,10 @@
 /* colors */
 :root {
-  --gray: 96, 115, 159;
-  --gray-light: 229, 233, 240;
-  --gray-dark: 34, 41, 57;
-  --orange: 242, 120, 54;
+  --gray: rgb(96, 115, 159);
+  --gray-light: rgb(229, 233, 240);
+  --gray-dark: rgb(34, 41, 57);
+  --orange-rgb: 242, 120, 54;
+  --orange: rgb(242, 120, 54);
   --black: hsl(40, 5%, 6%);
   --black-shadow: hsla(60, 3%, 6%, 0.2);
   --off-black: hsl(40, 5%, 12%);
@@ -14,25 +15,26 @@
   --NaturalGray: #958f83;
   --Dune: #363430;
   --blue: hsl(224.3, 76.3%, 48%);
+  --blue: hsl(224.3, 76.3%, 48%);
   --blue-light: hsl(217.2, 91.2%, 59.8%);
 }
 
 /* --light (default) */
 :root {
   --background: var(--white);
-  --background-alt: rgba(var(--gray-light), 85%);
-  --bg-gradient: rgba(var(--gray-light), 50%), var(--white);
+  --background-alt: rgb(from var(--gray-light) r g b / 0.85);
+  --bg-gradient: rgb(from var(--gray-light) r g b / 0.5), var(--white);
   --shadow-color: var(--background);
 
   background-color: var(--background);
 
-  --gray-gradient: rgba(var(--gray-light), 90%), #fff;
+  --gray-gradient: rgb(from var(--gray-light) r g b / 0.9), #fff;
   --box-shadow-color: var(--gray-dark);
   --box-shadow:
-    0 2px 6px rgba(var(--box-shadow-color), 25%),
-    0 8px 24px rgba(var(--box-shadow-color), 33%),
-    0 16px 32px rgba(var(--box-shadow-color), 33%);
-  --line-shadow-color: rgba(var(--gray), 25%);
+    0 2px 6px rgb(from var(--box-shadow-color) r g b / 0.25),
+    0 8px 24px rgb(from var(--box-shadow-color) r g b / 0.33),
+    0 16px 32px rgb(from var(--box-shadow-color) r g b / 0.33);
+  --line-shadow-color: rgb(from var(--gray) r g b / 0.25);
 
   --title-color: var(--black);
   --title-hover: var(--blue);
@@ -45,6 +47,8 @@
   --muted-foreground: var(--gray-dark);
   --border: var(--Dune);
   --date: rgb(var(--gray));
+
+  --card-background: var(--blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,19 +60,21 @@
 
     --box-shadow-color: var(--orange);
     --box-shadow: inset 0px -2px 0px 0px var(--box-shadow-color);
-    --line-shadow-color: rgba(var(--orange), 25%);
+    --line-shadow-color: rgb(from var(--orange) r g b / 0.25);
 
     --title-color: var(--off-white);
     --title-hover: var(--orange);
     --text-color: var(--white);
-    --code-bg: rgba(var(--orange), 15%);
-    --code-text: rgba(var(--orange), 100%);
-    --accent: rgb(var(--orange));
+    --code-bg: rgb(from var(--orange) r g b / 0.15);
+    --code-text: rgb(from var(--orange) r g b / 100%);
+    --accent: rgb(from var(--orange) r g b);
 
     --foreground: var(--off-white);
     --muted-foreground: var(--NaturalGray);
     --border: var(--Dune);
     --date: var(--NaturalGray);
+
+    --card-background: var(--orange);
   }
 }
 
@@ -199,7 +205,7 @@ pre {
   border-radius: 8px;
 }
 
-pre>code {
+pre > code {
   all: unset;
 }
 

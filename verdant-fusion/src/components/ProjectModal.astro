@@ -146,7 +146,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     width: 90%;
     background: var(--background);
     color: var(--text-color);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.8);
     margin: auto;
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
@@ -157,7 +157,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     }
   }
   dialog::backdrop {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0, 0.7);
     backdrop-filter: blur(4px);
   }
   .dialog-close {
@@ -178,7 +178,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     color: var(--text-color);
     transition: all 0.2s;
     z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.3);
   }
   .dialog-close:hover {
     color: var(--title-hover);

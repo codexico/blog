@@ -66,8 +66,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 padding-box,
             linear-gradient(
                     135deg,
-                    rgba(var(--orange), 0.3) 0%,
-                    transparent 100%
+                    rgb(from var(--card-background) r g b / 0.5) 0%,
+                    transparent 90%
                 )
                 border-box;
         border: 12px solid transparent;
@@ -79,7 +79,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             box-shadow 0.3s ease;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 15px rgb(0 0 0 / 5%);
     }
 
     .project-card img {
@@ -121,11 +121,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
                 padding-box,
             linear-gradient(
                     135deg,
-                    rgba(var(--orange), 0.9) 0%,
-                    rgba(var(--orange), 0.3) 100%
+                    rgb(from var(--card-background) r g b / 0.9) 0%,
+                    rgb(from var(--card-background) r g b / 0.3) 100%
                 )
                 border-box;
-        box-shadow: 0 10px 30px rgba(var(--orange), 0.15);
+        box-shadow: 0 10px 30px rgb(from var(--card-background) r g b, 0.5);
+
     }
     .project-card:hover .project-card-title {
         color: var(--title-hover);

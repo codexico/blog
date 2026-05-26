@@ -310,7 +310,8 @@ export const projects: Project[] = [
     title: "Tabela do Brasileirão para iPhone",
     category: [projectCategories.personal, projectCategories.openSource, projectCategories.mobile],
     shortDescription: "Primeiro aplicativo de tabela do brasileirão para iPhone.",
-    description: "Primeiro aplicativo desenvolvido para iPhone, que mostrava a tabela do campeonato brasileiro. Infelizmente não existem mais imagens, desculpa mas na época nem o github existia direito.",
+    description: "Primeiro aplicativo com a tabela do Campeonato Brasileiro desenvolvido para iPhone. Infelizmente não existem mais imagens, desculpa mas na época nem o github existia direito.",
+    image: { src: "/src/assets/projetos/brasileirao.png", width: 360, height: 360 },
     tags: ["iPhone", "Objective-C", "Web Scrapping"],
     year: "2009"
   },

@@ -42,7 +42,7 @@ function draw() {
 
   if (canvas.getContext) {
     var context = canvas.getContext("2d"); //retangulo
-    context.fillStyle = "rgba(0, 0, 200, 0.2)"; //cor do preenchimento
+    context.fillStyle = "rgb(0 0 200 / 0.2)"; //cor do preenchimento
     context.fillRect(0, 0, 128, 128); //background
     context.strokeStyle = "#FF0000"; //cor da borda
     context.strokeRect(0, 0, 128, 128); //borda
@@ -62,7 +62,7 @@ function draw(){
     var context = canvas.getContext('2d'); //retangulo
     context.strokeStyle = "red";
     context.strokeRect(0,0,128,128);
-    circulo context.fillStyle = "rgba(241, 178, 21, 0.3)";
+    circulo context.fillStyle = "rgb(241 178 21 / 0.3)";
     context.strokeStyle = "blue";
     context.beginPath();
     var x = 64; // = 128/2 - centraliza o circulo
@@ -88,13 +88,13 @@ function draw() {
   var canvas = document.getElementById("icon");
   if (canvas.getContext) {
     var context = canvas.getContext("2d"); //circulo
-    context.fillStyle = "rgba(241, 178, 21, 0.3)";
+    context.fillStyle = "rgb(241 178 21 / 0.3)";
     context.strokeStyle = "blue";
     context.beginPath();
     context.arc(64, 64, 64, 0, Math.PI \* 2, true);
     context.closePath();
-    context.stroke(); context.fill(); //texto context.strokeStyle = "rgba(2, 93, 198, 1)";
-    context.fillStyle = "rgba(2, 93, 198, 0.9)";
+    context.stroke(); context.fill(); //texto context.strokeStyle = "rgb(2 93 198 / 1)";
+    context.fillStyle = "rgb(2 93 198 / 0.9)";
     context.font = "italic bold 146px sans-serif";
     context.fillText("✪", 3, 117); //aqui ñ encontrei uma fórmula para x,y e o tamanho da fonte
   }
@@ -110,11 +110,11 @@ Só que ficou meio normal demais esse ícone. ¿Que tal brincar um pouco com os 
 
 ```js
 //texto
-context.strokeStyle = "rgba(2, 93, 198, 1)";
-context.fillStyle = "rgba(2, 93, 198, 0.9)";
+context.strokeStyle = "rgb(2 93 198 / 1)";
+context.fillStyle = "rgb(2 93 198 / 0.9)";
 context.font = "italic bold 146px sans-serif";
 context.fillText("✪", 3, 117); //circulo
-context.fillStyle = "rgba(241, 178, 21, 0.3)";
+context.fillStyle = "rgb(241 178 21 / 0.3)";
 context.beginPath();
 var startAngle = (Math.PI _ 3.78) / 2; //comeca um pouco acima do 0
 var endAngle = Math.PI + (Math.PI _ 3.42) / 2; //termina no sudoeste
@@ -129,11 +129,11 @@ Tá, mas até agora o desenho só apareceu no navegador, se tentar salvar vai ba
 
 ```js
 //texto
-context.strokeStyle = "rgba(2, 93, 198, 1)";
-context.fillStyle = "rgba(2, 93, 198, 0.9)";
+context.strokeStyle = "rgb(2 93 198 / 1)";
+context.fillStyle = "rgb(2 93 198 / 0.9)";
 context.font = "italic bold 146px sans-serif";
 context.fillText("✪", 3, 117); //circulo
-context.fillStyle = "rgba(241, 178, 21, 0.3)";
+context.fillStyle = "rgb(241 178 21 / 0.3)";
 context.beginPath();
 var startAngle = (Math.PI * 3.78) / 2;
 var endAngle = Math.PI + (Math.PI * 3.42) / 2;
