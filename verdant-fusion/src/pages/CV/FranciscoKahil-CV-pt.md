@@ -1,10 +1,3 @@
----
-layout: ../../layouts/CVLayout.astro
-title: Francisco Kahil CV
-author: Francisco Kahil
-description: Francisco Kahil CV
----
-
 # Francisco Eugenio Endler Kahil
 
 ## Desenvolvedor Full Stack
@@ -31,6 +24,14 @@ Agora, com foco renovado, busco novas oportunidades para aplicar minha seniorida
 
 ## Experiência
 
+### - Projetos recentes
+
+2026
+
+- [Meus Remedinhos](https://play.google.com/store/apps/details?id=com.franciscokahil.appMeusRemedinhos) - Android App feito em Kotlin
+- [No Posts No Shorts For YouTube](https://github.com/codexico/no_posts_no_shorts) - Extensão de navegador para [Firefox e Firefox for Android](https://addons.mozilla.org/en-US/firefox/addon/no-posts-no-shorts-for-youtube/), também para [Google Chrome](https://chromewebstore.google.com/detail/no-posts-no-shorts-for-yo/gnlkanbjjhfpfbgbkhcfhnggknipokde?pli=1)
+- [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 9k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2026).
+
 ### - [EITA](https://eita.coop.br/) - Desenvolvedor Android React Native
 
 janeiro de 2023 - julho de 2023 (7 meses)
@@ -52,16 +53,15 @@ dezembro de 2016 - dezembro de 2020 (4 anos e 1 mês)
 - Na equipe de checkout do e-commerce, implementei novos métodos de pagamento, login, segurança, CI/CD e analytics.
 - Responsável por separar do back e front, aumentando a estabilidade, o desempenho e a testabilidade.
 - Unifiquei os aplicativos móveis e desktop em um único aplicativo responsivo, criando uma melhor integração visual e velocidade para implementar novos recursos.
-- Ao unificar os checkouts de diversas plataformas e sistemas da empresa, liberei outras equipes da responsabilidade de manter seus checkouts e fui nomeado Funcionário do Mês.
 
 ### - Titans Group - Desenvolvedor Web Full Stack
 
 novembro de 2014 - maio de 2016 (1 ano e 7 meses)
 
-- Refatoração de plataforma white label com milhões de usuários na América Latina, com diversos idiomas marcas e temas, web e mobile, reduzindo em 80% a base de código.
+- Refatoração de plataforma white label com milhões de usuários na América Latina, com diversas marcas e temas, web e mobile, reduzindo em 80% a base de código.
 - Desenvolvimento do sistema em JavaScript puro para celulares de baixa performance.
 - Responsável por otimização e implementação de ferramentas de automatização, ci/cd, testes e boas práticas.
-- Como resultado a introdução de novas empresas clientes passou de semanas para dias.
+- Como resultado a introdução de novos clientes passou de semanas para dias.
 
 ### - Pivot Produtora Interativa - Desenvolvedor Web Full Stack
 
@@ -91,9 +91,9 @@ julho de 2008 - novembro de 2009 (1 ano 5 meses)
 
 **2009 - 2026**
 
-- [No Posts No Shorts For YouTube](https://github.com/codexico/no_posts_no_shorts) - Extensão para navegadores para ocultar Shorts e Posts do YouTube, versões para Chrome, Firefox, Opera e Firefox para Android (2026).
+- [No Posts No Shorts For YouTube](https://github.com/codexico/no_posts_no_shorts) - Brwoser Extension to remove Shorts and Posts from YouTube, versions for Chrome, Firefox, Opera and Firefox for Android (2026).
 
-- [Local AI for Kids](https://github.com/codexico/ai-kids) - Projeto pessoal de IA no Steam Deck usando Ollama e Open WebUI, totalmente offline, segura, focada em crianças e desenvolvimento de jogos para Roblox (2026).
+- [Local AI for Kids](https://github.com/codexico/ai-kids) - IA pronta para crianças no Steam Deck usando Ollama e Open WebUI (2026).
 
 - [Barking Gecko](http://www.barkinggecko.com.au) - Website australiano em Drupal (2009).
 
@@ -106,21 +106,15 @@ julho de 2008 - novembro de 2009 (1 ano 5 meses)
 
 - [ttlocal](https://github.com/codexico/ttlocal) - Todos os Trending Topics do Twitter, Youtube e outras fontes em uma só página. Uso de Twitter API, Youtube API, PHP, jQuery, CSS (2012).
 
-- [jquery-validation](https://github.com/codexico/jquery-validation) - Contribuição Open Source. Correção de bug na validação de horário de verão da biblioteca global jQuery Validation. (2013).
+- [jquery-validation](https://github.com/codexico/jquery-validation) - correção de bug na validação de horário de verão (2013).
 
-- [gnucash-htdocs](https://github.com/codexico/gnucash-htdocs) - Contribuição Open Source. Responsividade na interface e usabilidade para a Home Page do projeto GnuCash (2021).
-
-- [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 30k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2026).
+- [utf-8 chars](https://chromewebstore.google.com/detail/utf-8-and-unicode-charact/fcemphgmjnjpmmdhcedhjiegickfbiia?pli=1) - Extensões com 30k usuários para [Chrome](https://github.com/codexico/UTF-8-Chrome-Extension) e [Firefox](https://github.com/codexico/UTF-8-Firefox-Extension) para listar e usar caracteres e emojis (2013 - 2025).
 
 - [Ligeirinho](https://github.com/codexico/ligeirinho) - Extensão para Google Chrome, sistema de procura de produtos e comparação de preços baseado em API do Buscapé (2014).
 
 - [Rspec::Visual](https://github.com/codexico/rspec-visual) - Ruby Gem para testes através de comparação de screenshots (2015).
 
-- [calendar-report](https://github.com/codexico/calendar-report) - Ferramenta que sua Google Apps Script para revisar tarefas realizadas usando o Google Calendar, gera e envia relatório diário, semanal e mensal de horas trabalhadas e quantas horas por projeto (2013).
-
 - [changelogkeeper](https://github.com/codexico/changelogkeeper) - NPM package para escrever changelogs automaticamente (2019).
-
-- [Tabela do Brasileirão para iPhone]() - Primeiro aplicativo para iPhone que mostrava a tabela do campeonato brasileiro (2009).
 
 ## Formação acadêmica
 
