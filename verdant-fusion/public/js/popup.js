@@ -6,10 +6,12 @@
 const STORAGE_FAVS = 'utf_favorites';
 const STORAGE_RECENT = 'utf_recents';
 const STORAGE_COPY_COUNT = 'utf_copy_count';
+const STORAGE_LAST_CATEGORY = 'utf_last_category';
 
 // State
 let categoryCache = {}; // group -> array of character objects
 let currentCategory = 'home';
+let lastSelectedCategory = 'home';
 let activeGlyph = null;
 let favoriteGlyphs = [];
 let recentGlyphs = [];
@@ -128,28 +130,42 @@ document.addEventListener('DOMContentLoaded', async () => {
   await initStorage();
   setupEventListeners();
 
-  renderCategory('home');
+  renderCategory(lastSelectedCategory || 'home');
 });
 
 /**
- * Initialize storage for favorites, recents, and copy counter
+ * Initialize storage for favorites, recents, copy counter, and last category
  */
 async function initStorage() {
   if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local) {
-    const data = await chrome.storage.local.get([STORAGE_FAVS, STORAGE_RECENT, STORAGE_COPY_COUNT]);
+    const data = await chrome.storage.local.get([STORAGE_FAVS, STORAGE_RECENT, STORAGE_COPY_COUNT, STORAGE_LAST_CATEGORY]);
     favoriteGlyphs = data[STORAGE_FAVS] || [];
     recentGlyphs = data[STORAGE_RECENT] || [];
     copyCount = data[STORAGE_COPY_COUNT] || 0;
+    lastSelectedCategory = data[STORAGE_LAST_CATEGORY] || 'home';
   } else {
     try {
       favoriteGlyphs = JSON.parse(localStorage.getItem(STORAGE_FAVS) || '[]');
       recentGlyphs = JSON.parse(localStorage.getItem(STORAGE_RECENT) || '[]');
       copyCount = parseInt(localStorage.getItem(STORAGE_COPY_COUNT) || '0', 10);
+      lastSelectedCategory = localStorage.getItem(STORAGE_LAST_CATEGORY) || 'home';
     } catch (e) {
       favoriteGlyphs = [];
       recentGlyphs = [];
       copyCount = 0;
+      lastSelectedCategory = 'home';
     }
+  }
+}
+
+function saveLastCategory(cat) {
+  lastSelectedCategory = cat;
+  if (typeof chrome !== 'undefined' && chrome.storage && chrome.storage.local) {
+    chrome.storage.local.set({ [STORAGE_LAST_CATEGORY]: cat });
+  } else {
+    try {
+      localStorage.setItem(STORAGE_LAST_CATEGORY, cat);
+    } catch (e) {}
   }
 }
 
@@ -158,12 +174,14 @@ async function saveStorage() {
     await chrome.storage.local.set({
       [STORAGE_FAVS]: favoriteGlyphs,
       [STORAGE_RECENT]: recentGlyphs,
-      [STORAGE_COPY_COUNT]: copyCount
+      [STORAGE_COPY_COUNT]: copyCount,
+      [STORAGE_LAST_CATEGORY]: lastSelectedCategory
     });
   } else {
     localStorage.setItem(STORAGE_FAVS, JSON.stringify(favoriteGlyphs));
     localStorage.setItem(STORAGE_RECENT, JSON.stringify(recentGlyphs));
     localStorage.setItem(STORAGE_COPY_COUNT, copyCount.toString());
+    localStorage.setItem(STORAGE_LAST_CATEGORY, lastSelectedCategory);
   }
 }
 
@@ -436,6 +454,7 @@ function openSidePanel() {
  */
 async function switchCategory(cat, pillElement) {
   currentCategory = cat;
+  saveLastCategory(cat);
 
   document.querySelectorAll('.nav-pill').forEach(btn => btn.classList.remove('active'));
   if (pillElement) pillElement.classList.add('active');
