@@ -672,7 +672,7 @@ async function loadCategory(group) {
   }
 
   try {
-    const response = await fetch(`html/groups/${group}.html`);
+    const response = await fetch(`/html/groups/${group}.html`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const htmlText = await response.text();
     const parsedGlyphs = parseGroupHTML(htmlText, group);
@@ -845,7 +845,7 @@ async function performSearch(term) {
   for (const group of allGroups) {
     if (!categoryCache[group]) {
       try {
-        const res = await fetch(`html/groups/${group}.html`);
+        const res = await fetch(`/html/groups/${group}.html`);
         if (res.ok) {
           const txt = await res.text();
           categoryCache[group] = parseGroupHTML(txt, group);
