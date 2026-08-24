@@ -1198,8 +1198,8 @@ main {
 #app.app-container {
   width: 100% !important;
   max-width: 1280px !important;
-  height: calc(100vh - 180px) !important;
-  min-height: 620px !important;
+  height: calc(100vh - 240px) !important;
+  min-height: 580px !important;
   margin: 0 auto !important;
   border-radius: 16px !important;
   box-shadow: var(--box-shadow, 0 10px 25px rgba(0,0,0,0.15)) !important;
@@ -1229,4 +1229,99 @@ main {
 
 #btnSidePanel {
   display: none !important;
+}
+
+/* Extension Promo Banner CTA Styles */
+.extension-promo-banner {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.14) 0%, rgba(168, 85, 247, 0.14) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 16px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(8px);
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.promo-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.18);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  margin-bottom: 0.35rem;
+}
+
+.promo-text h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: var(--title-color, #f8fafc);
+}
+
+.promo-text p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--text-color, #94a3b8);
+  line-height: 1.4;
+}
+
+.promo-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-chrome-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-chrome-store:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+.firefox-tag {
+  font-size: 0.78rem;
+  color: var(--date, #94a3b8);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .promo-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .promo-actions {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .btn-chrome-store {
+    width: 100%;
+    justify-content: center;
+  }
 }
