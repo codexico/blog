@@ -13,15 +13,14 @@
     "generate-types": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.5.1",
-    "@astrojs/mdx": "^5.0.5",
-    "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.3.2",
-    "sharp": "^0.34.3",
-    "wrangler": "^4.92.0"
+    "@astrojs/cloudflare": "^14.2.4",
+    "@astrojs/mdx": "^7.0.8",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.6",
+    "sharp": "^0.35.3"
   },
-  "overrides": {
-    "vite": "^7"
+  "devDependencies": {
+    "wrangler": "^4.125.0"
   }
 }
