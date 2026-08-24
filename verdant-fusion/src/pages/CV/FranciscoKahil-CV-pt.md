@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/CVLayout.astro
+title: Francisco Kahil CV
+author: Francisco Kahil
+description: Francisco Kahil CV
+---
+
 # Francisco Eugenio Endler Kahil
 
 ## Desenvolvedor Full Stack
