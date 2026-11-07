@@ -1405,6 +1405,15 @@ main {
   font-size: 0.78rem;
   color: var(--date, #94a3b8);
   opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.firefox-tag:hover {
+  opacity: 1;
+  color: #ff7139;
 }
 
 @media (max-width: 768px) {
