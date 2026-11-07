@@ -264,6 +264,7 @@ body:not(.is-sidepanel):not(.web-mode) {
 .color-favorites   { --pill-color: var(--cat-fav); }
 .color-about       { --pill-color: #6366f1; }
 .color-emoticons   { --pill-color: var(--cat-fun); }
+.color-text-emoticons { --pill-color: #0ea5e9; }
 .color-kaomoji     { --pill-color: #ff5e97; }
 
 /* Grid Section Header */
@@ -1160,6 +1161,102 @@ body.is-sidepanel .btn-icon-fav {
 .btn-website-link:hover {
   opacity: 0.95;
   box-shadow: 0 3px 10px rgba(99, 102, 241, 0.3);
+}
+
+.offline-tag {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.12);
+}
+
+/* Links Grid & Action Cards */
+.about-links-card,
+.about-shortcuts-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.about-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.about-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.about-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.about-link-btn:hover {
+  border-color: var(--accent-primary);
+  background-color: rgba(99, 102, 241, 0.08);
+  color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
+.about-link-btn.btn-primary-accent {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-hover));
+  color: #ffffff;
+  border: none;
+}
+
+.about-link-btn.btn-primary-accent:hover {
+  opacity: 0.95;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Keyboard Shortcuts Summary in About */
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.shortcut-row kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  font-size: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: var(--bg-hover);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .icon-wrap {

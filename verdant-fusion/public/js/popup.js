@@ -17,6 +17,7 @@ let favoriteGlyphs = [];
 let recentGlyphs = [];
 let copyCount = 0;
 let toastTimeout = null;
+let LOCALIZED_EMOJI_NAMES = {};
 
 // High-frequency explicit Unicode Character Name Lookup
 const UNICODE_EXACT_NAMES = {
@@ -68,10 +69,37 @@ function applyI18n() {
 }
 
 /**
+ * Load Localized Emoji and Symbol Names (pt / es) on demand
+ */
+async function loadLocalizedEmojiNames() {
+  const uiLang = (typeof chrome !== 'undefined' && chrome.i18n && chrome.i18n.getUILanguage) 
+    ? chrome.i18n.getUILanguage().toLowerCase() 
+    : (navigator.language || 'en').toLowerCase();
+
+  let langFile = null;
+  if (uiLang.startsWith('pt')) langFile = 'emojis_pt.json';
+  else if (uiLang.startsWith('es')) langFile = 'emojis_es.json';
+
+  if (!langFile) return;
+
+  try {
+    const res = await fetch(`/data/${langFile}`);
+    if (res.ok) {
+      LOCALIZED_EMOJI_NAMES = await res.json();
+    }
+  } catch (e) {
+    // Silently fallback to official unicode names
+  }
+}
+
+/**
  * Dynamic Unicode Character Naming Engine
  */
 function getUnicodeName(symbol, hex, section) {
   const upperHex = hex.toUpperCase();
+  if (LOCALIZED_EMOJI_NAMES && LOCALIZED_EMOJI_NAMES[upperHex]) {
+    return LOCALIZED_EMOJI_NAMES[upperHex];
+  }
   if (typeof OFFICIAL_UNICODE_NAMES !== 'undefined' && OFFICIAL_UNICODE_NAMES[upperHex]) {
     return OFFICIAL_UNICODE_NAMES[upperHex];
   }
@@ -112,6 +140,7 @@ function getUnicodeName(symbol, hex, section) {
 
 document.addEventListener('DOMContentLoaded', async () => {
   applyI18n();
+  await loadLocalizedEmojiNames();
 
   // Detect Side Panel mode via query param or window width
   const urlParams = new URLSearchParams(window.location.search);
@@ -262,18 +291,28 @@ function setupEventListeners() {
 
   // Global Keyboard Shortcuts
   window.addEventListener('keydown', (e) => {
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'f') {
+    const isSearchFocused = (document.activeElement === searchInput);
+
+    if (((e.ctrlKey || e.metaKey) && (e.key.toLowerCase() === 'f' || e.key.toLowerCase() === 'k')) ||
+        (e.key === '/' && !isSearchFocused)) {
       e.preventDefault();
       searchInput.focus();
       searchInput.select();
     } else if (e.key === 'Escape') {
       if (fontsModal && !fontsModal.classList.contains('hidden')) {
         fontsModal.classList.add('hidden');
-      } else if (document.activeElement === searchInput) {
+      } else if (isSearchFocused) {
         searchInput.value = '';
         renderCategory(currentCategory);
         searchInput.blur();
       }
+    } else if (!isSearchFocused && activeGlyph && (e.key.toLowerCase() === 'f')) {
+      e.preventDefault();
+      toggleFavorite(activeGlyph);
+    } else if (!isSearchFocused && activeGlyph && (e.key.toLowerCase() === 'c') && !e.ctrlKey && !e.metaKey) {
+      e.preventDefault();
+      copyToClipboard(activeGlyph.symbol, `${getMsg('copiedMsg', 'Copiado: ')}${activeGlyph.symbol}`);
+      addToRecent(activeGlyph);
     } else if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
       handleGridArrowNavigation(e);
     }
@@ -551,85 +590,230 @@ function renderAboutView() {
   const container = document.createElement('div');
   container.className = 'about-container';
 
-  const prefix = getMsg('aboutCopyCountPrefix', 'Você já copiou ');
-  const suffix = getMsg('aboutCopyCountSuffix', ' caracteres usando a extensão!');
-  const desc = getMsg('aboutDesc', 'Repositório completo, rápido e prático de mais de 43.000 caracteres, símbolos e emojis Unicode com busca inteligente.');
-  const tip = getMsg('aboutSidePanelTip', 'Dica: Clique no ícone de Painel Lateral 🗂 no cabeçalho para manter esta extensão aberta ao lado enquanto você navega!');
+  // Obter versão dinâmica do manifest
+  const manifestVersion = (typeof chrome !== 'undefined' && chrome.runtime?.getManifest?.()?.version)
+    ? `v${chrome.runtime.getManifest().version}`
+    : 'v4.3.0';
+
   const sinceTag = getMsg('aboutSinceTag', 'Desde 2010');
+  const offlineTag = getMsg('aboutOfflineTag', '100% Offline');
+  const desc = getMsg('aboutDesc', 'Repositório completo, rápido e prático de mais de 43.000 caracteres, símbolos e emojis Unicode com busca inteligente.');
+  const tip = getMsg('aboutSidePanelTip', 'Dica: Clique no ícone de Painel Lateral no cabeçalho para manter esta extensão aberta ao lado enquanto você navega!');
 
-  const counterHtml = (copyCount > 0) ? `
-    <div class="copy-counter-card">
-      <span class="counter-icon">📊</span>
-      <div class="counter-text-wrapper">
-        <span>${prefix}<strong id="copyCountNumber" class="counter-count-number">${copyCount}</strong>${suffix}</span>
-      </div>
-    </div>
-  ` : '';
+  // 1. Hero Card
+  const heroCard = document.createElement('div');
+  heroCard.className = 'about-hero-card';
 
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(`
-    <div>
-      <div class="about-hero-card">
-        <div class="about-hero-top">
-          <div class="about-logo-badge">⚡</div>
-          <div>
-            <div class="about-hero-title">
-              <span>Unicode & UTF-8 Studio</span>
-              <span class="version-tag">v4.0.0</span>
-              <span class="since-tag">🎉 ${sinceTag}</span>
-            </div>
-            <div class="about-hero-desc">${desc}</div>
-          </div>
-        </div>
-      </div>
+  const heroTop = document.createElement('div');
+  heroTop.className = 'about-hero-top';
 
-      ${counterHtml}
+  const logoBadge = document.createElement('div');
+  logoBadge.className = 'about-logo-badge';
+  logoBadge.textContent = '⚡';
 
-      <div class="sidepanel-tip-card">
-        <span class="tip-card-icon">💡</span>
-        <div>${tip}</div>
-      </div>
+  const titleWrapper = document.createElement('div');
+  const heroTitle = document.createElement('div');
+  heroTitle.className = 'about-hero-title';
 
-      <div class="about-fonts-card">
-        <h4 data-i18n="modalTitle">🔤 ${getMsg('modalTitle', 'Fontes Recomendadas')}</h4>
-        <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 6px;" data-i18n="modalSubtitle">
-          ${getMsg('modalSubtitle', 'Alguns caracteres Unicode raros (como CJK, Tibetano, Rúnico ou Braille) exigem fontes específicas para renderizar corretamente no seu sistema operacional.')}
-        </p>
-        <ul class="font-list" style="margin: 4px 0;">
-          <li class="font-item">
-            <a href="https://fonts.google.com/noto" target="_blank" rel="noopener" data-i18n="modalFontGoogleNoto">
-              ${getMsg('modalFontGoogleNoto', 'Google Noto Fonts (Cobertura Universal)')}
-            </a>
-          </li>
-          <li class="font-item">
-            <a href="https://www.babelstone.co.uk/Fonts/" target="_blank" rel="noopener" data-i18n="modalFontBabelStone">
-              ${getMsg('modalFontBabelStone', 'BabelStone Fonts (Símbolos & Escritas Raras)')}
-            </a>
-          </li>
-          <li class="font-item">
-            <a href="http://www.quivira-font.com/" target="_blank" rel="noopener" data-i18n="modalFontQuivira">
-              ${getMsg('modalFontQuivira', 'Quivira (Fonte Unicode Abrangente)')}
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  `, 'text/html');
+  const titleText = document.createElement('span');
+  titleText.textContent = 'Unicode & UTF-8 Studio';
 
-  const wrapper = doc.body.firstElementChild;
-  if (wrapper) {
-    while (wrapper.firstChild) {
-      container.appendChild(wrapper.firstChild);
+  const versionTag = document.createElement('span');
+  versionTag.className = 'version-tag';
+  versionTag.textContent = manifestVersion;
+
+  const sinceBadge = document.createElement('span');
+  sinceBadge.className = 'since-tag';
+  sinceBadge.textContent = `🎉 ${sinceTag}`;
+
+  const offlineBadge = document.createElement('span');
+  offlineBadge.className = 'version-tag offline-tag';
+  offlineBadge.textContent = `✨ ${offlineTag}`;
+
+  heroTitle.append(titleText, versionTag, sinceBadge, offlineBadge);
+
+  const heroDesc = document.createElement('div');
+  heroDesc.className = 'about-hero-desc';
+  heroDesc.textContent = desc;
+
+  titleWrapper.append(heroTitle, heroDesc);
+  heroTop.append(logoBadge, titleWrapper);
+  heroCard.appendChild(heroTop);
+  container.appendChild(heroCard);
+
+  // 2. Personal Copy Counter Card (se copyCount > 0)
+  if (copyCount > 0) {
+    const counterCard = document.createElement('div');
+    counterCard.className = 'copy-counter-card';
+
+    const counterIcon = document.createElement('span');
+    counterIcon.className = 'counter-icon';
+    counterIcon.textContent = '📊';
+
+    const textWrapper = document.createElement('div');
+    textWrapper.className = 'counter-text-wrapper';
+
+    const prefix = getMsg('aboutCopyCountPrefix', 'Você já copiou ');
+    const suffix = getMsg('aboutCopyCountSuffix', ' caracteres usando a extensão!');
+
+    const countSpan = document.createElement('span');
+    countSpan.append(prefix);
+
+    const countNum = document.createElement('strong');
+    countNum.id = 'copyCountNumber';
+    countNum.className = 'counter-count-number';
+    countNum.textContent = String(copyCount);
+
+    countSpan.append(countNum, suffix);
+    textWrapper.appendChild(countSpan);
+    counterCard.append(counterIcon, textWrapper);
+    container.appendChild(counterCard);
+  }
+
+  // 3. Side Panel Tip Card (interativo)
+  const tipCard = document.createElement('div');
+  tipCard.className = 'sidepanel-tip-card';
+  tipCard.title = getMsg('sidepanelOpenTip', 'Clique para abrir o Painel Lateral');
+
+  const tipIcon = document.createElement('span');
+  tipIcon.className = 'tip-card-icon';
+  tipIcon.textContent = '💡';
+
+  const tipText = document.createElement('div');
+  tipText.textContent = tip;
+
+  tipCard.append(tipIcon, tipText);
+  tipCard.addEventListener('click', () => {
+    openSidePanel();
+  });
+  container.appendChild(tipCard);
+
+  // 4. Official Links Card (Grid 2x2 com os links Web, Chrome, Firefox, GitHub)
+  const linksCard = document.createElement('div');
+  linksCard.className = 'about-links-card';
+
+  const linksTitle = document.createElement('h4');
+  linksTitle.className = 'about-card-title';
+  linksTitle.textContent = `🔗 ${getMsg('aboutLinksTitle', 'Links Oficiais')}`;
+  linksCard.appendChild(linksTitle);
+
+  const linksGrid = document.createElement('div');
+  linksGrid.className = 'about-links-grid';
+
+  const linksData = [
+    {
+      href: 'https://codexico.com.br/unicode/',
+      label: getMsg('aboutWebVersionBtn', 'Versão Web Online'),
+      icon: '🌐',
+      isPrimary: true
+    },
+    {
+      href: 'https://chromewebstore.google.com/detail/unicode-utf-8-character-s/fcemphgmjnjpmmdhcedhjiegickfbiia',
+      label: getMsg('aboutChromeStoreBtn', 'Chrome Web Store'),
+      icon: '🛒',
+      isPrimary: false
+    },
+    {
+      href: 'https://addons.mozilla.org/pt-BR/firefox/addon/unicode-utf-8-character-studio/',
+      label: getMsg('aboutFirefoxAddonBtn', 'Firefox Add-ons'),
+      icon: '🦊',
+      isPrimary: false
+    },
+    {
+      href: 'https://github.com/codexico/UTF-Browser-Extensions',
+      label: getMsg('aboutGithubBtn', 'Repositório GitHub'),
+      icon: '💻',
+      isPrimary: false
     }
-  }
+  ];
 
-  const tipCard = container.querySelector('.sidepanel-tip-card');
-  if (tipCard) {
-    tipCard.title = getMsg('sidepanelOpenTip', 'Clique para abrir o Painel Lateral');
-    tipCard.addEventListener('click', () => {
-      openSidePanel();
-    });
-  }
+  linksData.forEach(item => {
+    const a = document.createElement('a');
+    a.href = item.href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.className = `about-link-btn ${item.isPrimary ? 'btn-primary-accent' : ''}`;
+    a.textContent = `${item.icon} ${item.label}`;
+    linksGrid.appendChild(a);
+  });
+
+  linksCard.appendChild(linksGrid);
+  container.appendChild(linksCard);
+
+  // 5. Shortcuts Summary Card
+  const shortcutsCard = document.createElement('div');
+  shortcutsCard.className = 'about-shortcuts-card';
+
+  const shortcutsTitle = document.createElement('h4');
+  shortcutsTitle.className = 'about-card-title';
+  shortcutsTitle.textContent = `⌨️ ${getMsg('aboutShortcutsTitle', 'Atalhos de Teclado')}`;
+  shortcutsCard.appendChild(shortcutsTitle);
+
+  const shortcutsList = document.createElement('div');
+  shortcutsList.className = 'shortcuts-list';
+
+  const shortcutsData = [
+    { kbd: 'Ctrl+K /', desc: getMsg('shortcutSearchDesc', 'Focar na barra de busca') },
+    { kbd: 'Enter / C', desc: getMsg('shortcutCopyDesc', 'Copiar caractere focado') },
+    { kbd: '↑ ↓ ← →', desc: getMsg('shortcutNavDesc', 'Navegação 2D na grade') },
+    { kbd: 'F', desc: getMsg('shortcutFontsDesc', 'Guia de Fontes') },
+    { kbd: 'Esc', desc: getMsg('shortcutEscDesc', 'Limpar busca / fechar modal') }
+  ];
+
+  shortcutsData.forEach(s => {
+    const row = document.createElement('div');
+    row.className = 'shortcut-row';
+
+    const descEl = document.createElement('span');
+    descEl.textContent = s.desc;
+
+    const kbdEl = document.createElement('kbd');
+    kbdEl.textContent = s.kbd;
+
+    row.append(descEl, kbdEl);
+    shortcutsList.appendChild(row);
+  });
+
+  shortcutsCard.appendChild(shortcutsList);
+  container.appendChild(shortcutsCard);
+
+  // 6. Recommended Fonts Card
+  const fontsCard = document.createElement('div');
+  fontsCard.className = 'about-fonts-card';
+
+  const fontsTitle = document.createElement('h4');
+  fontsTitle.textContent = `🔤 ${getMsg('modalTitle', 'Fontes Recomendadas')}`;
+
+  const fontsSubtitle = document.createElement('p');
+  fontsSubtitle.style.fontSize = '11px';
+  fontsSubtitle.style.color = 'var(--text-muted)';
+  fontsSubtitle.style.marginBottom = '6px';
+  fontsSubtitle.textContent = getMsg('modalSubtitle', 'Alguns caracteres Unicode raros (como CJK, Tibetano, Rúnico ou Braille) exigem fontes específicas para renderizar corretamente no seu sistema operacional.');
+
+  const fontList = document.createElement('ul');
+  fontList.className = 'font-list';
+  fontList.style.margin = '4px 0';
+
+  const fonts = [
+    { href: 'https://fonts.google.com/noto', label: getMsg('modalFontGoogleNoto', 'Google Noto Fonts (Cobertura Universal)') },
+    { href: 'https://www.babelstone.co.uk/Fonts/', label: getMsg('modalFontBabelStone', 'BabelStone Fonts (Símbolos & Escritas Raras)') },
+    { href: 'http://www.quivira-font.com/', label: getMsg('modalFontQuivira', 'Quivira (Fonte Unicode Abrangente)') }
+  ];
+
+  fonts.forEach(f => {
+    const li = document.createElement('li');
+    li.className = 'font-item';
+    const a = document.createElement('a');
+    a.href = f.href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.textContent = f.label;
+    li.appendChild(a);
+    fontList.appendChild(li);
+  });
+
+  fontsCard.append(fontsTitle, fontsSubtitle, fontList);
+  container.appendChild(fontsCard);
 
   grid.appendChild(container);
 }
@@ -643,7 +827,7 @@ function createCardElement(g) {
   card.className = 'glyph-card';
   card.dataset.hex = g.hex;
 
-  const isKaomoji = (g.section === 'kaomoji' || currentCategory === 'kaomoji' || (g.name && g.name.startsWith('KAOMOJI:')) || (g.symbol && g.symbol.length > 2));
+  const isKaomoji = (g.section === 'kaomoji' || g.section === 'text_emoticons' || currentCategory === 'kaomoji' || currentCategory === 'text_emoticons' || (g.name && (g.name.startsWith('KAOMOJI:') || g.name.startsWith('TEXT_EMOTICON:'))) || (g.symbol && g.symbol.length > 2));
   if (isKaomoji) {
     card.classList.add('is-kaomoji-card');
     if (g.symbol && g.symbol.length > 10) {
@@ -682,7 +866,21 @@ function createCardElement(g) {
 }
 
 /**
- * Fetch and Parse Category HTML
+ * Fetch and Parse Category JSON dataset
+ */
+async function fetchAndParseCategory(group) {
+  if (categoryCache[group]) return categoryCache[group];
+
+  const res = await fetch(`/data/${group}.json`);
+  if (!res.ok) throw new Error(`HTTP ${res.status} loading dataset for ${group}`);
+  const jsonData = await res.json();
+  const glyphs = parseGroupJSON(jsonData, group);
+  categoryCache[group] = glyphs;
+  return glyphs;
+}
+
+/**
+ * Fetch and Parse Category JSON and render
  */
 async function loadCategory(group) {
   if (categoryCache[group]) {
@@ -691,11 +889,7 @@ async function loadCategory(group) {
   }
 
   try {
-    const response = await fetch(`/html/groups/${group}.html`);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const htmlText = await response.text();
-    const parsedGlyphs = parseGroupHTML(htmlText, group);
-    categoryCache[group] = parsedGlyphs;
+    const parsedGlyphs = await fetchAndParseCategory(group);
     renderGlyphList(parsedGlyphs);
   } catch (err) {
     console.error('Error loading category:', err);
@@ -704,55 +898,50 @@ async function loadCategory(group) {
 }
 
 /**
- * Parse Group HTML content into glyph objects
+ * Parse Group JSON content (supports structured items for emoticons/kaomoji and chars strings for unicode glyphs)
  */
-function parseGroupHTML(htmlText, groupName) {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(htmlText, 'text/html');
-  const paragraphs = doc.querySelectorAll('p');
+function parseGroupJSON(jsonData, groupName) {
   const glyphs = [];
+  const prefix = groupName === 'text_emoticons' ? 'TEXT_EMOTICON' : 'KAOMOJI';
 
-  let currentSection = groupName;
+  jsonData.forEach(sec => {
+    const sectionName = (sec.sectionKey ? getMsg(sec.sectionKey, sec.section) : sec.section) || groupName;
 
-  paragraphs.forEach(p => {
-    const text = (p.textContent || p.innerText || '').trim();
-    if (!text) return;
-
-    if (text.includes(' ') && text.match(/\d+$/)) {
-      currentSection = text.replace(/\s+\d+$/, '').replace(/_/g, ' ');
-    } else if (groupName === 'kaomoji') {
-      let symbol = text;
-      let itemCustomName = '';
-      if (text.includes(' :: ')) {
-        const parts = text.split(' :: ');
-        symbol = parts[0].trim();
-        itemCustomName = parts[1].trim();
-      }
-      if (!symbol) return;
-      const firstCp = symbol.codePointAt(0) || 0;
-      const hex = firstCp.toString(16).toUpperCase().padStart(4, '0');
-      const displayName = itemCustomName || currentSection;
-      glyphs.push({
-        symbol: symbol,
-        hex: hex,
-        dec: firstCp.toString(),
-        section: currentSection,
-        name: `KAOMOJI: ${displayName}`,
-        isKaomoji: true
+    // Structured items (text_emoticons and kaomoji)
+    if (sec.items && Array.isArray(sec.items)) {
+      sec.items.forEach(item => {
+        const symbol = item.symbol;
+        if (!symbol) return;
+        const firstCp = symbol.codePointAt(0) || 0;
+        const hex = firstCp.toString(16).toUpperCase().padStart(4, '0');
+        const translatedName = item.key ? getMsg(item.key, item.name) : item.name;
+        const displayName = translatedName || sectionName;
+        glyphs.push({
+          symbol: symbol,
+          hex: hex,
+          dec: firstCp.toString(),
+          section: sectionName,
+          name: `${prefix}: ${displayName}`,
+          isKaomoji: true
+        });
       });
-    } else {
-      const chars = Array.from(text);
+      return;
+    }
+
+    // Direct Unicode characters string
+    if (sec.chars) {
+      const chars = Array.from(sec.chars);
       chars.forEach(ch => {
-        if (!ch || ch === ' ' || ch === '\n') return;
+        if (!ch) return;
         const codePoint = ch.codePointAt(0);
         const hex = codePoint.toString(16).toUpperCase().padStart(4, '0');
-        const name = getUnicodeName(ch, hex, currentSection);
+        const name = getUnicodeName(ch, hex, sectionName);
 
         glyphs.push({
           symbol: ch,
           hex: hex,
           dec: codePoint.toString(),
-          section: currentSection,
+          section: sectionName,
           name: name
         });
       });
@@ -854,7 +1043,7 @@ async function performSearch(term) {
   });
 
   const allGroups = [
-    'emoticons', 'kaomoji', 'miscellaneous_symbols_and_pictographs', 'transport_and_map_symbols', 'miscellaneous_symbols',
+    'emoticons', 'text_emoticons', 'kaomoji', 'miscellaneous_symbols_and_pictographs', 'transport_and_map_symbols', 'miscellaneous_symbols',
     'dingbats', 'currency_symbols', 'mathematical_operators', 'arrows', 'miscellaneous_technical', 'enclosed_alphanumerics',
     'box_drawing', 'block_elements', 'geometric_shapes', 'general_punctuation', 'superscripts_and_subscripts',
     'letterlike_symbols', 'number_forms', 'games', 'latin', 'greek', 'hebrew', 'arabic', 'devanagari', 'thai',
@@ -864,12 +1053,8 @@ async function performSearch(term) {
   for (const group of allGroups) {
     if (!categoryCache[group]) {
       try {
-        const res = await fetch(`/html/groups/${group}.html`);
-        if (res.ok) {
-          const txt = await res.text();
-          categoryCache[group] = parseGroupHTML(txt, group);
-          searchPool = searchPool.concat(categoryCache[group]);
-        }
+        const glyphs = await fetchAndParseCategory(group);
+        searchPool = searchPool.concat(glyphs);
       } catch (e) {}
     }
   }
@@ -947,7 +1132,7 @@ function renderGlyphList(glyphs, emptyMsg = 'Nenhum caractere nesta categoria') 
   const emptyState = id('emptyState');
   grid.innerHTML = '';
 
-  if (currentCategory === 'kaomoji') {
+  if (currentCategory === 'kaomoji' || currentCategory === 'text_emoticons') {
     grid.classList.add('kaomoji-grid');
   } else {
     grid.classList.remove('kaomoji-grid');
@@ -989,7 +1174,7 @@ function selectGlyph(glyph, cardElement) {
  */
 function updateInspector(glyph) {
   if (!glyph) return;
-  const isKaomoji = (glyph.section === 'kaomoji' || currentCategory === 'kaomoji' || (glyph.name && glyph.name.startsWith('KAOMOJI:')) || (glyph.symbol && glyph.symbol.length > 2));
+  const isKaomoji = (glyph.section === 'kaomoji' || glyph.section === 'text_emoticons' || currentCategory === 'kaomoji' || currentCategory === 'text_emoticons' || (glyph.name && (glyph.name.startsWith('KAOMOJI:') || glyph.name.startsWith('TEXT_EMOTICON:'))) || (glyph.symbol && glyph.symbol.length > 2));
 
   const inspectGlyphEl = id('inspectGlyph');
   const inspectKaomojiDisplay = id('inspectKaomojiDisplay');
@@ -1002,9 +1187,10 @@ function updateInspector(glyph) {
     inspectGlyphEl.classList.add('is-kaomoji-inspect');
 
     if (subgroupEl) {
-      const isCustomName = glyph.name && glyph.name.startsWith('KAOMOJI: ') && glyph.name !== `KAOMOJI: ${glyph.symbol}`;
-      const nameText = isCustomName ? glyph.name.replace('KAOMOJI: ', '') : (glyph.section && glyph.section !== 'kaomoji' ? glyph.section : 'Expressões');
-      subgroupEl.textContent = `Kaomoji • ${nameText}`;
+      const isCustomName = glyph.name && (glyph.name.startsWith('KAOMOJI: ') || glyph.name.startsWith('TEXT_EMOTICON: ')) && glyph.name !== `KAOMOJI: ${glyph.symbol}` && glyph.name !== `TEXT_EMOTICON: ${glyph.symbol}`;
+      const prefix = glyph.section === 'text_emoticons' || (glyph.name && glyph.name.startsWith('TEXT_EMOTICON')) ? 'Emoticon' : 'Kaomoji';
+      const nameText = isCustomName ? glyph.name.replace(/^(KAOMOJI|TEXT_EMOTICON): /, '') : (glyph.section && glyph.section !== 'kaomoji' && glyph.section !== 'text_emoticons' ? glyph.section : 'Expressões');
+      subgroupEl.textContent = `${prefix} • ${nameText}`;
       subgroupEl.title = glyph.symbol;
     }
 

@@ -1,0 +1,982 @@
+[
+  {
+    "section": "Felizes & Alegres",
+    "sectionKey": "kaomoji_sec_felizes_alegres",
+    "items": [
+      {
+        "symbol": "(⁠^⁠^⁠)",
+        "name": "Feliz Rosto Sorridente",
+        "key": "kaomoji_feliz_rosto_sorridente"
+      },
+      {
+        "symbol": "(⁠^⁠_⁠^⁠)",
+        "name": "Sorriso Alegre",
+        "key": "kaomoji_sorriso_alegre"
+      },
+      {
+        "symbol": "(⁠*⁠^⁠─⁠^⁠*⁠)",
+        "name": "Sorriso Fofo Corado",
+        "key": "kaomoji_sorriso_fofo_corado"
+      },
+      {
+        "symbol": "(⁠◕⁠‿⁠◕⁠)",
+        "name": "Olhos Grandes Felizes",
+        "key": "kaomoji_olhos_grandes_felizes"
+      },
+      {
+        "symbol": "(⁠✿⁠^⁠‿⁠^⁠)",
+        "name": "Sorriso com Flor",
+        "key": "kaomoji_sorriso_com_flor"
+      },
+      {
+        "symbol": "(⁠ﾉ⁠◕⁠ヮ⁠◕⁠)⁠ﾉ⁠*",
+        "name": "Alegria Mágica Sparkles",
+        "key": "kaomoji_alegria_magica_sparkles"
+      },
+      {
+        "symbol": "(⁠*⁠´⁠ω⁠｀⁠*⁠)",
+        "name": "Contentamento Fofo",
+        "key": "kaomoji_contentamento_fofo"
+      },
+      {
+        "symbol": "(⁠◠⁠‿⁠◠⁠)",
+        "name": "Sorriso Suave",
+        "key": "kaomoji_sorriso_suave"
+      },
+      {
+        "symbol": "(⁠•⁠‿⁠•⁠)",
+        "name": "Sorriso Simples",
+        "key": "kaomoji_sorriso_simples"
+      },
+      {
+        "symbol": "(⁠๑⁠─⁠.⁠─⁠๑⁠)",
+        "name": "Sorriso Fofo Pequeno",
+        "key": "kaomoji_sorriso_fofo_pequeno"
+      },
+      {
+        "symbol": "(⁠ ⁠^⁠▽⁠^⁠ ⁠)",
+        "name": "Risada Aberta",
+        "key": "kaomoji_risada_aberta"
+      },
+      {
+        "symbol": "(⁠≧⁠▽⁠×⁠)",
+        "name": "Risada Gargalhada",
+        "key": "kaomoji_risada_gargalhada"
+      },
+      {
+        "symbol": "(⁠o⁠^⁠▽⁠^⁠o⁠)",
+        "name": "Felicidade Radiante",
+        "key": "kaomoji_felicidade_radiante"
+      },
+      {
+        "symbol": "(⁠*⁠´⁠▽⁠`⁠*⁠)",
+        "name": "Relaxado e Feliz",
+        "key": "kaomoji_relaxado_e_feliz"
+      },
+      {
+        "symbol": "(⁠^⁠U⁠^⁠)",
+        "name": "Sorriso Amigável",
+        "key": "kaomoji_sorriso_amigavel"
+      },
+      {
+        "symbol": "(⁠ʘ⁠‿⁠ʘ⁠)",
+        "name": "Olhos Atentos Felizes",
+        "key": "kaomoji_olhos_atentos_felizes"
+      },
+      {
+        "symbol": "(*≧ω≦)",
+        "name": "Empolgação Máxima",
+        "key": "kaomoji_empolgacao_maxima"
+      },
+      {
+        "symbol": "(o^A^o)",
+        "name": "Animação Radiante",
+        "key": "kaomoji_animacao_radiante"
+      },
+      {
+        "symbol": "(☆ω☆)",
+        "name": "Olhos Estrelados",
+        "key": "kaomoji_olhos_estrelados"
+      },
+      {
+        "symbol": "＼(≧▽≦)／",
+        "name": "Celebração de Alegria",
+        "key": "kaomoji_celebracao_de_alegria"
+      }
+    ]
+  },
+  {
+    "section": "Amor, Beijos & Abraços",
+    "sectionKey": "kaomoji_sec_amor_beijos_abracos",
+    "items": [
+      {
+        "symbol": "(⁠*⁠˘⁠︶⁠˘⁠*⁠)⁠.⁠｡⁠*⁠♡",
+        "name": "Amor Sonhador",
+        "key": "kaomoji_amor_sonhador"
+      },
+      {
+        "symbol": "(⁠♡⁠ω⁠♡⁠)⁠~⁠♪",
+        "name": "Apaixonado com Música",
+        "key": "kaomoji_apaixonado_com_musica"
+      },
+      {
+        "symbol": "(⁠っ⁠.⁠❛⁠ ⁠ᴗ⁠ ⁠❛⁠.⁠)⁠っ",
+        "name": "Abraço Fofo",
+        "key": "kaomoji_abraco_fofo"
+      },
+      {
+        "symbol": "(⁠⊃⁠｡⁠•́⁠‿⁠•⁠｡⁠)⁠⊃",
+        "name": "Abraço Caloroso",
+        "key": "kaomoji_abraco_caloroso"
+      },
+      {
+        "symbol": "(⁠๑⁠─⁠.⁠─⁠๑⁠)⁠♡",
+        "name": "Amor Fofinho",
+        "key": "kaomoji_amor_fofinho"
+      },
+      {
+        "symbol": "(⁠*⁠─⁠3⁠─⁠)⁠(⁠─⁠ε⁠─⁠*⁠)",
+        "name": "Beijo de Casal",
+        "key": "kaomoji_beijo_de_casal"
+      },
+      {
+        "symbol": "(⁠っ⁠˘⁠з⁠(⁠˘⁠⌣⁠˘⁠ ⁠)",
+        "name": "Beijinho Carinhoso",
+        "key": "kaomoji_beijinho_carinhoso"
+      },
+      {
+        "symbol": "(⁠/⁠^⁠V⁠^⁠)⁠/⁠~⁠♡",
+        "name": "Enviando Coração",
+        "key": "kaomoji_enviando_coracao"
+      },
+      {
+        "symbol": "(⁠｡⁠･⁠ω⁠･⁠｡⁠)⁠ﾉ⁠♡",
+        "name": "Aceno com Coração",
+        "key": "kaomoji_aceno_com_coracao"
+      },
+      {
+        "symbol": "(⁠*⁠♡⁠∀⁠♡⁠)",
+        "name": "Olhos de Coração",
+        "key": "kaomoji_olhos_de_coracao"
+      },
+      {
+        "symbol": "(⁠ ⁠♡⁠ω⁠♡⁠ ⁠)",
+        "name": "Amor Intenso",
+        "key": "kaomoji_amor_intenso"
+      },
+      {
+        "symbol": "(⁠ ⁠♡⁠‿⁠♡⁠ ⁠)",
+        "name": "Apaixonado Radiante",
+        "key": "kaomoji_apaixonado_radiante"
+      },
+      {
+        "symbol": "(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)⁠❤",
+        "name": "Rosto Apaixonado Corado",
+        "key": "kaomoji_rosto_apaixonado_corado"
+      },
+      {
+        "symbol": "(⁠─⁠‿⁠─⁠)⁠♡",
+        "name": "Carinho Doce",
+        "key": "kaomoji_carinho_doce"
+      },
+      {
+        "symbol": "(⁠ ⁠っ⁠o⁠─⁠o⁠ ⁠)⁠っ",
+        "name": "Querendo Abraço",
+        "key": "kaomoji_querendo_abraco"
+      },
+      {
+        "symbol": "(っ'3')っ",
+        "name": "Enviando Beijo",
+        "key": "kaomoji_enviando_beijo"
+      },
+      {
+        "symbol": "(⊃ i_i )⊃",
+        "name": "Abraço de Conforto",
+        "key": "kaomoji_abraco_de_conforto"
+      },
+      {
+        "symbol": "(⁠*⁠´⁠3⁠｀⁠)⁠ε⁠｀⁠*⁠)",
+        "name": "Beijo Duplo",
+        "key": "kaomoji_beijo_duplo"
+      },
+      {
+        "symbol": "(⁠っ⁠.⁠~⁠.⁠)⁠っ",
+        "name": "Abraço Apertado",
+        "key": "kaomoji_abraco_apertado"
+      },
+      {
+        "symbol": "(⁠*⁠^⁠3⁠^⁠)⁠/⁠~⁠☆",
+        "name": "Beijo Estrelado",
+        "key": "kaomoji_beijo_estrelado"
+      },
+      {
+        "symbol": "(*^3^*)",
+        "name": "Beijinho Fofo",
+        "key": "kaomoji_beijinho_fofo"
+      },
+      {
+        "symbol": "(˘ε˘)",
+        "name": "Beijo Doce",
+        "key": "kaomoji_beijo_doce"
+      },
+      {
+        "symbol": "(♥_♥)",
+        "name": "Olhos de Coração",
+        "key": "kaomoji_olhos_de_coracao_2"
+      },
+      {
+        "symbol": "(♡ω♡)",
+        "name": "Apaixonado",
+        "key": "kaomoji_apaixonado"
+      },
+      {
+        "symbol": "(๑♡3♡๑)",
+        "name": "Beijo com Amor",
+        "key": "kaomoji_beijo_com_amor"
+      },
+      {
+        "symbol": "♥‿♥",
+        "name": "Olhar Apaixonado",
+        "key": "kaomoji_olhar_apaixonado"
+      },
+      {
+        "symbol": "(｡♥‿♥｡)",
+        "name": "Rosto Apaixonado Corado",
+        "key": "kaomoji_rosto_apaixonado_corado_2"
+      },
+      {
+        "symbol": "❤u❤",
+        "name": "Fofinho Apaixonado",
+        "key": "kaomoji_fofinho_apaixonado"
+      },
+      {
+        "symbol": "♡(ŐωŐ人)",
+        "name": "Casal Apaixonado",
+        "key": "kaomoji_casal_apaixonado"
+      },
+      {
+        "symbol": "(灬♥ω♥灬)",
+        "name": "Corações nos Olhos",
+        "key": "kaomoji_coracoes_nos_olhos"
+      },
+      {
+        "symbol": "(๑˙❥˙๑)",
+        "name": "Beijinho com Coração",
+        "key": "kaomoji_beijinho_com_coracao"
+      },
+      {
+        "symbol": "(✿ ♥‿♥)",
+        "name": "Romântico com Flor",
+        "key": "kaomoji_romantico_com_flor"
+      },
+      {
+        "symbol": "❥(^_-)",
+        "name": "Beijo Enviado",
+        "key": "kaomoji_beijo_enviado"
+      },
+      {
+        "symbol": "(´ε｀ ) ♡",
+        "name": "Amor e Carinho",
+        "key": "kaomoji_amor_e_carinho"
+      },
+      {
+        "symbol": "(๑>◡<๑)",
+        "name": "Sorriso Apaixonado",
+        "key": "kaomoji_sorriso_apaixonado"
+      }
+    ]
+  },
+  {
+    "section": "Fofos & Animais",
+    "sectionKey": "kaomoji_sec_fofos_animais",
+    "items": [
+      {
+        "symbol": "(=⁠^⁠･⁠ω⁠･⁠^⁠=)",
+        "name": "Gato Fofo Cat",
+        "key": "kaomoji_gato_fofo_cat"
+      },
+      {
+        "symbol": "(⁠/⁠─⁠.⁠─⁠/⁠)⁠~⁠🐾",
+        "name": "Patinha de Animais",
+        "key": "kaomoji_patinha_de_animais"
+      },
+      {
+        "symbol": "(⁠￣⁠(⁠ｴ⁠)⁠￣⁠)⁠ﾉ",
+        "name": "Urso Acenando Bear",
+        "key": "kaomoji_urso_acenando_bear"
+      },
+      {
+        "symbol": "(⁠•⁠ᴥ⁠•⁠)",
+        "name": "Ursinho Fofo Bear",
+        "key": "kaomoji_ursinho_fofo_bear"
+      },
+      {
+        "symbol": "(⁠◕⁠ᴥ⁠◕⁠)",
+        "name": "Cachorrinho Olhos Grandes Dog",
+        "key": "kaomoji_cachorrinho_olhos_grandes_dog"
+      },
+      {
+        "symbol": "(⁠ᵔ⁠ᴥ⁠ᵔ⁠)",
+        "name": "Urso Sorridente Bear",
+        "key": "kaomoji_urso_sorridente_bear"
+      },
+      {
+        "symbol": "(⁠・⁠∀⁠・⁠)",
+        "name": "Rosto Amigável",
+        "key": "kaomoji_rosto_amigavel"
+      },
+      {
+        "symbol": "(⁠=⁠^⁠･⁠ｪ⁠･⁠^⁠=)",
+        "name": "Gatinho Atento Cat",
+        "key": "kaomoji_gatinho_atento_cat"
+      },
+      {
+        "symbol": "(⁠^⁠a⁠^⁠)",
+        "name": "Bichinho Curioso",
+        "key": "kaomoji_bichinho_curioso"
+      },
+      {
+        "symbol": "(⁠-⁠ω⁠-⁠)",
+        "name": "Gato Relaxado Cat",
+        "key": "kaomoji_gato_relaxado_cat"
+      },
+      {
+        "symbol": "U⁠^⁠ｪ⁠^⁠U",
+        "name": "Cachorro Orelhudo Dog",
+        "key": "kaomoji_cachorro_orelhudo_dog"
+      },
+      {
+        "symbol": "(⁠;⁠ŏ⁠﹏⁠ŏ⁠)",
+        "name": "Bichinho Nervoso",
+        "key": "kaomoji_bichinho_nervoso"
+      },
+      {
+        "symbol": "(⁠/⁠･⁠ω⁠･⁠(⁠-⁠_⁠-⁠)",
+        "name": "Carinho de Gatos Cat",
+        "key": "kaomoji_carinho_de_gatos_cat"
+      },
+      {
+        "symbol": "(▼ᴥ▼)",
+        "name": "Urso Épico Bear",
+        "key": "kaomoji_urso_epico_bear"
+      },
+      {
+        "symbol": "ʕ•ᴥ•ʔ",
+        "name": "Ursinho Clássico Bear",
+        "key": "kaomoji_ursinho_classico_bear"
+      },
+      {
+        "symbol": "(=^‥^=)",
+        "name": "Gatinho Pequeno Cat",
+        "key": "kaomoji_gatinho_pequeno_cat"
+      },
+      {
+        "symbol": "(⏝⩊⏝)",
+        "name": "Coelho Fofo Bunny",
+        "key": "kaomoji_coelho_fofo_bunny"
+      },
+      {
+        "symbol": "( • ─ • )",
+        "name": "Bichinho Fofo Simples",
+        "key": "kaomoji_bichinho_fofo_simples"
+      },
+      {
+        "symbol": "(◕ᴥ◕ʋ)",
+        "name": "Cachorro Feliz Dog",
+        "key": "kaomoji_cachorro_feliz_dog"
+      },
+      {
+        "symbol": "ฅ^•ﻌ•^ฅ",
+        "name": "Patinhas de Gato Cat",
+        "key": "kaomoji_patinhas_de_gato_cat"
+      }
+    ]
+  },
+  {
+    "section": "Dar de Ombros & Indiferença",
+    "sectionKey": "kaomoji_sec_dar_de_ombros_indiferenca",
+    "items": [
+      {
+        "symbol": "¯⁠\\⁠_⁠(⁠ツ⁠)⁠_⁠/⁠¯",
+        "name": "Shrug Dar de Ombros Clássico",
+        "key": "kaomoji_shrug_dar_de_ombros_classico"
+      },
+      {
+        "symbol": "¯⁠\\⁠_⁠(⁠⊙⁠_⁠⊙⁠)⁠_⁠/⁠¯",
+        "name": "Shrug Surpreso",
+        "key": "kaomoji_shrug_surpreso"
+      },
+      {
+        "symbol": "(⁠・⁠_⁠・⁠;⁠)",
+        "name": "Indiferente com Gota",
+        "key": "kaomoji_indiferente_com_gota"
+      },
+      {
+        "symbol": "(⁠─⁠_⁠─⁠;⁠)",
+        "name": "Sem Paciência Meh",
+        "key": "kaomoji_sem_paciencia_meh"
+      },
+      {
+        "symbol": "(⁠^⁠_⁠^⁠;⁠)",
+        "name": "Sorriso Sem Graça",
+        "key": "kaomoji_sorriso_sem_graca"
+      },
+      {
+        "symbol": "¯⁠\\⁠_⁠(⁠i⁠_⁠i⁠)⁠_⁠/⁠¯",
+        "name": "Shrug Triste",
+        "key": "kaomoji_shrug_triste"
+      },
+      {
+        "symbol": "┐⁠(⁠'⁠～⁠`⁠)⁠┌",
+        "name": "O que Fazer Meh",
+        "key": "kaomoji_o_que_fazer_meh"
+      },
+      {
+        "symbol": "┐⁠(⁠￣⁠H⁠￣⁠)⁠┌",
+        "name": "Desdém Sem Se Importar",
+        "key": "kaomoji_desdem_sem_se_importar"
+      },
+      {
+        "symbol": "¯⁠\\⁠_⁠(⁠-⁠_⁠-⁠)⁠_⁠/⁠¯",
+        "name": "Shrug Relaxado",
+        "key": "kaomoji_shrug_relaxado"
+      },
+      {
+        "symbol": "¯⁠\\⁠_⁠(⁠⊙⁠_⁠█⁠)⁠_⁠/⁠¯",
+        "name": "Shrug Pirata",
+        "key": "kaomoji_shrug_pirata"
+      },
+      {
+        "symbol": "┐(︶▽︶)┌",
+        "name": "Shrug Contente",
+        "key": "kaomoji_shrug_contente"
+      },
+      {
+        "symbol": "╮(￣_￣)╭",
+        "name": "Nem Liguei Meh",
+        "key": "kaomoji_nem_liguei_meh"
+      },
+      {
+        "symbol": "┐( ˘_˘ )┌",
+        "name": "Sem Comentários",
+        "key": "kaomoji_sem_comentarios"
+      },
+      {
+        "symbol": "¯\\_( ಠ_ಠ )_/¯",
+        "name": "Shrug Desconfiado",
+        "key": "kaomoji_shrug_desconfiado"
+      }
+    ]
+  },
+  {
+    "section": "Virando Mesa & Raiva",
+    "sectionKey": "kaomoji_sec_virando_mesa_raiva",
+    "items": [
+      {
+        "symbol": "(⁠ノ⁠ಠ⁠益⁠ಠ⁠)⁠ノ",
+        "name": "Raiva Fúria",
+        "key": "kaomoji_raiva_furia"
+      },
+      {
+        "symbol": "(⁠╯⁠°⁠□⁠°⁠)⁠╯⁠︵⁠ ⁠┻⁠━⁠┻",
+        "name": "Virando Mesa Table Flip Clássico",
+        "key": "kaomoji_virando_mesa_table_flip_classico"
+      },
+      {
+        "symbol": "(⁠ಠ⁠_⁠ಠ⁠)",
+        "name": "Olhar Sério Raiva",
+        "key": "kaomoji_olhar_serio_raiva"
+      },
+      {
+        "symbol": "(⁠╬⁠ಠ⁠益⁠ಠ⁠)",
+        "name": "Fúria Intensa Veia",
+        "key": "kaomoji_furia_intensa_veia"
+      },
+      {
+        "symbol": "(⁠-⁠_⁠-⁠メ⁠)",
+        "name": "Irritado com Veia",
+        "key": "kaomoji_irritado_com_veia"
+      },
+      {
+        "symbol": "(⁠凸⁠ಠ⁠益⁠ಠ⁠)⁠凸",
+        "name": "Raiva Extrema Dedo",
+        "key": "kaomoji_raiva_extrema_dedo"
+      },
+      {
+        "symbol": "(⁠ノ⁠｀⁠D⁠´⁠)⁠ノ⁠彡⁠┻⁠━⁠┻",
+        "name": "Virando Mesa com Fúria Table Flip",
+        "key": "kaomoji_virando_mesa_com_furia_table_flip"
+      },
+      {
+        "symbol": "(⁠┬⁠─⁠┬⁠ノ⁠(⁠ ͡⁠°⁠ ⁠͜⁠ʖ⁠ ͡⁠°⁠ノ⁠)",
+        "name": "Desvirando Mesa Arrumando",
+        "key": "kaomoji_desvirando_mesa_arrumando"
+      },
+      {
+        "symbol": "(⁠ ⁠ಠ⁠_⁠ಠ⁠ ⁠)",
+        "name": "Olhar de Julgamento",
+        "key": "kaomoji_olhar_de_julgamento"
+      },
+      {
+        "symbol": "(ノ#4─4)ノ彡┻━┻",
+        "name": "Virando Mesa Raiva",
+        "key": "kaomoji_virando_mesa_raiva"
+      },
+      {
+        "symbol": "(ﾉ──)ﾉ ┫",
+        "name": "Virando Mesa Simples",
+        "key": "kaomoji_virando_mesa_simples"
+      },
+      {
+        "symbol": "┬─┬ノ( º _ ºノ)",
+        "name": "Arrumando Mesa Cuidado",
+        "key": "kaomoji_arrumando_mesa_cuidado"
+      },
+      {
+        "symbol": "(ಠ益ಠ)",
+        "name": "Rosto de Fúria",
+        "key": "kaomoji_rosto_de_furia"
+      },
+      {
+        "symbol": "(•̀-•́)",
+        "name": "Bravo Irritado",
+        "key": "kaomoji_bravo_irritado"
+      },
+      {
+        "symbol": "╚(ಠ_ಠ)=┐",
+        "name": "Caminhando com Raiva",
+        "key": "kaomoji_caminhando_com_raiva"
+      },
+      {
+        "symbol": "(╬ ಠ益ಠ)",
+        "name": "Raiva Extrema",
+        "key": "kaomoji_raiva_extrema"
+      },
+      {
+        "symbol": "┌( ಠ_ಠ)┘",
+        "name": "Revolta",
+        "key": "kaomoji_revolta"
+      },
+      {
+        "symbol": "╭∩╮(ಠ_ಠ)╭∩╮",
+        "name": "Dedo do Meio",
+        "key": "kaomoji_dedo_do_meio"
+      },
+      {
+        "symbol": "💢(>_<)",
+        "name": "Raiva com Marca",
+        "key": "kaomoji_raiva_com_marca"
+      }
+    ]
+  },
+  {
+    "section": "Surpresos & Chocados",
+    "sectionKey": "kaomoji_sec_surpresos_chocados",
+    "items": [
+      {
+        "symbol": "(⁠⊙⁠_⁠⊙⁠)",
+        "name": "Chocado Olhos Abertos",
+        "key": "kaomoji_chocado_olhos_abertos"
+      },
+      {
+        "symbol": "(⁠O⁠_⁠O⁠)",
+        "name": "Surpreso Olhos Grandes",
+        "key": "kaomoji_surpreso_olhos_grandes"
+      },
+      {
+        "symbol": "(⁠°⁠o⁠°⁠)",
+        "name": "Boca Aberta Espanto",
+        "key": "kaomoji_boca_aberta_espanto"
+      },
+      {
+        "symbol": "(⁠｡⁠●⁠_⁠●⁠｡⁠)",
+        "name": "Surpresa Fofa",
+        "key": "kaomoji_surpresa_fofa"
+      },
+      {
+        "symbol": "(⁠ﾉ⁠ﾟ⁠0⁠ﾟ⁠)⁠ﾉ⁠~",
+        "name": "Espanto com Braços",
+        "key": "kaomoji_espanto_com_bracos"
+      },
+      {
+        "symbol": "(⁠⑉⁠⊙⁠_⁠⊙⁠⑉⁠)",
+        "name": "Chocado Corado",
+        "key": "kaomoji_chocado_corado"
+      },
+      {
+        "symbol": "(⁠ ⁠i⁠_⁠i⁠ ⁠)",
+        "name": "Incredulidade",
+        "key": "kaomoji_incredulidade"
+      },
+      {
+        "symbol": "(⁠ ⁠°⁠ ⁠██⁠ ⁠°⁠ ⁠)",
+        "name": "Espanto Extremo",
+        "key": "kaomoji_espanto_extremo"
+      },
+      {
+        "symbol": "(⁠⯀⁠_⁠⯀⁠)",
+        "name": "Olhar Fixo Chocado",
+        "key": "kaomoji_olhar_fixo_chocado"
+      },
+      {
+        "symbol": "(⁠☉⁠｡⁠☉⁠!⁠)",
+        "name": "Impactado",
+        "key": "kaomoji_impactado"
+      },
+      {
+        "symbol": "(o_O)",
+        "name": "Olhos Desiguais Surpreso",
+        "key": "kaomoji_olhos_desiguais_surpreso"
+      },
+      {
+        "symbol": "(w(ﾟoﾟ)w)",
+        "name": "Muito Surpreso",
+        "key": "kaomoji_muito_surpreso"
+      },
+      {
+        "symbol": "w(ﾟДﾟ)w",
+        "name": "Espanto Total",
+        "key": "kaomoji_espanto_total"
+      },
+      {
+        "symbol": "( ﾟoﾟ)",
+        "name": "Impressionado",
+        "key": "kaomoji_impressionado"
+      },
+      {
+        "symbol": "Σ(O_O)",
+        "name": "Susto Repentino",
+        "key": "kaomoji_susto_repentino"
+      },
+      {
+        "symbol": "(O.O)",
+        "name": "Olhar Perplexo",
+        "key": "kaomoji_olhar_perplexo"
+      },
+      {
+        "symbol": "ヽ(°〇°)ﾉ",
+        "name": "Surpresa Aberta",
+        "key": "kaomoji_surpresa_aberta"
+      },
+      {
+        "symbol": "Σ(⊙▽⊙\")a",
+        "name": "Surpresa Súbita",
+        "key": "kaomoji_surpresa_subita"
+      },
+      {
+        "symbol": "∑(O_O;)",
+        "name": "Surpresa com Susto",
+        "key": "kaomoji_surpresa_com_susto"
+      },
+      {
+        "symbol": "Σ(°△°|||)",
+        "name": "Susto Extremo",
+        "key": "kaomoji_susto_extremo"
+      }
+    ]
+  },
+  {
+    "section": "Tristes, Chorando & Desculpas",
+    "sectionKey": "kaomoji_sec_tristes_chorando_desculpas",
+    "items": [
+      {
+        "symbol": "(⁠〒⁠﹏⁠〒⁠)",
+        "name": "Chorando Copiosamente",
+        "key": "kaomoji_chorando_copiosamente"
+      },
+      {
+        "symbol": "(⁠;⁠_⁠;⁠)",
+        "name": "Lágrimas Triste",
+        "key": "kaomoji_lagrimas_triste"
+      },
+      {
+        "symbol": "(⁠´⁠;⁠︵⁠;⁠`⁠)",
+        "name": "Chorando Choro Fofo",
+        "key": "kaomoji_chorando_choro_fofo"
+      },
+      {
+        "symbol": "(⁠Q⁠_⁠Q⁠)",
+        "name": "Choroso Q_Q",
+        "key": "kaomoji_choroso_q_q"
+      },
+      {
+        "symbol": "(⁠ ⁠T⁠_⁠T⁠ ⁠)",
+        "name": "Triste T_T",
+        "key": "kaomoji_triste_t_t"
+      },
+      {
+        "symbol": "(⁠ಥ⁠_⁠ಥ⁠)",
+        "name": "Olhos Cheios de Lágrimas",
+        "key": "kaomoji_olhos_cheios_de_lagrimas"
+      },
+      {
+        "symbol": "(⁠;⁠ŏ⁠﹏⁠ŏ⁠)",
+        "name": "Preocupado Triste",
+        "key": "kaomoji_preocupado_triste"
+      },
+      {
+        "symbol": "(⁠｡⁠ŏ⁠﹏⁠ŏ⁠)",
+        "name": "Magoado Chateado",
+        "key": "kaomoji_magoado_chateado"
+      },
+      {
+        "symbol": "(⁠ ⁠･⁠ั⁠﹏⁠･⁠ั⁠ ⁠)",
+        "name": "Triste Arrependido",
+        "key": "kaomoji_triste_arrependido"
+      },
+      {
+        "symbol": "(⁠╥⁠﹏⁠╥⁠)",
+        "name": "Chorando Muito",
+        "key": "kaomoji_chorando_muito"
+      },
+      {
+        "symbol": "(o_ _)o",
+        "name": "Pedindo Desculpas Curvado",
+        "key": "kaomoji_pedindo_desculpas_curvado"
+      },
+      {
+        "symbol": "(._.)",
+        "name": "Cabisbaixo Triste",
+        "key": "kaomoji_cabisbaixo_triste"
+      },
+      {
+        "symbol": "(T_T)",
+        "name": "Choro Clássico",
+        "key": "kaomoji_choro_classico"
+      },
+      {
+        "symbol": "(¬_¬)",
+        "name": "Olhar de Desdém",
+        "key": "kaomoji_olhar_de_desdem"
+      },
+      {
+        "symbol": "#-_(-_-)",
+        "name": "Irritação Silenciosa",
+        "key": "kaomoji_irritacao_silenciosa"
+      },
+      {
+        "symbol": "(つ﹏<。)",
+        "name": "Escondendo o Rosto Chorando",
+        "key": "kaomoji_escondendo_o_rosto_chorando"
+      },
+      {
+        "symbol": "(ノ_<。)",
+        "name": "Decepcionado Triste",
+        "key": "kaomoji_decepcionado_triste"
+      }
+    ]
+  },
+  {
+    "section": "Dançando & Festivos",
+    "sectionKey": "kaomoji_sec_dancando_festivos",
+    "items": [
+      {
+        "symbol": "└⁠(⁠ ⁠＾⁠ω⁠＾⁠)⁠┐",
+        "name": "Dançando Animado",
+        "key": "kaomoji_dancando_animado"
+      },
+      {
+        "symbol": "┌⁠(⁠★⁠o⁠★⁠)⁠┘",
+        "name": "Dança Estelar Disco",
+        "key": "kaomoji_danca_estelar_disco"
+      },
+      {
+        "symbol": "(⁠┌⁠|⁠o⁠^⁠▽⁠^⁠o⁠|⁠)⁠┘",
+        "name": "Dançando com Alegria",
+        "key": "kaomoji_dancando_com_alegria"
+      },
+      {
+        "symbol": "(⁠𝅘𝅥𝅮⁠ ⁠'⁠─⁠'⁠ ⁠)⁠𝅘𝅥𝅮",
+        "name": "Ouvindo Música",
+        "key": "kaomoji_ouvindo_musica"
+      },
+      {
+        "symbol": "└⁠(⁠~⁠─⁠~⁠)⁠┐",
+        "name": "Dança Ritmo",
+        "key": "kaomoji_danca_ritmo"
+      },
+      {
+        "symbol": "(⁠♪⁠┌⁠|⁠o⁠^⁠▽⁠^⁠o⁠|⁠┐⁠♪)",
+        "name": "Festa com Música",
+        "key": "kaomoji_festa_com_musica"
+      },
+      {
+        "symbol": "└⁠(⁠ ⁠o⁠^⁠─⁠^⁠o⁠ ⁠)⁠┐",
+        "name": "Dançando Suave",
+        "key": "kaomoji_dancando_suave"
+      },
+      {
+        "symbol": "(⁠ノ⁠^⁠_⁠^⁠)⁠ノ",
+        "name": "Acenando na Festa",
+        "key": "kaomoji_acenando_na_festa"
+      },
+      {
+        "symbol": "(♪θKeyθ)♪",
+        "name": "Cantando",
+        "key": "kaomoji_cantando"
+      },
+      {
+        "symbol": "ヾ(⌐■_■)ノ♪",
+        "name": "DJ Dançando Óculos",
+        "key": "kaomoji_dj_dancando_oculos"
+      },
+      {
+        "symbol": "(〜￣▽￣)〜",
+        "name": "Deslizando na Dança",
+        "key": "kaomoji_deslizando_na_danca"
+      },
+      {
+        "symbol": "〜(￣▽￣〜)",
+        "name": "Dança Descontraída",
+        "key": "kaomoji_danca_descontraida"
+      },
+      {
+        "symbol": "(┌==)┌",
+        "name": "Dançando Passinho",
+        "key": "kaomoji_dancando_passinho"
+      },
+      {
+        "symbol": "♪ヽ(┌・o・)┌",
+        "name": "Dança com Ritmo",
+        "key": "kaomoji_danca_com_ritmo"
+      },
+      {
+        "symbol": "ヽ(>∀<☆)ノ",
+        "name": "Comemorando Festa",
+        "key": "kaomoji_comemorando_festa"
+      }
+    ]
+  },
+  {
+    "section": "Óculos & Estilo",
+    "sectionKey": "kaomoji_sec_oculos_estilo",
+    "items": [
+      {
+        "symbol": "(⁠⌐⁠■⁠-⁠■⁠)",
+        "name": "Óculos Escuros Estilo Cool",
+        "key": "kaomoji_oculos_escuros_estilo_cool"
+      },
+      {
+        "symbol": "(⁠ ⁠•⁠_⁠•⁠)⁠>⁠⌐⁠■⁠-⁠■",
+        "name": "Colocando Óculos Estilo",
+        "key": "kaomoji_colocando_oculos_estilo"
+      },
+      {
+        "symbol": "(⁠ಠ⁠_⁠├┬┴┬┴",
+        "name": "Espiando Atrás da Parede",
+        "key": "kaomoji_espiando_atras_da_parede"
+      },
+      {
+        "symbol": "(⁠/⁠¯⁠◡⁠‿⁠◡⁠)⁠/⁠¯⁠~⁠*",
+        "name": "Mágico Brilho Estilo",
+        "key": "kaomoji_magico_brilho_estilo"
+      },
+      {
+        "symbol": "(⁠☞⁠^⁠o⁠^⁠)⁠☞",
+        "name": "Apontando com Estilo",
+        "key": "kaomoji_apontando_com_estilo"
+      },
+      {
+        "symbol": "(⁠☞⁠ ⁠ಠ⁠_⁠ಠ⁠)⁠☞",
+        "name": "Apontando Sério",
+        "key": "kaomoji_apontando_serio"
+      },
+      {
+        "symbol": "(⁠ง⁠ ⁠•⁠_⁠•⁠)⁠ง",
+        "name": "Lutador Pronto estilo",
+        "key": "kaomoji_lutador_pronto_estilo"
+      },
+      {
+        "symbol": "(⁠ᕗ⁠╭⁠╮⁠v⁠)⁠ᕗ",
+        "name": "Forte Músculos",
+        "key": "kaomoji_forte_musculos"
+      },
+      {
+        "symbol": "(⌐■_■)",
+        "name": "Cool Sunglasses",
+        "key": "kaomoji_cool_sunglasses"
+      },
+      {
+        "symbol": "( •_•) ( •_•)>⌐■-■ (⌐■_■)",
+        "name": "Meme Colocando Óculos",
+        "key": "kaomoji_meme_colocando_oculos"
+      },
+      {
+        "symbol": "( ͡° ͜ʖ ͡°)",
+        "name": "Lenny Face Estilo",
+        "key": "kaomoji_lenny_face_estilo"
+      },
+      {
+        "symbol": "(︶┌┐︶)",
+        "name": "Elegante",
+        "key": "kaomoji_elegante"
+      },
+      {
+        "symbol": "(─‿─)",
+        "name": "Confiante Estilo",
+        "key": "kaomoji_confiante_estilo"
+      },
+      {
+        "symbol": "( ▀̿ Ĺ̯ ▀̿ )",
+        "name": "Agente Secreto",
+        "key": "kaomoji_agente_secreto"
+      },
+      {
+        "symbol": "(✧ω✧)",
+        "name": "Brilho nos Olhos",
+        "key": "kaomoji_brilho_nos_olhos"
+      }
+    ]
+  },
+  {
+    "section": "Ação, Luta & Armas",
+    "sectionKey": "kaomoji_sec_acao_luta_armas",
+    "items": [
+      {
+        "symbol": "(ง'̀-'́)ง",
+        "name": "Pronto pra Luta Boxing",
+        "key": "kaomoji_pronto_pra_luta_boxing"
+      },
+      {
+        "symbol": "(╯°├┬┴)╯",
+        "name": "Derrubando Parede Ação",
+        "key": "kaomoji_derrubando_parede_acao"
+      },
+      {
+        "symbol": "o(%)=====>",
+        "name": "Espada Mágica Sword",
+        "key": "kaomoji_espada_magica_sword"
+      },
+      {
+        "symbol": "(==)/",
+        "name": "Atacando com Espada",
+        "key": "kaomoji_atacando_com_espada"
+      },
+      {
+        "symbol": "(ง •̀_•́)ง",
+        "name": "Determinado Luta",
+        "key": "kaomoji_determinado_luta"
+      },
+      {
+        "symbol": "(⊃ಠ_ಠ)⊃",
+        "name": "Segurando Firme",
+        "key": "kaomoji_segurando_firme"
+      },
+      {
+        "symbol": "( Execute )",
+        "name": "Ataque Especial",
+        "key": "kaomoji_ataque_especial"
+      },
+      {
+        "symbol": "( •_•)>⌐■-■",
+        "name": "Preparar Ação",
+        "key": "kaomoji_preparar_acao"
+      },
+      {
+        "symbol": "( `_´ ) >🔫",
+        "name": "Com Arma Gun",
+        "key": "kaomoji_com_arma_gun"
+      }
+    ]
+  }
+]

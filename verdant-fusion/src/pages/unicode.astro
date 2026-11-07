@@ -44,7 +44,7 @@ import AppLayout from "../layouts/AppLayout.astro";
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
         <input type="text" id="searchInput" placeholder="Search symbols, hex, names..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
-        <span class="shortcut-badge">Ctrl+F</span>
+        <span class="shortcut-badge">Ctrl+K</span>
       </div>
       <button id="btnFontInfo" class="btn-sidepanel btn-tofu" title="Recommended Fonts for Rare Characters" data-i18n-title="fontInfoTitle">
         <span class="tofu-icon">
@@ -74,7 +74,10 @@ import AppLayout from "../layouts/AppLayout.astro";
           <span class="pill-icon">ℹ️</span> <span class="pill-label" data-i18n="navAbout">Sobre</span>
         </button>
         <button class="nav-pill color-emoticons" data-category="emoticons">
-          <span class="pill-icon">😀</span> <span class="pill-label" data-i18n="navEmoticons">Emoticons</span>
+          <span class="pill-icon">😀</span> <span class="pill-label" data-i18n="navEmoticons">Emojis</span>
+        </button>
+        <button class="nav-pill color-text-emoticons" data-category="text_emoticons">
+          <span class="pill-icon">ツ</span> <span class="pill-label" data-i18n="navTextEmoticons">Emoticons</span>
         </button>
         <button class="nav-pill color-kaomoji" data-category="kaomoji">
           <span class="pill-icon">(⁠◕⁠‿⁠◕⁠)</span> <span class="pill-label" data-i18n="navKaomoji">Kaomoji</span>
@@ -191,8 +194,8 @@ import AppLayout from "../layouts/AppLayout.astro";
       <!-- Empty State Indicator -->
       <div id="emptyState" class="empty-state hidden">
         <span class="empty-icon">🔍</span>
-        <p class="empty-title">Nenhum resultado encontrado</p>
-        <p class="empty-sub">Tente pesquisar por outro termo ou código hex</p>
+        <p class="empty-title" data-i18n="emptySearchTitle">Nenhum resultado encontrado</p>
+        <p class="empty-sub" data-i18n="emptySearchSub">Tente pesquisar por outro termo ou código hex</p>
       </div>
     </main>
 
@@ -202,27 +205,27 @@ import AppLayout from "../layouts/AppLayout.astro";
       <div class="inspector-details">
         <div class="inspect-title-row">
           <span id="inspectSubgroup" class="inspect-subgroup" title="SPARKLES">SPARKLES</span>
-          <span id="inspectCodepoint" class="inspect-codepoint" title="Clique para copiar U+HEX">U+2728</span>
+          <span id="inspectCodepoint" class="inspect-codepoint" title="Clique para copiar U+HEX" data-i18n-title="copyCodepointTitle">U+2728</span>
         </div>
         <div id="inspectKaomojiDisplay" class="inspect-kaomoji-display hidden"></div>
         <div class="inspect-info-grid">
-          <span class="info-label clickable-code" id="btnCopyHexVal" title="Clique para copiar HEX">HEX: <code id="inspectHex">2728</code></span>
-          <span class="info-label clickable-code" id="btnCopyDecVal" title="Clique para copiar DEC">DEC: <code id="inspectDec">10024</code></span>
-          <span class="info-label clickable-code" id="btnCopyEntityVal" title="Clique para copiar ENTITY">ENT: <code id="inspectEntity">&#10024;</code></span>
+          <span class="info-label clickable-code" id="btnCopyHexVal" title="Clique para copiar HEX" data-i18n-title="copyHexTitle">HEX: <code id="inspectHex">2728</code></span>
+          <span class="info-label clickable-code" id="btnCopyDecVal" title="Clique para copiar DEC" data-i18n-title="copyDecTitle">DEC: <code id="inspectDec">10024</code></span>
+          <span class="info-label clickable-code" id="btnCopyEntityVal" title="Clique para copiar ENTITY" data-i18n-title="copyEntityTitle">ENT: <code id="inspectEntity">&#10024;</code></span>
         </div>
       </div>
       <div class="inspector-actions">
-        <button id="btnCopyChar" class="btn-copy-primary" title="Copiar Caractere">
-          <span>Copiar</span>
+        <button id="btnCopyChar" class="btn-copy-primary" title="Copiar Caractere" data-i18n-title="copyCharTitle">
+          <span data-i18n="copyCharBtn">Copiar</span>
         </button>
-        <button id="btnFav" class="btn-icon-fav" title="Adicionar aos Favoritos">★</button>
+        <button id="btnFav" class="btn-icon-fav" title="Adicionar aos Favoritos" data-i18n-title="addFavTitle">★</button>
       </div>
     </footer>
   </div>
 
   <!-- Toast Notification -->
   <div id="toast" class="toast hidden">
-    <span id="toastMsg">Copiado para a área de transferência</span>
+    <span id="toastMsg" data-i18n="toastCopied">Copiado para a área de transferência</span>
   </div>
 
   <!-- Recommended Fonts Information Modal -->

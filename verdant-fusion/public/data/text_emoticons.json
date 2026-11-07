@@ -1,0 +1,488 @@
+[
+  {
+    "section": "Felizes & Sorrisos",
+    "sectionKey": "text_emoticon_sec_felizes_sorrisos",
+    "items": [
+      {
+        "symbol": ":-)",
+        "name": "Sorriso Clássico",
+        "key": "text_emoticon_sorriso_classico"
+      },
+      {
+        "symbol": ":D",
+        "name": "Sorriso Largo",
+        "key": "text_emoticon_sorriso_largo"
+      },
+      {
+        "symbol": "^^",
+        "name": "Olhos Felizes",
+        "key": "text_emoticon_olhos_felizes"
+      },
+      {
+        "symbol": "^‿^",
+        "name": "Sorriso Alegre",
+        "key": "text_emoticon_sorriso_alegre"
+      },
+      {
+        "symbol": "(:",
+        "name": "Sorriso Invertido",
+        "key": "text_emoticon_sorriso_invertido"
+      },
+      {
+        "symbol": "=)",
+        "name": "Sorriso Simples",
+        "key": "text_emoticon_sorriso_simples"
+      },
+      {
+        "symbol": "':)",
+        "name": "Sorriso Nervoso",
+        "key": "text_emoticon_sorriso_nervoso"
+      },
+      {
+        "symbol": "':D",
+        "name": "Sorriso Largo Nervoso",
+        "key": "text_emoticon_sorriso_largo_nervoso"
+      },
+      {
+        "symbol": "B-)",
+        "name": "Sorriso com Óculos de Sol",
+        "key": "text_emoticon_sorriso_com_oculos_de_sol"
+      },
+      {
+        "symbol": "8-)",
+        "name": "Sorriso com Óculos",
+        "key": "text_emoticon_sorriso_com_oculos"
+      },
+      {
+        "symbol": ";-)",
+        "name": "Pisadinha Sorriso",
+        "key": "text_emoticon_pisadinha_sorriso"
+      },
+      {
+        "symbol": ";D",
+        "name": "Pisadinha Largo",
+        "key": "text_emoticon_pisadinha_largo"
+      },
+      {
+        "symbol": "^(^.^)^",
+        "name": "Alegre com Mãos",
+        "key": "text_emoticon_alegre_com_maos"
+      },
+      {
+        "symbol": "xD",
+        "name": "Rindo com Olhos Fechados",
+        "key": "text_emoticon_rindo_com_olhos_fechados"
+      },
+      {
+        "symbol": "XD",
+        "name": "Gargalhada",
+        "key": "text_emoticon_gargalhada"
+      },
+      {
+        "symbol": ":^D",
+        "name": "Sorriso Pontudo",
+        "key": "text_emoticon_sorriso_pontudo"
+      },
+      {
+        "symbol": "o_O",
+        "name": "Expressão Espantada",
+        "key": "text_emoticon_expressao_espantada"
+      },
+      {
+        "symbol": "O_O",
+        "name": "Olhos Bem Abertos",
+        "key": "text_emoticon_olhos_bem_abertos"
+      },
+      {
+        "symbol": "^-^",
+        "name": "Sorriso Suave",
+        "key": "text_emoticon_sorriso_suave"
+      }
+    ]
+  },
+  {
+    "section": "Tristes & Chateados",
+    "sectionKey": "text_emoticon_sec_tristes_chateados",
+    "items": [
+      {
+        "symbol": ":-(",
+        "name": "Triste Clássico",
+        "key": "text_emoticon_triste_classico"
+      },
+      {
+        "symbol": ":(",
+        "name": "Triste Simples",
+        "key": "text_emoticon_triste_simples"
+      },
+      {
+        "symbol": ":-c",
+        "name": "Muito Chateado",
+        "key": "text_emoticon_muito_chateado"
+      },
+      {
+        "symbol": ":c",
+        "name": "Chateado Simples",
+        "key": "text_emoticon_chateado_simples"
+      },
+      {
+        "symbol": ":-<",
+        "name": "Ranzinza",
+        "key": "text_emoticon_ranzinza"
+      },
+      {
+        "symbol": ":<",
+        "name": "Triste Canto",
+        "key": "text_emoticon_triste_canto"
+      },
+      {
+        "symbol": ":-[",
+        "name": "Rosto Envergonhado",
+        "key": "text_emoticon_rosto_envergonhado"
+      },
+      {
+        "symbol": ":[",
+        "name": "Envergonhado Simples",
+        "key": "text_emoticon_envergonhado_simples"
+      },
+      {
+        "symbol": ":{",
+        "name": "Bigode Triste",
+        "key": "text_emoticon_bigode_triste"
+      },
+      {
+        "symbol": ":. (",
+        "name": "Chorando",
+        "key": "text_emoticon_chorando"
+      },
+      {
+        "symbol": "T_T",
+        "name": "Chorando com Lágrimas",
+        "key": "text_emoticon_chorando_com_lagrimas"
+      },
+      {
+        "symbol": ";_;",
+        "name": "Choro Profundo",
+        "key": "text_emoticon_choro_profundo"
+      },
+      {
+        "symbol": "Q_Q",
+        "name": "Choro Intenso",
+        "key": "text_emoticon_choro_intenso"
+      },
+      {
+        "symbol": "╥﹏╥",
+        "name": "Choro Soluçando",
+        "key": "text_emoticon_choro_solucando"
+      },
+      {
+        "symbol": "=(",
+        "name": "Tristeza Profunda",
+        "key": "text_emoticon_tristeza_profunda"
+      },
+      {
+        "symbol": "':(",
+        "name": "Triste Nervoso",
+        "key": "text_emoticon_triste_nervoso"
+      },
+      {
+        "symbol": "'-'",
+        "name": "Sem Expressão",
+        "key": "text_emoticon_sem_expressao"
+      },
+      {
+        "symbol": "._.",
+        "name": "Desapontado",
+        "key": "text_emoticon_desapontado"
+      },
+      {
+        "symbol": "•_•",
+        "name": "Sério",
+        "key": "text_emoticon_serio"
+      },
+      {
+        "symbol": "-_-",
+        "name": "Rosto Incomodado",
+        "key": "text_emoticon_rosto_incomodado"
+      }
+    ]
+  },
+  {
+    "section": "Surpresos & Espantados",
+    "sectionKey": "text_emoticon_sec_surpresos_espantados",
+    "items": [
+      {
+        "symbol": ":-O",
+        "name": "Boca Aberta Espanto",
+        "key": "text_emoticon_boca_aberta_espanto"
+      },
+      {
+        "symbol": ":O",
+        "name": "Espanto Simples",
+        "key": "text_emoticon_espanto_simples"
+      },
+      {
+        "symbol": ":-o",
+        "name": "Surpresa Leve",
+        "key": "text_emoticon_surpresa_leve"
+      },
+      {
+        "symbol": ":o",
+        "name": "Surpresa Pequena",
+        "key": "text_emoticon_surpresa_pequena"
+      },
+      {
+        "symbol": ":-0",
+        "name": "Boca em Zero",
+        "key": "text_emoticon_boca_em_zero"
+      },
+      {
+        "symbol": "8-O",
+        "name": "Espanto com Óculos",
+        "key": "text_emoticon_espanto_com_oculos"
+      },
+      {
+        "symbol": "#_#",
+        "name": "Confuso Tonto",
+        "key": "text_emoticon_confuso_tonto"
+      },
+      {
+        "symbol": "@_@",
+        "name": "Tonto Confuso",
+        "key": "text_emoticon_tonto_confuso"
+      },
+      {
+        "symbol": "o_o",
+        "name": "Olhos Redondos",
+        "key": "text_emoticon_olhos_redondos"
+      },
+      {
+        "symbol": "O_o",
+        "name": "Olho Desalinhado",
+        "key": "text_emoticon_olho_desalinhado"
+      },
+      {
+        "symbol": "o_O",
+        "name": "Espanto Assimétrico",
+        "key": "text_emoticon_espanto_assimetrico"
+      },
+      {
+        "symbol": "⊙﹏⊙",
+        "name": "Espanto Aperto",
+        "key": "text_emoticon_espanto_aperto"
+      },
+      {
+        "symbol": "(O_O)",
+        "name": "Olhos Esbugalhados",
+        "key": "text_emoticon_olhos_esbugalhados"
+      },
+      {
+        "symbol": "|;-)",
+        "name": "Piscadela Séria",
+        "key": "text_emoticon_piscadela_seria"
+      }
+    ]
+  },
+  {
+    "section": "Raiva & Irritados",
+    "sectionKey": "text_emoticon_sec_raiva_irritados",
+    "items": [
+      {
+        "symbol": ">:-[",
+        "name": "Muito Bravo com Raiva",
+        "key": "text_emoticon_muito_bravo_com_raiva"
+      },
+      {
+        "symbol": ">:-(",
+        "name": "Bravo Clássico",
+        "key": "text_emoticon_bravo_classico"
+      },
+      {
+        "symbol": ">:(",
+        "name": "Irritado Simples",
+        "key": "text_emoticon_irritado_simples"
+      },
+      {
+        "symbol": ":-E",
+        "name": "Rosto de Raiva Dentes",
+        "key": "text_emoticon_rosto_de_raiva_dentes"
+      },
+      {
+        "symbol": ":-V",
+        "name": "Gritando Raiva",
+        "key": "text_emoticon_gritando_raiva"
+      },
+      {
+        "symbol": ">:O",
+        "name": "Bravo Gritando",
+        "key": "text_emoticon_bravo_gritando"
+      },
+      {
+        "symbol": ">:-O",
+        "name": "Espanto com Raiva",
+        "key": "text_emoticon_espanto_com_raiva"
+      },
+      {
+        "symbol": ">:C",
+        "name": "Muito Chateado Bravo",
+        "key": "text_emoticon_muito_chateado_bravo"
+      },
+      {
+        "symbol": "><",
+        "name": "Expressão de Dor/Raiva",
+        "key": "text_emoticon_expressao_de_dor_raiva"
+      },
+      {
+        "symbol": ">_<",
+        "name": "Apertado com Raiva",
+        "key": "text_emoticon_apertado_com_raiva"
+      },
+      {
+        "symbol": ">.<!",
+        "name": "Nervoso",
+        "key": "text_emoticon_nervoso"
+      },
+      {
+        "symbol": "ಠ_ಠ",
+        "name": "Desaprovação Disapproval",
+        "key": "text_emoticon_desaprovacao_disapproval"
+      },
+      {
+        "symbol": "ಠ,ಥ",
+        "name": "Choro de Raiva",
+        "key": "text_emoticon_choro_de_raiva"
+      }
+    ]
+  },
+  {
+    "section": "Amor & Beijos",
+    "sectionKey": "text_emoticon_sec_amor_beijos",
+    "items": [
+      {
+        "symbol": ":-*",
+        "name": "Beijo Clássico",
+        "key": "text_emoticon_beijo_classico"
+      },
+      {
+        "symbol": ":*",
+        "name": "Beijinho Simples",
+        "key": "text_emoticon_beijinho_simples"
+      },
+      {
+        "symbol": ";*",
+        "name": "Beijo com Pisadinha",
+        "key": "text_emoticon_beijo_com_pisadinha"
+      },
+      {
+        "symbol": "^_^*",
+        "name": "Corado Sorrindo",
+        "key": "text_emoticon_corado_sorrindo"
+      }
+    ]
+  },
+  {
+    "section": "Diversos & Especiais",
+    "sectionKey": "text_emoticon_sec_diversos_especiais",
+    "items": [
+      {
+        "symbol": ":-P",
+        "name": "Mostrando a Língua",
+        "key": "text_emoticon_mostrando_a_lingua"
+      },
+      {
+        "symbol": ":P",
+        "name": "Língua de Fora",
+        "key": "text_emoticon_lingua_de_fora"
+      },
+      {
+        "symbol": ";-P",
+        "name": "Pisadinha Língua",
+        "key": "text_emoticon_pisadinha_lingua"
+      },
+      {
+        "symbol": ":-p",
+        "name": "Língua Pequena",
+        "key": "text_emoticon_lingua_pequena"
+      },
+      {
+        "symbol": ":p",
+        "name": "Língua Simples",
+        "key": "text_emoticon_lingua_simples"
+      },
+      {
+        "symbol": ":-Þ",
+        "name": "Língua Estilizada",
+        "key": "text_emoticon_lingua_estilizada"
+      },
+      {
+        "symbol": "X-P",
+        "name": "Língua Olhos Fechados",
+        "key": "text_emoticon_lingua_olhos_fechados"
+      },
+      {
+        "symbol": ":-X",
+        "name": "Boca Fechada Segredo",
+        "key": "text_emoticon_boca_fechada_segredo"
+      },
+      {
+        "symbol": ":X",
+        "name": "Silêncio",
+        "key": "text_emoticon_silencio"
+      },
+      {
+        "symbol": ":-#",
+        "name": "Boca Costurada",
+        "key": "text_emoticon_boca_costurada"
+      },
+      {
+        "symbol": ":#",
+        "name": "Segredo Guardado",
+        "key": "text_emoticon_segredo_guardado"
+      },
+      {
+        "symbol": "%-|",
+        "name": "Cansado Confuso",
+        "key": "text_emoticon_cansado_confuso"
+      },
+      {
+        "symbol": "|-O",
+        "name": "Bocejando Sono",
+        "key": "text_emoticon_bocejando_sono"
+      },
+      {
+        "symbol": "|-I",
+        "name": "Dormindo",
+        "key": "text_emoticon_dormindo"
+      },
+      {
+        "symbol": "I-I",
+        "name": "Olhos Fechados Dormindo",
+        "key": "text_emoticon_olhos_fechados_dormindo"
+      },
+      {
+        "symbol": "3:-O",
+        "name": "Vaca Espantada",
+        "key": "text_emoticon_vaca_espantada"
+      },
+      {
+        "symbol": "3:)",
+        "name": "Diabinho Sorridente",
+        "key": "text_emoticon_diabinho_sorridente"
+      },
+      {
+        "symbol": "}:-)",
+        "name": "Diabinho Clássico",
+        "key": "text_emoticon_diabinho_classico"
+      },
+      {
+        "symbol": "0:-3",
+        "name": "Anjinho Fofo",
+        "key": "text_emoticon_anjinho_fofo"
+      },
+      {
+        "symbol": "O:-)",
+        "name": "Anjo com Auréola",
+        "key": "text_emoticon_anjo_com_aureola"
+      }
+    ]
+  }
+]
